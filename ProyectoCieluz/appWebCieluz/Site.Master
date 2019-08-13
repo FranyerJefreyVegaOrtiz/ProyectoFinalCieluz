@@ -69,7 +69,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="contact.html">
+							<a href="Plantillas/contact.html">
 								Contact Us
 							</a>
 						</li>
@@ -96,7 +96,7 @@
 							<div class="auto-style1">
 								<ul class="nav navbar-nav center_nav pull-right" style="width: 833px; height: 87px; position: absolute; left: 24px; top: 80px">
 									<li class="nav-item active" style="text-align: justify">
-										<a class="auto-style2" href="index.html">Home<a class="auto-style3" href="contact.html">Contact</a></a>
+										<a class="auto-style2" href="Plantillas/inicio.html">Home<a class="auto-style3" href="contact.html">Contact</a></a>
 									</li>
 									<li class="nav-item submenu dropdown" style="left: 139px; top: -1px; width: 160px; height: 80px; position: absolute">
 										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="width: 156px">Shop</a>
