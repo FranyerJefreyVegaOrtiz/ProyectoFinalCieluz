@@ -127,8 +127,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Plantilla\Checkout.aspx" />
+    <Content Include="Plantilla\Contact.aspx" />
+    <Content Include="Plantilla\Login.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -145,9 +146,7 @@
     <Content Include="css\_team.css" />
     <Content Include="css\_timer.css" />
     <Content Include="css\_variables.css" />
-    <Content Include="Cart.aspx" />
-    <Content Include="Formulario web1.aspx" />
-    <Content Include="Index.aspx" />
+    <Content Include="Plantilla\Category.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -378,41 +377,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Plantilla\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Plantilla\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="Plantilla\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="Plantilla\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="Plantilla\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
+    <Compile Include="Plantilla\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formulario web1.aspx.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
+    <Compile Include="Plantilla\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formulario web1.aspx.designer.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Plantilla\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
