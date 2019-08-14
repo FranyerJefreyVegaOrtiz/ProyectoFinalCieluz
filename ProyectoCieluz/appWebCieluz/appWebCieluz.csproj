@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -9,13 +8,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7216FEBC-FFAE-472B-9A19-5025FD39F231}</ProjectGuid>
+    <ProjectGuid>{E6C48B2C-8B42-41ED-95E4-E5414D85905C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>appWebCieluz</RootNamespace>
     <AssemblyName>appWebCieluz</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -49,6 +48,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -62,80 +64,78 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.bootstrap">
-      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ScriptManager.MSAjax">
-      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ScriptManager.WebForms">
-      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.FriendlyUrls">
-      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.Agent.Intercept">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
-    </Reference>
+    <Content Include=".DS_Store" />
+    <Content Include="css\breadcrumb.css.map" />
+    <Content Include="css\style.css.map" />
+    <Content Include="css\_about.css.map" />
+    <Content Include="css\_client.css.map" />
+    <Content Include="css\_feature.css.map" />
+    <Content Include="css\_gallery.css.map" />
+    <Content Include="css\_product.css.map" />
+    <Content Include="css\_team.css.map" />
+    <Content Include="css\_timer.css.map" />
+    <Content Include="css\_variables.css.map" />
+    <Content Include="Fashiop-doc\.DS_Store" />
+    <Content Include="Fashiop-doc\css\_DS_Store" />
+    <Content Include="Fashiop-doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Fashiop-doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fashiop-doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Fashiop-doc\fonts\FontAwesome.otf" />
+    <Content Include="Fashiop-doc\fonts\_DS_Store" />
+    <Content Include="Fashiop-doc\js\_DS_Store" />
+    <Content Include="Fashiop-doc\syntax-highlighter\_DS_Store" />
+    <Content Include="Fashiop-doc\_DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\banner\.DS_Store" />
+    <Content Include="img\blog\.DS_Store" />
+    <Content Include="img\elements\_DS_Store" />
+    <Content Include="img\product\.DS_Store" />
+    <Content Include="img\product\feature-product\.DS_Store" />
+    <None Include="packages.config" />
+    <Content Include="prepros-6.config" />
+    <Content Include="scss\breadcrumb.scss" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_blog.scss" />
+    <Content Include="scss\_button.scss" />
+    <Content Include="scss\_clients.scss" />
+    <Content Include="scss\_contact.scss" />
+    <Content Include="scss\_elements.scss" />
+    <Content Include="scss\_footer.scss" />
+    <Content Include="scss\_header.scss" />
+    <Content Include="scss\_predefine.scss" />
+    <Content Include="scss\_product.scss" />
+    <Content Include="scss\_timer.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="vendors\.DS_Store" />
+    <Content Include="vendors\linericon\.DS_Store" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.ttf" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff" />
+    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff2" />
+    <Content Include="vendors\nice-select\.DS_Store" />
+    <Content Include="vendors\owl-carousel\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Carrito.aspx" />
-    <Content Include="Registrar.aspx" />
-    <Content Include="Inicio.aspx" />
-    <Content Include="Checkout.aspx" />
-    <Content Include="Contact.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="blog.html" />
+    <Content Include="cart.html" />
+    <Content Include="category.html" />
+    <Content Include="checkout.html" />
+    <Content Include="confirmation.html" />
+    <Content Include="contact.html" />
+    <Content Include="contact_process.php" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\breadcrumb.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -149,35 +149,62 @@
     <Content Include="css\_team.css" />
     <Content Include="css\_timer.css" />
     <Content Include="css\_variables.css" />
-    <Content Include="Category.aspx" />
-    <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="css\breadcrumb.css.map" />
-    <Content Include="css\style.css.map" />
-    <Content Include="css\_about.css.map" />
-    <Content Include="css\_client.css.map" />
-    <Content Include="css\_feature.css.map" />
-    <Content Include="css\_gallery.css.map" />
-    <Content Include="css\_product.css.map" />
-    <Content Include="css\_team.css.map" />
-    <Content Include="css\_timer.css.map" />
-    <Content Include="css\_variables.css.map" />
-    <Content Include="img\.DS_Store" />
-    <Content Include="img\banner\.DS_Store" />
-    <Content Include="img\blog\.DS_Store" />
-    <Content Include="img\elements\_DS_Store" />
-    <Content Include="img\product\.DS_Store" />
-    <Content Include="img\product\feature-product\.DS_Store" />
-    <Content Include=".DS_Store" />
-    <Content Include="prepros-6.config" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="elements.html" />
+    <Content Include="Fashiop-doc\css\font-awesome.min.css" />
+    <Content Include="Fashiop-doc\css\main.css" />
+    <Content Include="Fashiop-doc\css\normalize.min.css" />
+    <Content Include="Fashiop-doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Fashiop-doc\img\logo.png" />
+    <Content Include="Fashiop-doc\index.html" />
+    <Content Include="Fashiop-doc\js\custom.js" />
+    <Content Include="Fashiop-doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Fashiop-doc\js\jquery.nav.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\banner\banner-2.jpg" />
     <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\banner\banner.jpg" />
@@ -285,6 +312,7 @@
     <Content Include="img\product\single-product\s-product-s-2.jpg" />
     <Content Include="img\product\single-product\s-product-s-3.jpg" />
     <Content Include="img\product\single-product\s-product-s-4.jpg" />
+    <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
     <Content Include="js\custom.js" />
@@ -297,35 +325,11 @@
     <Content Include="js\popper.js" />
     <Content Include="js\stellar.js" />
     <Content Include="js\theme.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\WebForms\DetailsView.js" />
-    <Content Include="Scripts\WebForms\Focus.js" />
-    <Content Include="Scripts\WebForms\GridView.js" />
-    <Content Include="Scripts\WebForms\Menu.js" />
-    <Content Include="Scripts\WebForms\MenuStandards.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
-    <Content Include="Scripts\WebForms\SmartNav.js" />
-    <Content Include="Scripts\WebForms\TreeView.js" />
-    <Content Include="Scripts\WebForms\WebForms.js" />
-    <Content Include="Scripts\WebForms\WebParts.js" />
-    <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Site.Master" />
+    <Content Include="login.html" />
+    <Content Include="registration.html" />
+    <Content Include="single-blog.html" />
+    <Content Include="single-product.html" />
+    <Content Include="tracking.html" />
     <Content Include="vendors\animate-css\animate.css" />
     <Content Include="vendors\animate-css\wow.min.js" />
     <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
@@ -352,111 +356,10 @@
     <Content Include="vendors\owl-carousel\assets\owl.carousel.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.css" />
     <Content Include="vendors\owl-carousel\owl.carousel.min.js" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
-    <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
-    <Content Include="scss\breadcrumb.scss" />
-    <Content Include="scss\style.scss" />
-    <Content Include="scss\_blog.scss" />
-    <Content Include="scss\_button.scss" />
-    <Content Include="scss\_clients.scss" />
-    <Content Include="scss\_contact.scss" />
-    <Content Include="scss\_elements.scss" />
-    <Content Include="scss\_footer.scss" />
-    <Content Include="scss\_header.scss" />
-    <Content Include="scss\_predefine.scss" />
-    <Content Include="scss\_product.scss" />
-    <Content Include="scss\_timer.scss" />
-    <Content Include="scss\_variables.scss" />
-    <Content Include="vendors\.DS_Store" />
-    <Content Include="vendors\linericon\.DS_Store" />
-    <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
-    <Content Include="vendors\linericon\fonts\Linearicons-Free.ttf" />
-    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff" />
-    <Content Include="vendors\linericon\fonts\Linearicons-Free.woff2" />
-    <Content Include="vendors\nice-select\.DS_Store" />
-    <Content Include="vendors\owl-carousel\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Carrito.aspx.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Carrito.aspx.designer.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Registrar.aspx.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registrar.aspx.designer.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Category.aspx.designer.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -471,9 +374,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51579</DevelopmentServerPort>
+          <DevelopmentServerPort>50597</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51579/</IISUrl>
+          <IISUrl>http://localhost:50597/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
