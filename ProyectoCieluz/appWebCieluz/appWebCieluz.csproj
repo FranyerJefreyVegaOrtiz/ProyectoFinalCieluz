@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Carrito.aspx" />
+    <Content Include="Formulario web2.aspx" />
     <Content Include="Registrar.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Checkout.aspx" />
@@ -386,6 +387,13 @@
     </Compile>
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario web2.aspx.cs">
+      <DependentUpon>Formulario web2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario web2.aspx.designer.cs">
+      <DependentUpon>Formulario web2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
