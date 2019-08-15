@@ -27,7 +27,7 @@ namespace ServidorProyecto.Datos
 
         public int mtdRegistrar(clAdministrador objAdministrador)
         {
-            string consulta = "insert into Cliente(Documento,Nombre,Apellido,Telefono,Correo,Clave)" +
+            string consulta = "insert into Administrador(Documento,Nombre,Apellido,Telefono,Correo,Clave)" +
                 "Values('" + Documento + "','" + Nombre + "','" + Apellido + "','" + Telefono + "','" + Correo + "','" + Clave + "')";
             clConexion clconexion = new clConexion();
             int result = clconexion.mtdConectado(consulta);
