@@ -48,6 +48,8 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".DS_Store" />
+    <None Include="Connected Services\ServicioWebCieluz\ServidorProyecto.disco" />
+    <None Include="Connected Services\ServicioWebCieluz\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioWebCieluz\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioWebCieluz\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="css\breadcrumb.css.map" />
     <Content Include="css\style.css.map" />
     <Content Include="css\_about.css.map" />
@@ -99,6 +108,7 @@
     <Content Include="img\elements\_DS_Store" />
     <Content Include="img\product\.DS_Store" />
     <Content Include="img\product\feature-product\.DS_Store" />
+    <None Include="Connected Services\ServicioWebCieluz\ServidorProyecto.wsdl" />
     <None Include="packages.config" />
     <Content Include="prepros-6.config" />
     <Content Include="scss\breadcrumb.scss" />
@@ -123,6 +133,7 @@
     <Content Include="vendors\nice-select\.DS_Store" />
     <Content Include="vendors\owl-carousel\.DS_Store" />
     <Content Include="PaginaMaestra.Master" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -360,6 +371,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ServicioWebCieluz\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarCliente.aspx.cs">
       <DependentUpon>RegistrarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,6 +397,16 @@
       <Project>{4B5E902F-836C-44C6-8BA4-89831478D2F6}</Project>
       <Name>appEscritorioCieluz</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServidorProyecto\ServidorProyecto.csproj">
+      <Project>{C4A066A3-8114-430B-B487-EB593AB669A9}</Project>
+      <Name>ServidorProyecto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioWebCieluz\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
