@@ -121,6 +121,7 @@
     <Content Include="vendors\linericon\fonts\Linearicons-Free.woff2" />
     <Content Include="vendors\nice-select\.DS_Store" />
     <Content Include="vendors\owl-carousel\.DS_Store" />
+    <Content Include="PaginaMaestra.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,7 +136,6 @@
     <Content Include="checkout.html" />
     <Content Include="confirmation.html" />
     <Content Include="contact.html" />
-    <Content Include="contact_process.php" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\breadcrumb.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -359,6 +359,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaginaMaestra.Master.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra.Master.designer.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
