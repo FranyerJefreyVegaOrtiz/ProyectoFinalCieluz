@@ -135,7 +135,6 @@
     <Content Include="checkout.html" />
     <Content Include="confirmation.html" />
     <Content Include="contact.html" />
-    <Content Include="contact_process.php" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\breadcrumb.css" />
     <Content Include="css\font-awesome.min.css" />

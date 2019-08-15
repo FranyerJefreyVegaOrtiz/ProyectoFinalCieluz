@@ -37,7 +37,7 @@ namespace ServidorProyecto.Datos
             int result = clconexion.mtdConectado(consulta);
             return result;
         }
-        public int mtdEditar()
+        public int mtdEditar(clCliente objCliente)
         {
             string consulta = "Update Cliente set Documento='" + Documento + "',Nombre='" + Nombre + "',Apellido='" + Apellido + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Departamento='"+  Departamento +"',Municipio='"+ Municipio +"',Direccion='"+ Direccion +"',Clave='" + Clave + "'" +
                               "where Documento='" + Documento + "'";
@@ -45,7 +45,7 @@ namespace ServidorProyecto.Datos
             int res = objConexion.mtdConectado(consulta);
             return res;
         }
-        public int mtdEliminar()
+        public int mtdEliminar(clCliente objCliente)
         {
             string consulta = "Delete from Cliente where Documento='" + Documento + "'";
             clConexion objconexion = new clConexion();
