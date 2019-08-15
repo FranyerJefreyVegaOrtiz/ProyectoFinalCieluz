@@ -85,6 +85,8 @@
     <Compile Include="Datos\clAdministrador.cs" />
     <Compile Include="Datos\clCliente.cs" />
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clHistorial.cs" />
+    <Compile Include="Datos\clPedido.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
