@@ -39,7 +39,7 @@ namespace ServidorProyecto.Datos
         }
         public int mtdEditar()
         {
-            string consulta = "Update Administrador set Documento='" + Documento + "',Nombre='" + Nombre + "',Apellido='" + Apellido + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Departamento='"+  Departamento +"',Municipio='"+ Municipio +"',Direccion='"+ Direccion +"',Clave='" + Clave + "'" +
+            string consulta = "Update Cliente set Documento='" + Documento + "',Nombre='" + Nombre + "',Apellido='" + Apellido + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Departamento='"+  Departamento +"',Municipio='"+ Municipio +"',Direccion='"+ Direccion +"',Clave='" + Clave + "'" +
                               "where Documento='" + Documento + "'";
             clConexion objConexion = new clConexion();
             int res = objConexion.mtdConectado(consulta);
