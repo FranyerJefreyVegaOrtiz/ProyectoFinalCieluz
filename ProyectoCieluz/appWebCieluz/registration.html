@@ -1,4 +1,4 @@
-
+﻿
 
 <head>
 	<!-- Required meta tags -->
@@ -194,29 +194,54 @@
 				<div class="col-lg-6">
 					<div class="login_form_inner reg_form">
 						<h3>Create an Account</h3>
-						<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Name">
-							</div>
-							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-							</div>
-							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="password" name="password" placeholder="Password">
-							</div>
-							<div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="pass" name="pass" placeholder="Confirm password">
-							</div>
-							<div class="col-md-12 form-group">
-								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
-								</div>
-							</div>
-							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="btn submit_btn">Register</button>
-							</div>
-						</form>
+                        <form class="row login_form" action="RegistrarCliente.aspx" method="post">
+                            <div class="col-md-12 form-group">
+                                <select type="text" class="form-control" id="Tipo" runat="server">
+                                    <option value="">Cedula de ciudadania</option>
+                                    <option value="">Tarjeta de identidad</option>
+                                    <option value="">Cedula extranjera</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Documento" name="Documento" placeholder="Documento" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Correo" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Departamento" name="Departamento" placeholder="Departamento" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Municipio" name="Municipio" placeholder="Municipio" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Direccion" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Clave" name="Clave" placeholder="Clave" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="password" class="form-control" id="pass" name="pass" placeholder="Confirm password" runat="server">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account">
+                                    <input type="checkbox" id="f-option2" name="selector">
+                                    <label for="f-option2">Quieres iniciar sesion de una vez</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn submit_btn" runat="server">Registrar</button>
+                            </div>
+                        </form>
 					</div>
 				</div>
 			</div>
