@@ -92,6 +92,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="RegistrarCliente.aspx" />
     <Content Include="img\.DS_Store" />
     <Content Include="img\banner\.DS_Store" />
     <Content Include="img\blog\.DS_Store" />
@@ -359,6 +360,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RegistrarCliente.aspx.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarCliente.aspx.designer.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PaginaMaestra.Master.cs">
       <DependentUpon>PaginaMaestra.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -367,6 +375,12 @@
       <DependentUpon>PaginaMaestra.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\appEscritorioCieluz\appEscritorioCieluz.csproj">
+      <Project>{4B5E902F-836C-44C6-8BA4-89831478D2F6}</Project>
+      <Name>appEscritorioCieluz</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
