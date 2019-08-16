@@ -32,23 +32,23 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.btnEnviarCL = new System.Windows.Forms.Button();
+            this.txtPrecioCL = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtCodigoCL = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtNombrePed = new System.Windows.Forms.TextBox();
+            this.txtNombrePedCL = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.txtMunicipioCl = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtTelefonoCL = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtApellidoCL = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombreCL = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.txtDocumentoCl = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,23 +83,23 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.btnEnviar);
-            this.panel3.Controls.Add(this.txtPrecio);
+            this.panel3.Controls.Add(this.btnEnviarCL);
+            this.panel3.Controls.Add(this.txtPrecioCL);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.txtCodigo);
+            this.panel3.Controls.Add(this.txtCodigoCL);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.txtNombrePed);
+            this.panel3.Controls.Add(this.txtNombrePedCL);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txtMunicipio);
+            this.panel3.Controls.Add(this.txtMunicipioCl);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.txtTelefono);
+            this.panel3.Controls.Add(this.txtTelefonoCL);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txtApellido);
+            this.panel3.Controls.Add(this.txtApellidoCL);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.txtNombre);
+            this.panel3.Controls.Add(this.txtNombreCL);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtDocumento);
+            this.panel3.Controls.Add(this.txtDocumentoCl);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(648, 64);
@@ -120,22 +120,22 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Enviar a Entregados:";
             // 
-            // btnEnviar
+            // btnEnviarCL
             // 
-            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(254, 434);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(98, 32);
-            this.btnEnviar.TabIndex = 18;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviarCL.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCL.Location = new System.Drawing.Point(254, 434);
+            this.btnEnviarCL.Name = "btnEnviarCL";
+            this.btnEnviarCL.Size = new System.Drawing.Size(98, 32);
+            this.btnEnviarCL.TabIndex = 18;
+            this.btnEnviarCL.Text = "Enviar";
+            this.btnEnviarCL.UseVisualStyleBackColor = true;
             // 
-            // txtPrecio
+            // txtPrecioCL
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(134, 384);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(209, 20);
-            this.txtPrecio.TabIndex = 17;
+            this.txtPrecioCL.Location = new System.Drawing.Point(134, 384);
+            this.txtPrecioCL.Name = "txtPrecioCL";
+            this.txtPrecioCL.Size = new System.Drawing.Size(209, 20);
+            this.txtPrecioCL.TabIndex = 17;
             // 
             // label11
             // 
@@ -148,12 +148,12 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Precio:";
             // 
-            // txtCodigo
+            // txtCodigoCL
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(134, 344);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(209, 20);
-            this.txtCodigo.TabIndex = 15;
+            this.txtCodigoCL.Location = new System.Drawing.Point(134, 344);
+            this.txtCodigoCL.Name = "txtCodigoCL";
+            this.txtCodigoCL.Size = new System.Drawing.Size(209, 20);
+            this.txtCodigoCL.TabIndex = 15;
             // 
             // label10
             // 
@@ -166,12 +166,12 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Codigo:";
             // 
-            // txtNombrePed
+            // txtNombrePedCL
             // 
-            this.txtNombrePed.Location = new System.Drawing.Point(134, 304);
-            this.txtNombrePed.Name = "txtNombrePed";
-            this.txtNombrePed.Size = new System.Drawing.Size(209, 20);
-            this.txtNombrePed.TabIndex = 13;
+            this.txtNombrePedCL.Location = new System.Drawing.Point(134, 304);
+            this.txtNombrePedCL.Name = "txtNombrePedCL";
+            this.txtNombrePedCL.Size = new System.Drawing.Size(209, 20);
+            this.txtNombrePedCL.TabIndex = 13;
             // 
             // label9
             // 
@@ -195,12 +195,12 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Datos Pedido";
             // 
-            // txtMunicipio
+            // txtMunicipioCl
             // 
-            this.txtMunicipio.Location = new System.Drawing.Point(134, 222);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(209, 20);
-            this.txtMunicipio.TabIndex = 10;
+            this.txtMunicipioCl.Location = new System.Drawing.Point(134, 222);
+            this.txtMunicipioCl.Name = "txtMunicipioCl";
+            this.txtMunicipioCl.Size = new System.Drawing.Size(209, 20);
+            this.txtMunicipioCl.TabIndex = 10;
             // 
             // label7
             // 
@@ -213,12 +213,12 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Municipio:";
             // 
-            // txtTelefono
+            // txtTelefonoCL
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(134, 187);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(209, 20);
-            this.txtTelefono.TabIndex = 8;
+            this.txtTelefonoCL.Location = new System.Drawing.Point(134, 187);
+            this.txtTelefonoCL.Name = "txtTelefonoCL";
+            this.txtTelefonoCL.Size = new System.Drawing.Size(209, 20);
+            this.txtTelefonoCL.TabIndex = 8;
             // 
             // label6
             // 
@@ -231,12 +231,12 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Telefono:";
             // 
-            // txtApellido
+            // txtApellidoCL
             // 
-            this.txtApellido.Location = new System.Drawing.Point(134, 148);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(209, 20);
-            this.txtApellido.TabIndex = 6;
+            this.txtApellidoCL.Location = new System.Drawing.Point(134, 148);
+            this.txtApellidoCL.Name = "txtApellidoCL";
+            this.txtApellidoCL.Size = new System.Drawing.Size(209, 20);
+            this.txtApellidoCL.TabIndex = 6;
             // 
             // label5
             // 
@@ -249,12 +249,12 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Apellido:";
             // 
-            // txtNombre
+            // txtNombreCL
             // 
-            this.txtNombre.Location = new System.Drawing.Point(134, 107);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(209, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombreCL.Location = new System.Drawing.Point(134, 107);
+            this.txtNombreCL.Name = "txtNombreCL";
+            this.txtNombreCL.Size = new System.Drawing.Size(209, 20);
+            this.txtNombreCL.TabIndex = 4;
             // 
             // label4
             // 
@@ -267,12 +267,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Nombre:";
             // 
-            // txtDocumento
+            // txtDocumentoCl
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(134, 67);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(209, 20);
-            this.txtDocumento.TabIndex = 2;
+            this.txtDocumentoCl.Location = new System.Drawing.Point(134, 67);
+            this.txtDocumentoCl.Name = "txtDocumentoCl";
+            this.txtDocumentoCl.Size = new System.Drawing.Size(209, 20);
+            this.txtDocumentoCl.TabIndex = 2;
             // 
             // label3
             // 
@@ -331,23 +331,23 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Button btnEnviarCL;
+        private System.Windows.Forms.TextBox txtPrecioCL;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtCodigoCL;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNombrePed;
+        private System.Windows.Forms.TextBox txtNombrePedCL;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtMunicipio;
+        private System.Windows.Forms.TextBox txtMunicipioCl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtTelefonoCL;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtApellidoCL;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombreCL;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.TextBox txtDocumentoCl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
