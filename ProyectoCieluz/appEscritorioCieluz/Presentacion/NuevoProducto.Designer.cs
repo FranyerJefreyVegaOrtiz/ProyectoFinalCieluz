@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAdminstradorPro = new System.Windows.Forms.TextBox();
+            this.txtDescripcionPro = new System.Windows.Forms.TextBox();
+            this.txtPrecioPro = new System.Windows.Forms.TextBox();
+            this.txtDiseñoPro = new System.Windows.Forms.TextBox();
+            this.txtColorPro = new System.Windows.Forms.TextBox();
+            this.txtCodigoPro = new System.Windows.Forms.TextBox();
+            this.txtNombrePro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +62,13 @@
             this.panel1.Controls.Add(this.btnEliminarProducto);
             this.panel1.Controls.Add(this.btnEditarProducto);
             this.panel1.Controls.Add(this.btnNuevoProducto);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAdminstradorPro);
+            this.panel1.Controls.Add(this.txtDescripcionPro);
+            this.panel1.Controls.Add(this.txtPrecioPro);
+            this.panel1.Controls.Add(this.txtDiseñoPro);
+            this.panel1.Controls.Add(this.txtColorPro);
+            this.panel1.Controls.Add(this.txtCodigoPro);
+            this.panel1.Controls.Add(this.txtNombrePro);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -83,6 +83,21 @@
             this.panel1.Size = new System.Drawing.Size(1080, 680);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(1033, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(47, 25);
+            this.btnCerrar.TabIndex = 19;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pcbFoto
             // 
@@ -125,69 +140,69 @@
             this.btnNuevoProducto.Text = "Nuevo";
             this.btnNuevoProducto.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txtAdminstradorPro
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(177, 377);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(519, 20);
-            this.textBox7.TabIndex = 14;
+            this.txtAdminstradorPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtAdminstradorPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdminstradorPro.Location = new System.Drawing.Point(177, 377);
+            this.txtAdminstradorPro.Name = "txtAdminstradorPro";
+            this.txtAdminstradorPro.Size = new System.Drawing.Size(519, 20);
+            this.txtAdminstradorPro.TabIndex = 14;
             // 
-            // textBox6
+            // txtDescripcionPro
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(177, 440);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(519, 122);
-            this.textBox6.TabIndex = 13;
+            this.txtDescripcionPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtDescripcionPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcionPro.Location = new System.Drawing.Point(177, 440);
+            this.txtDescripcionPro.Multiline = true;
+            this.txtDescripcionPro.Name = "txtDescripcionPro";
+            this.txtDescripcionPro.Size = new System.Drawing.Size(519, 122);
+            this.txtDescripcionPro.TabIndex = 13;
             // 
-            // textBox5
+            // txtPrecioPro
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(177, 314);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(519, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtPrecioPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtPrecioPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecioPro.Location = new System.Drawing.Point(177, 314);
+            this.txtPrecioPro.Name = "txtPrecioPro";
+            this.txtPrecioPro.Size = new System.Drawing.Size(519, 20);
+            this.txtPrecioPro.TabIndex = 12;
             // 
-            // textBox4
+            // txtDiseñoPro
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(177, 250);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(519, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtDiseñoPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtDiseñoPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiseñoPro.Location = new System.Drawing.Point(177, 250);
+            this.txtDiseñoPro.Name = "txtDiseñoPro";
+            this.txtDiseñoPro.Size = new System.Drawing.Size(519, 20);
+            this.txtDiseñoPro.TabIndex = 11;
             // 
-            // textBox3
+            // txtColorPro
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(177, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(519, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtColorPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtColorPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtColorPro.Location = new System.Drawing.Point(177, 182);
+            this.txtColorPro.Name = "txtColorPro";
+            this.txtColorPro.Size = new System.Drawing.Size(519, 20);
+            this.txtColorPro.TabIndex = 10;
             // 
-            // textBox2
+            // txtCodigoPro
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(177, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(519, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtCodigoPro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtCodigoPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigoPro.Location = new System.Drawing.Point(177, 123);
+            this.txtCodigoPro.Name = "txtCodigoPro";
+            this.txtCodigoPro.Size = new System.Drawing.Size(519, 20);
+            this.txtCodigoPro.TabIndex = 9;
             // 
-            // textBox1
+            // txtNombrePro
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(177, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(519, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtNombrePro.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNombrePro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombrePro.Location = new System.Drawing.Point(177, 58);
+            this.txtNombrePro.Name = "txtNombrePro";
+            this.txtNombrePro.Size = new System.Drawing.Size(519, 20);
+            this.txtNombrePro.TabIndex = 8;
             // 
             // label8
             // 
@@ -277,21 +292,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1033, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(47, 25);
-            this.btnCerrar.TabIndex = 19;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,13 +322,13 @@
         private System.Windows.Forms.Button btnEditarProducto;
         private System.Windows.Forms.Button btnNuevoProducto;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtAdminstradorPro;
+        public System.Windows.Forms.TextBox txtDescripcionPro;
+        public System.Windows.Forms.TextBox txtPrecioPro;
+        public System.Windows.Forms.TextBox txtDiseñoPro;
+        public System.Windows.Forms.TextBox txtColorPro;
+        public System.Windows.Forms.TextBox txtCodigoPro;
+        public System.Windows.Forms.TextBox txtNombrePro;
         private System.Windows.Forms.Button btnCerrar;
     }
 }
