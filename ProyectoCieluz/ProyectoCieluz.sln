@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServidorProyecto", "ServidorProyecto\ServidorProyecto.csproj", "{C4A066A3-8114-430B-B487-EB593AB669A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appEscritorioCieluz", "appEscritorioCieluz\appEscritorioCieluz.csproj", "{4B5E902F-836C-44C6-8BA4-89831478D2F6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4A066A3-8114-430B-B487-EB593AB669A9} = {C4A066A3-8114-430B-B487-EB593AB669A9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appWebCieluz", "appWebCieluz\appWebCieluz.csproj", "{E6C48B2C-8B42-41ED-95E4-E5414D85905C}"
 	ProjectSection(ProjectDependencies) = postProject

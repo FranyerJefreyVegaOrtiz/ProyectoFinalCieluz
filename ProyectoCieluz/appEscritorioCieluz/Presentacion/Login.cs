@@ -26,20 +26,20 @@ namespace appEscritorioCieluz
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
+            if (txtCorreo.Text == "CORREO")
             {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtCorreo.Text = "";
+                txtCorreo.ForeColor = Color.LightGray;
 
             }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text=="")
+            if (txtCorreo.Text=="")
             {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.DimGray;
+                txtCorreo.Text = "CORREO";
+                txtCorreo.ForeColor = Color.DimGray;
             }
         }
 
@@ -78,6 +78,37 @@ namespace appEscritorioCieluz
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            mtdLogin();
+        }
+
+        servicioEscritorioCieluz.ServidorProyectoSoapClient MiServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
+
+        static class Globales
+        {
+            public static string Correo;
+            public static string Clave;
+        }
+
+        public void mtdLogin()
+        {
+            DataSet dsLogin = new DataSet();
+            Globales.Correo = txtCorreo.Text;
+            Globales.Clave = txtContraseña.Text;
+            dsLogin = MiServicio.mtdLoginEscritorio(Globales.Correo, Globales.Clave);
+            DataTable TablaLogin = dsLogin.Tables["tblDatos"];
+
+            if (TablaLogin.Rows.Count > 0)
+            {
+                MessageBox.Show("Bienvenido!!!!");
+            }
+            else
+            {
+                MessageBox.Show("Datos Incorrectos");
+            }
         }
     }
 }

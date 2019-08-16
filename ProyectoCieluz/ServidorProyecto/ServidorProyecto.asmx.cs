@@ -26,6 +26,7 @@ namespace ServidorProyecto
             int resul = objCliente.mtdRegistrar(objCliente);
             return resul;
         }
+
         [WebMethod]
         public DataSet mtdListarClientes()
         {
@@ -33,6 +34,15 @@ namespace ServidorProyecto
             clCliente objCliente = new clCliente();
             dsCliente = objCliente.mtdListar();
             return dsCliente;
+        }
+
+        [WebMethod]
+        public DataSet mtdLoginEscritorio(string Correo, string Clave)
+        {
+            DataSet dsLogin = new DataSet();
+            clAdministrador objAdministrador = new clAdministrador();
+            dsLogin = objAdministrador.mtdLogin(Correo, Clave);
+            return dsLogin;
         }
     }
 }

@@ -17,35 +17,6 @@ namespace appEscritorioCieluz
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void Cerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Maximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            Maximizar.Visible = false;
-            Restaurar.Visible = true;
-        }
-
-        private void Minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Restaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            Restaurar.Visible = false;
-            Maximizar.Visible = true;
-        }
-
-        private void btnSlide_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSlide_Click_1(object sender, EventArgs e)
         {
             if (MenuVertical.Width == 220)
@@ -107,6 +78,30 @@ namespace appEscritorioCieluz
         private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new Productos());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
