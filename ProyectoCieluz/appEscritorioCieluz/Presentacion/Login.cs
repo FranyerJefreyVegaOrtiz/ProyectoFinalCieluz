@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace appEscritorioCieluz
 {
@@ -85,6 +85,13 @@ namespace appEscritorioCieluz
             mtdLogin();
         }
 
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtContraseña.Clear();
+            txtCorreo.Clear();
+            txtCorreo.Focus();
+        }
+
         servicioEscritorioCieluz.ServidorProyectoSoapClient MiServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
 
         static class Globales
@@ -103,12 +110,20 @@ namespace appEscritorioCieluz
 
             if (TablaLogin.Rows.Count > 0)
             {
-                MessageBox.Show("Bienvenido!!!!");
+                Index objIndex = new Index();
+                objIndex.Show();
+                objIndex.FormClosed += Logout;
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Datos Incorrectos");
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

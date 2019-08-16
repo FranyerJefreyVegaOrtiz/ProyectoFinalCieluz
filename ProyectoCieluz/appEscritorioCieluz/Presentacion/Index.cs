@@ -72,7 +72,9 @@ namespace appEscritorioCieluz
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-         
+            Login objLogin = new Login();
+            objLogin.Show();
+            this.Hide();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
