@@ -45,64 +45,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs">
+    <Compile Include="Presentacion\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
+    <Compile Include="Presentacion\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Despachados.cs">
+    <Compile Include="Presentacion\Despachados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Despachados.Designer.cs">
+    <Compile Include="Presentacion\Despachados.Designer.cs">
       <DependentUpon>Despachados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entregados.cs">
+    <Compile Include="Presentacion\Entregados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Entregados.Designer.cs">
+    <Compile Include="Presentacion\Entregados.Designer.cs">
       <DependentUpon>Entregados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Index.cs">
+    <Compile Include="Presentacion\Index.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Index.Designer.cs">
+    <Compile Include="Presentacion\Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Presentacion\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OlvidoContraseña.cs">
+    <Compile Include="Presentacion\NuevoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OlvidoContraseña.Designer.cs">
+    <Compile Include="Presentacion\NuevoProducto.Designer.cs">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\OlvidoContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\OlvidoContraseña.Designer.cs">
       <DependentUpon>OlvidoContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
+    <Compile Include="Presentacion\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedidos.Designer.cs">
+    <Compile Include="Presentacion\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PedidosHoy.cs">
+    <Compile Include="Presentacion\PedidosHoy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PedidosHoy.Designer.cs">
+    <Compile Include="Presentacion\PedidosHoy.Designer.cs">
       <DependentUpon>PedidosHoy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cliente.resx">
+    <EmbeddedResource Include="Presentacion\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Index.resx">
+    <EmbeddedResource Include="Presentacion\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Presentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\NuevoProducto.resx">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

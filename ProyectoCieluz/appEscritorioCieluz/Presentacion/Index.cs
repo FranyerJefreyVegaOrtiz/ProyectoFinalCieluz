@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using appEscritorioCieluz.Presentacion;
 
 namespace appEscritorioCieluz
 {
@@ -101,6 +102,11 @@ namespace appEscritorioCieluz
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
          
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Productos());
         }
     }
 }
