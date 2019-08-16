@@ -24,25 +24,6 @@ namespace appEscritorioCieluz
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void txtUsuario_Enter(object sender, EventArgs e)
-        {
-            if (txtCorreo.Text == "CORREO")
-            {
-                txtCorreo.Text = "";
-                txtCorreo.ForeColor = Color.LightGray;
-
-            }
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-            if (txtCorreo.Text=="")
-            {
-                txtCorreo.Text = "CORREO";
-                txtCorreo.ForeColor = Color.DimGray;
-            }
-        }
-
         private void txtContraseña_Enter(object sender, EventArgs e)
         {
             if(txtContraseña.Text == "CONTRASEÑA")
@@ -122,6 +103,30 @@ namespace appEscritorioCieluz
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "")
+            {
+                txtCorreo.Text = "CORREO";
+                txtCorreo.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtCorreo_Enter_1(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "CORREO")
+            {
+                txtCorreo.Text = "";
+                txtCorreo.ForeColor = Color.LightGray;
+
+            }
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
