@@ -30,7 +30,7 @@ namespace appEscritorioCieluz
             {
                 txtContraseña.Text = "";
                 txtContraseña.ForeColor = Color.LightGray;
-                txtContraseña.UseSystemPasswordChar = false;
+                txtContraseña.UseSystemPasswordChar = true;
              
             }
         }
@@ -59,11 +59,6 @@ namespace appEscritorioCieluz
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            mtdLogin();
         }
 
         private void Logout(object sender, FormClosedEventArgs e)
@@ -129,6 +124,11 @@ namespace appEscritorioCieluz
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+            mtdLogin();
         }
     }
 }

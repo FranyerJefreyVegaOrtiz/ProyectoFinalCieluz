@@ -75,7 +75,6 @@
             this.txtContraseña.Size = new System.Drawing.Size(347, 20);
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.Text = "CONTRASEÑA";
-            this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
@@ -105,6 +104,7 @@
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
             // 
             // linkContraseña
             // 
@@ -115,7 +115,7 @@
             this.linkContraseña.Location = new System.Drawing.Point(437, 284);
             this.linkContraseña.Name = "linkContraseña";
             this.linkContraseña.Size = new System.Drawing.Size(165, 17);
-            this.linkContraseña.TabIndex = 0;
+            this.linkContraseña.TabIndex = 1;
             this.linkContraseña.TabStop = true;
             this.linkContraseña.Text = "¿Olvido Su Contraseña?";
             // 
@@ -148,7 +148,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(323, 66);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(347, 20);
-            this.txtCorreo.TabIndex = 9;
+            this.txtCorreo.TabIndex = 2;
             this.txtCorreo.Text = "CORREO";
             this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter_1);
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
@@ -164,7 +164,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(734, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(46, 25);
-            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.TabIndex = 5;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 

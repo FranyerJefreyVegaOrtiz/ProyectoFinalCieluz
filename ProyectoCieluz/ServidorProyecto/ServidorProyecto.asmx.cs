@@ -36,6 +36,7 @@ namespace ServidorProyecto
             return dsCliente;
         }
 
+
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
         {
@@ -44,5 +45,6 @@ namespace ServidorProyecto
             dsLogin = objAdministrador.mtdLogin(Correo, Clave);
             return dsLogin;
         }
+
     }
 }
