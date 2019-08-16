@@ -74,9 +74,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(619, 507);
+            this.dataGridView1.Size = new System.Drawing.Size(596, 507);
             this.dataGridView1.TabIndex = 3;
             // 
             // panel3
@@ -102,9 +102,9 @@
             this.panel3.Controls.Add(this.txtDocumento);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(647, 61);
+            this.panel3.Location = new System.Drawing.Point(648, 64);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 507);
+            this.panel3.Size = new System.Drawing.Size(416, 507);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
@@ -301,7 +301,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 21);
+            this.label1.Location = new System.Drawing.Point(41, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 23);
             this.label1.TabIndex = 0;
