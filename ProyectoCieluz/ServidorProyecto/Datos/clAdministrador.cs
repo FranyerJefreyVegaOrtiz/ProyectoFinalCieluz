@@ -48,5 +48,14 @@ namespace ServidorProyecto.Datos
             int resul = objconexion.mtdConectado(consulta);
             return resul;
         }
+
+        public DataSet mtdLogin(string Correo, string Clave)
+        {
+            string consulta = "Select Correo, Clave From Administrador where Correo = '"+ Correo + "' and Clave = '" + Clave + "'";
+            DataSet dsAdministrador = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsAdministrador = clConexion.mtdDesconectado(consulta);
+            return dsAdministrador;
+        }
     }
 }

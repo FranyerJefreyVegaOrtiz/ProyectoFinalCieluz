@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace appEscritorioCieluz
 {
@@ -26,20 +26,20 @@ namespace appEscritorioCieluz
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
+            if (txtCorreo.Text == "CORREO")
             {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.LightGray;
+                txtCorreo.Text = "";
+                txtCorreo.ForeColor = Color.LightGray;
 
             }
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text=="")
+            if (txtCorreo.Text=="")
             {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.DimGray;
+                txtCorreo.Text = "CORREO";
+                txtCorreo.ForeColor = Color.DimGray;
             }
         }
 
@@ -80,9 +80,50 @@ namespace appEscritorioCieluz
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
+            mtdLogin();
+        }
 
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtContraseña.Clear();
+            txtCorreo.Clear();
+            txtCorreo.Focus();
+        }
+
+        servicioEscritorioCieluz.ServidorProyectoSoapClient MiServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
+
+        static class Globales
+        {
+            public static string Correo;
+            public static string Clave;
+        }
+
+        public void mtdLogin()
+        {
+            DataSet dsLogin = new DataSet();
+            Globales.Correo = txtCorreo.Text;
+            Globales.Clave = txtContraseña.Text;
+            dsLogin = MiServicio.mtdLoginEscritorio(Globales.Correo, Globales.Clave);
+            DataTable TablaLogin = dsLogin.Tables["tblDatos"];
+
+            if (TablaLogin.Rows.Count > 0)
+            {
+                Index objIndex = new Index();
+                objIndex.Show();
+                objIndex.FormClosed += Logout;
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Datos Incorrectos");
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
