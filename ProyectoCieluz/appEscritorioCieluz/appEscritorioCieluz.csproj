@@ -110,6 +110,12 @@
     <EmbeddedResource Include="Presentacion\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Despachados.resx">
+      <DependentUpon>Despachados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Entregados.resx">
+      <DependentUpon>Entregados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\NuevoProducto.resx">
       <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\OlvidoContraseña.resx">
+      <DependentUpon>OlvidoContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
