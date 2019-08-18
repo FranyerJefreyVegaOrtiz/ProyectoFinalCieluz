@@ -101,6 +101,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="img\Cieluz.png" />
     <Content Include="RegistrarCliente.aspx" />
     <Content Include="img\.DS_Store" />
     <Content Include="img\banner\.DS_Store" />
