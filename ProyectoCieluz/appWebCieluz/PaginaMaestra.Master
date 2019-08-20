@@ -53,6 +53,8 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
+                      <asp:ContentPlaceHolder ID="head" runat="server">
+                    </asp:ContentPlaceHolder>
 					<a class="navbar-brand logo_h" href="index.html">
 						<img src="img/logo.png" alt="">
 					</a>
@@ -63,6 +65,8 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!-- Collect the nav links, forms, and other content for toggling -->
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<div class="row w-100">
 							<div class="col-lg-7 pr-0">

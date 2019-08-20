@@ -32,7 +32,7 @@ namespace ServidorProyecto.Datos
         public int mtdRegistrar(clCliente objCliente)
         {
             string consulta = "insert into Cliente(TipoDocumento,Documento,Nombre,Apellido,Telefono,Correo,Departamento,Municipio,Direccion,Clave)" +
-                "Values('" + TipoDocumento + "','" + Documento + "','" + Nombre + "','" + Apellido + "','" + Telefono + "','" + Correo + "','" + Departamento + "','" + Municipio + "','" + Direccion + "','" + Clave + "')";
+                "Values('" + objCliente.TipoDocumento + "','" + objCliente.Documento + "','" + objCliente.Nombre + "','" + objCliente.Apellido + "','" + objCliente.Telefono + "','" + objCliente.Correo + "','" + objCliente.Departamento + "','" + objCliente.Municipio + "','" + objCliente.Direccion + "','" + objCliente.Clave + "')";
             clConexion clconexion = new clConexion();
             int result = clconexion.mtdConectado(consulta);
             return result;

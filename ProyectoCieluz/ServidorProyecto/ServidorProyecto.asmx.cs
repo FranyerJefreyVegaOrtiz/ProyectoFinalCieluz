@@ -22,8 +22,8 @@ namespace ServidorProyecto
         [WebMethod]
         public int mtdRegistrarClientes(clCliente ObjCliente)
         {
-            clCliente objCliente = new clCliente();
-            int resul = objCliente.mtdRegistrar(objCliente);
+            clCliente objCli= new clCliente();
+            int resul = objCli.mtdRegistrar(ObjCliente);
             return resul;
         }
 
