@@ -102,6 +102,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="img\Cieluz.png" />
+    <Content Include="img\Cieluz2.png" />
     <Content Include="RegistrarCliente.aspx" />
     <Content Include="img\.DS_Store" />
     <Content Include="img\banner\.DS_Store" />
@@ -125,6 +126,7 @@
     <Content Include="scss\_product.scss" />
     <Content Include="scss\_timer.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="ss.html" />
     <Content Include="vendors\.DS_Store" />
     <Content Include="vendors\linericon\.DS_Store" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
@@ -143,7 +145,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="blog.html" />
     <Content Include="cart.html" />
     <Content Include="category.html" />
     <Content Include="checkout.html" />

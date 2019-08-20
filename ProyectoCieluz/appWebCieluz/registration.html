@@ -55,7 +55,7 @@
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="index.html">
-                        <img src="img/logo.png" alt="">
+                        <img src="img/Cieluz2.png" alt="">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -192,13 +192,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="login_form_inner reg_form">
-                        <h3>Create an Account</h3>
+                        <h3>Crear Nuevo Cliente</h3>
                         <form class="row login_form" action="RegistrarCliente.aspx" method="post">
                             <div class="col-md-12 form-group">
-                                <select type="text" class="form-control" id="Tipo" runat="server">
-                                    <option value="">Cedula de ciudadania</option>
-                                    <option value="">Tarjeta de identidad</option>
-                                    <option value="">Cedula extranjera</option>
+                                <select type="text" class="form-control" id="Tipo" runat="server" >
+                                    <option value="0"type="text" class="form-control" id="Tipo" runat="server">Cedula de ciudadania</option>
+                                    <option value="1"type="text" class="form-control" id="Tipo" runat="server">Tarjeta de identidad</option>
+                                    <option value="2"type="text" class="form-control" id="Tipo" runat="server">Cedula extranjera</option>
                                 </select>
                             </div>
                             <div class="col-md-12 form-group">
@@ -226,10 +226,7 @@
                                 <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Direccion" runat="server">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Clave" name="Clave" placeholder="Clave" runat="server">
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="pass" name="pass" placeholder="Confirm password" runat="server">
+                                <input type="password" class="form-control" id="Clave" name="Clave" placeholder="Clave" runat="server">
                             </div>
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">

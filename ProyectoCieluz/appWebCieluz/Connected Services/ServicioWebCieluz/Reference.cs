@@ -29,6 +29,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave);
     }
     
     /// <remarks/>
@@ -244,6 +251,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync() {
             return base.Channel.mtdListarClientesAsync();
+        }
+        
+        public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {
+            return base.Channel.mtdLoginEscritorio(Correo, Clave);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave) {
+            return base.Channel.mtdLoginEscritorioAsync(Correo, Clave);
         }
     }
 }
