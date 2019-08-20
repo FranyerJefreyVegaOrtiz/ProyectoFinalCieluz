@@ -35,8 +35,6 @@ namespace ServidorProyecto
             dsCliente = objCliente.mtdListar();
             return dsCliente;
         }
-
-
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
         {

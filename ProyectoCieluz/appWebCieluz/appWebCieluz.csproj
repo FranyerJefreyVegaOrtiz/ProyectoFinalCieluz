@@ -125,6 +125,7 @@
     <Content Include="scss\_product.scss" />
     <Content Include="scss\_timer.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="ss.html" />
     <Content Include="vendors\.DS_Store" />
     <Content Include="vendors\linericon\.DS_Store" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
@@ -143,7 +144,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="blog.html" />
     <Content Include="cart.html" />
     <Content Include="category.html" />
     <Content Include="checkout.html" />
