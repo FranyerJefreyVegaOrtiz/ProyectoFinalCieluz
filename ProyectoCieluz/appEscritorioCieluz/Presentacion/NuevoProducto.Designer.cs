@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbAdministrador = new System.Windows.Forms.ComboBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
-            this.txtAdminstradorPro = new System.Windows.Forms.TextBox();
             this.txtDescripcionPro = new System.Windows.Forms.TextBox();
             this.txtPrecioPro = new System.Windows.Forms.TextBox();
             this.txtDiseñoPro = new System.Windows.Forms.TextBox();
@@ -57,12 +57,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.panel1.Controls.Add(this.cmbAdministrador);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.pcbFoto);
             this.panel1.Controls.Add(this.btnEliminarProducto);
             this.panel1.Controls.Add(this.btnEditarProducto);
             this.panel1.Controls.Add(this.btnNuevoProducto);
-            this.panel1.Controls.Add(this.txtAdminstradorPro);
             this.panel1.Controls.Add(this.txtDescripcionPro);
             this.panel1.Controls.Add(this.txtPrecioPro);
             this.panel1.Controls.Add(this.txtDiseñoPro);
@@ -83,6 +83,14 @@
             this.panel1.Size = new System.Drawing.Size(1080, 680);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // cmbAdministrador
+            // 
+            this.cmbAdministrador.FormattingEnabled = true;
+            this.cmbAdministrador.Location = new System.Drawing.Point(177, 376);
+            this.cmbAdministrador.Name = "cmbAdministrador";
+            this.cmbAdministrador.Size = new System.Drawing.Size(519, 21);
+            this.cmbAdministrador.TabIndex = 20;
             // 
             // btnCerrar
             // 
@@ -117,6 +125,7 @@
             this.btnEliminarProducto.TabIndex = 17;
             this.btnEliminarProducto.Text = "Eliminar";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // btnEditarProducto
             // 
@@ -128,6 +137,7 @@
             this.btnEditarProducto.TabIndex = 16;
             this.btnEditarProducto.Text = "Editar";
             this.btnEditarProducto.UseVisualStyleBackColor = true;
+            this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
             // btnNuevoProducto
             // 
@@ -139,15 +149,7 @@
             this.btnNuevoProducto.TabIndex = 15;
             this.btnNuevoProducto.Text = "Nuevo";
             this.btnNuevoProducto.UseVisualStyleBackColor = true;
-            // 
-            // txtAdminstradorPro
-            // 
-            this.txtAdminstradorPro.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtAdminstradorPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAdminstradorPro.Location = new System.Drawing.Point(177, 377);
-            this.txtAdminstradorPro.Name = "txtAdminstradorPro";
-            this.txtAdminstradorPro.Size = new System.Drawing.Size(519, 20);
-            this.txtAdminstradorPro.TabIndex = 14;
+            this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
             // txtDescripcionPro
             // 
@@ -301,6 +303,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoProducto";
             this.Text = "NuevoProducto";
+            this.Load += new System.EventHandler(this.NuevoProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
@@ -322,7 +325,6 @@
         private System.Windows.Forms.Button btnEditarProducto;
         private System.Windows.Forms.Button btnNuevoProducto;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TextBox txtAdminstradorPro;
         public System.Windows.Forms.TextBox txtDescripcionPro;
         public System.Windows.Forms.TextBox txtPrecioPro;
         public System.Windows.Forms.TextBox txtDiseñoPro;
@@ -330,5 +332,6 @@
         public System.Windows.Forms.TextBox txtCodigoPro;
         public System.Windows.Forms.TextBox txtNombrePro;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ComboBox cmbAdministrador;
     }
 }
