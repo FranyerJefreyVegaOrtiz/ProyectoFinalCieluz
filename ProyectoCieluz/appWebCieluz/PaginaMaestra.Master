@@ -55,6 +55,8 @@
 					<!-- Brand and toggle get grouped for better mobile display -->
                       <asp:ContentPlaceHolder ID="head" runat="server">
                     </asp:ContentPlaceHolder>
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
 					<a class="navbar-brand logo_h" href="index.html">
 						<img src="img/logo.png" alt="">
 					</a>
