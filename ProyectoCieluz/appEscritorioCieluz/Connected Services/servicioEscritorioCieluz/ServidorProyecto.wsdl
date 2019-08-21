@@ -70,6 +70,92 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdRegistrarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPro" type="tns:clProducto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clProducto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdProducto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Precio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Color" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Diseño" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idAdministrador" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdRegistrarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPro" type="tns:clProducto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdEditarProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEliminarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPro" type="tns:clProducto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEliminarProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdEliminarProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjAdmin" type="tns:clAdministrador" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="clAdministrador">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdAdministrador" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mtdListarAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarAdminResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdRegistrarClientesSoapIn">
@@ -90,6 +176,30 @@
   <wsdl:message name="mtdLoginEscritorioSoapOut">
     <wsdl:part name="parameters" element="tns:mtdLoginEscritorioResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdRegistrarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEditarProducto" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEditarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdEliminarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEliminarProducto" />
+  </wsdl:message>
+  <wsdl:message name="mtdEliminarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarAdmin" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarAdminResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServidorProyectoSoap">
     <wsdl:operation name="mtdRegistrarClientes">
       <wsdl:input message="tns:mtdRegistrarClientesSoapIn" />
@@ -102,6 +212,22 @@
     <wsdl:operation name="mtdLoginEscritorio">
       <wsdl:input message="tns:mtdLoginEscritorioSoapIn" />
       <wsdl:output message="tns:mtdLoginEscritorioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <wsdl:input message="tns:mtdRegistrarProductoSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarProducto">
+      <wsdl:input message="tns:mtdEditarProductoSoapIn" />
+      <wsdl:output message="tns:mtdEditarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdEliminarProducto">
+      <wsdl:input message="tns:mtdEliminarProductoSoapIn" />
+      <wsdl:output message="tns:mtdEliminarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarAdmin">
+      <wsdl:input message="tns:mtdListarAdminSoapIn" />
+      <wsdl:output message="tns:mtdListarAdminSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServidorProyectoSoap" type="tns:ServidorProyectoSoap">
@@ -133,6 +259,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarProducto">
+      <soap:operation soapAction="http://tempuri.org/mtdEditarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEliminarProducto">
+      <soap:operation soapAction="http://tempuri.org/mtdEliminarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarAdmin">
+      <soap:operation soapAction="http://tempuri.org/mtdListarAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServidorProyectoSoap12" type="tns:ServidorProyectoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -156,6 +318,42 @@
     </wsdl:operation>
     <wsdl:operation name="mtdLoginEscritorio">
       <soap12:operation soapAction="http://tempuri.org/mtdLoginEscritorio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarProducto">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarProducto">
+      <soap12:operation soapAction="http://tempuri.org/mtdEditarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEliminarProducto">
+      <soap12:operation soapAction="http://tempuri.org/mtdEliminarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarAdmin">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarAdmin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

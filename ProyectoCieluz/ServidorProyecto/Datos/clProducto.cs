@@ -12,7 +12,7 @@ namespace ServidorProyecto.Datos
         public int IdProducto {get; set;}
         public string Nombre {get; set;}
         public string Codigo {get; set;}
-        public string Foto {get; set;}
+        //public string Foto {get; set;}
         public string Precio {get; set;}
         public string Color {get; set;}
         public string Diseño {get; set;}
@@ -30,8 +30,8 @@ namespace ServidorProyecto.Datos
 
         public int mtdRegistrar(clProducto objPr)
         {
-            string consulta = "Insert Into Producto (Nombre, Codigo, Foto, Precio, Color, Diseño, Descripcion, idAdministrador)" +
-                "Values ('" + objPr.Nombre + "','" + objPr.Codigo + "','" + objPr.Foto + "','" + objPr.Precio + "','" + objPr.Color + "','" + objPr.Diseño + "','" + objPr.Descripcion + "','" + objPr.idAdministrador + "')";
+            string consulta = "Insert Into Producto (Nombre, Codigo, Precio, Color, Diseño, Descripcion, idAdministrador)" +
+                "Values ('" + objPr.Nombre + "','" + objPr.Codigo + "','" + objPr.Precio + "','" + objPr.Color + "','" + objPr.Diseño + "','" + objPr.Descripcion + "','" + objPr.idAdministrador + "')";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
@@ -39,7 +39,7 @@ namespace ServidorProyecto.Datos
 
         public int mtdEditar(clProducto objPr)
         {
-            string consulta = "Update Producto Set Nombre = '"+objPr.Nombre+ "', Codigo = '" + objPr.Codigo + "', Foto = '" + objPr.Foto + "', Precio = '" + objPr.Precio + "', Color = '" + objPr.Color + "', Diseño = '" + objPr.Diseño + "', Descripcion = '" + objPr.Descripcion + "', idAdministrador = '" + objPr.idAdministrador + "'";
+            string consulta = "Update Producto Set Nombre = '"+objPr.Nombre+ "', Precio = '" + objPr.Precio + "', Color = '" + objPr.Color + "', Diseño = '" + objPr.Diseño + "', Descripcion = '" + objPr.Descripcion + "'";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
