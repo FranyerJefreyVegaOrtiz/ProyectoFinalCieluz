@@ -35,8 +35,6 @@ namespace ServidorProyecto
             dsCliente = objCliente.mtdListar();
             return dsCliente;
         }
-
-
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
         {
@@ -46,5 +44,37 @@ namespace ServidorProyecto
             return dsLogin;
         }
 
+        [WebMethod]
+        public int mtdRegistrarProducto(clProducto objPro)
+        {
+            clProducto objProducto = new clProducto();
+            int resul = objProducto.mtdRegistrar(objPro);
+            return resul;
+        }
+
+        [WebMethod]
+        public int mtdEditarProducto(clProducto objPro)
+        {
+            clProducto objProducto = new clProducto();
+            int resul = objProducto.mtdEditar(objPro);
+            return resul;
+        }
+
+        [WebMethod]
+        public int mtdEliminarProducto(clProducto objPro)
+        {
+            clProducto objProducto = new clProducto();
+            int resul = objProducto.mtdEliminar(objPro);
+            return resul;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarAdmin(clAdministrador ObjAdmin)
+        {
+            DataSet dsAdmin = new DataSet();
+            clAdministrador objAdmin = new clAdministrador();
+            dsAdmin = objAdmin.mtdListar();
+            return dsAdmin;
+        }
     }
 }

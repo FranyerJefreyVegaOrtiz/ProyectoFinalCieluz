@@ -19,7 +19,6 @@ namespace ServidorProyecto.Datos
             catch (Exception error)
             {
                 string salida = error.Message;
-
             }
         }
 
@@ -40,7 +39,6 @@ namespace ServidorProyecto.Datos
             adaptador.Fill(dsDatos, "tblDatos");
             objConexion.Close();
             return dsDatos;
-
         }
     }
 }
