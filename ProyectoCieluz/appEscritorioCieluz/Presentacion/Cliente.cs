@@ -16,5 +16,21 @@ namespace appEscritorioCieluz
         {
             InitializeComponent();
         }
+
+        servicioEscritorioCieluz.ServidorProyectoSoapClient miServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
+
+        public void mtdCargarDatos()
+        {
+            //DataSet dsProducto = new DataSet();
+            //dsProducto = miServicio.mtdListarPro();
+            //DataTable tblAdmin = dsProducto.Tables["tblDatos"];
+            //dgvProductos.DataSource = tblAdmin;
+            //this.dgvProductos.Columns["IdProducto"].Visible = false;
+        }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

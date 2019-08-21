@@ -16,6 +16,7 @@ namespace ServidorProyecto
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
     // [System.Web.Script.Services.ScriptService]
+
     public class ServidorProyecto : System.Web.Services.WebService
     {
 
@@ -35,6 +36,7 @@ namespace ServidorProyecto
             dsCliente = objCliente.mtdListar();
             return dsCliente;
         }
+
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
         {
@@ -75,6 +77,33 @@ namespace ServidorProyecto
             clAdministrador objAdmin = new clAdministrador();
             dsAdmin = objAdmin.mtdListar();
             return dsAdmin;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarPro()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListar();
+            return dsProducto;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarCli()
+        {
+            DataSet dsCliente = new DataSet();
+            clCliente objCli = new clCliente();
+            dsCliente = objCli.mtdListar();
+            return dsCliente;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarPed()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListar();
+            return dsProducto;
         }
     }
 }

@@ -64,6 +64,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarAdmin", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarAdminAsync(appEscritorioCieluz.servicioEscritorioCieluz.clAdministrador ObjAdmin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPro();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync();
     }
     
     /// <remarks/>
@@ -368,6 +375,8 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         private string codigoField;
         
+        private string fotoField;
+        
         private string precioField;
         
         private string colorField;
@@ -416,6 +425,18 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Foto {
+            get {
+                return this.fotoField;
+            }
+            set {
+                this.fotoField = value;
+                this.RaisePropertyChanged("Foto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string Precio {
             get {
                 return this.precioField;
@@ -427,7 +448,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string Color {
             get {
                 return this.colorField;
@@ -439,7 +460,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public string Diseño {
             get {
                 return this.diseñoField;
@@ -451,7 +472,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public string Descripcion {
             get {
                 return this.descripcionField;
@@ -463,7 +484,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public int idAdministrador {
             get {
                 return this.idAdministradorField;
@@ -565,6 +586,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarAdminAsync(appEscritorioCieluz.servicioEscritorioCieluz.clAdministrador ObjAdmin) {
             return base.Channel.mtdListarAdminAsync(ObjAdmin);
+        }
+        
+        public System.Data.DataSet mtdListarPro() {
+            return base.Channel.mtdListarPro();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync() {
+            return base.Channel.mtdListarProAsync();
         }
     }
 }

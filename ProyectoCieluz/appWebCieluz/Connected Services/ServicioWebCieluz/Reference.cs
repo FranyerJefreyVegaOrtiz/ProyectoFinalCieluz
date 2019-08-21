@@ -36,6 +36,34 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarProducto", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEliminarProducto", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEliminarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEliminarProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEliminarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarAdmin", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarAdmin(appWebCieluz.ServicioWebCieluz.clAdministrador ObjAdmin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarAdmin", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarAdminAsync(appWebCieluz.ServicioWebCieluz.clAdministrador ObjAdmin);
     }
     
     /// <remarks/>
@@ -210,6 +238,252 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clAdministrador : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idAdministradorField;
+        
+        private string documentoField;
+        
+        private string nombreField;
+        
+        private string apellidoField;
+        
+        private string telefonoField;
+        
+        private string correoField;
+        
+        private string claveField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdAdministrador {
+            get {
+                return this.idAdministradorField;
+            }
+            set {
+                this.idAdministradorField = value;
+                this.RaisePropertyChanged("IdAdministrador");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Documento {
+            get {
+                return this.documentoField;
+            }
+            set {
+                this.documentoField = value;
+                this.RaisePropertyChanged("Documento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("Nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                this.apellidoField = value;
+                this.RaisePropertyChanged("Apellido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("Telefono");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("Correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Clave {
+            get {
+                return this.claveField;
+            }
+            set {
+                this.claveField = value;
+                this.RaisePropertyChanged("Clave");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class clProducto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idProductoField;
+        
+        private string nombreField;
+        
+        private string codigoField;
+        
+        private string precioField;
+        
+        private string colorField;
+        
+        private string diseñoField;
+        
+        private string descripcionField;
+        
+        private int idAdministradorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int IdProducto {
+            get {
+                return this.idProductoField;
+            }
+            set {
+                this.idProductoField = value;
+                this.RaisePropertyChanged("IdProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("Nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("Codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("Precio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string Color {
+            get {
+                return this.colorField;
+            }
+            set {
+                this.colorField = value;
+                this.RaisePropertyChanged("Color");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Diseño {
+            get {
+                return this.diseñoField;
+            }
+            set {
+                this.diseñoField = value;
+                this.RaisePropertyChanged("Diseño");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("Descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public int idAdministrador {
+            get {
+                return this.idAdministradorField;
+            }
+            set {
+                this.idAdministradorField = value;
+                this.RaisePropertyChanged("idAdministrador");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServidorProyectoSoapChannel : appWebCieluz.ServicioWebCieluz.ServidorProyectoSoap, System.ServiceModel.IClientChannel {
     }
@@ -259,6 +533,38 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave) {
             return base.Channel.mtdLoginEscritorioAsync(Correo, Clave);
+        }
+        
+        public int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdRegistrarProducto(objPro);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdRegistrarProductoAsync(objPro);
+        }
+        
+        public int mtdEditarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdEditarProducto(objPro);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEditarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdEditarProductoAsync(objPro);
+        }
+        
+        public int mtdEliminarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdEliminarProducto(objPro);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEliminarProductoAsync(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
+            return base.Channel.mtdEliminarProductoAsync(objPro);
+        }
+        
+        public System.Data.DataSet mtdListarAdmin(appWebCieluz.ServicioWebCieluz.clAdministrador ObjAdmin) {
+            return base.Channel.mtdListarAdmin(ObjAdmin);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarAdminAsync(appWebCieluz.ServicioWebCieluz.clAdministrador ObjAdmin) {
+            return base.Channel.mtdListarAdminAsync(ObjAdmin);
         }
     }
 }

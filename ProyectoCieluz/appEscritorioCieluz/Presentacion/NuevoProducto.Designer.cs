@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFotoPro = new System.Windows.Forms.TextBox();
             this.cmbAdministrador = new System.Windows.Forms.ComboBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pcbFoto = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.panel1.Controls.Add(this.txtFotoPro);
             this.panel1.Controls.Add(this.cmbAdministrador);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.pcbFoto);
@@ -83,6 +85,13 @@
             this.panel1.Size = new System.Drawing.Size(1080, 680);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // txtFotoPro
+            // 
+            this.txtFotoPro.Location = new System.Drawing.Point(777, 460);
+            this.txtFotoPro.Name = "txtFotoPro";
+            this.txtFotoPro.Size = new System.Drawing.Size(190, 20);
+            this.txtFotoPro.TabIndex = 21;
             // 
             // cmbAdministrador
             // 
@@ -332,6 +341,7 @@
         public System.Windows.Forms.TextBox txtCodigoPro;
         public System.Windows.Forms.TextBox txtNombrePro;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.ComboBox cmbAdministrador;
+        public System.Windows.Forms.ComboBox cmbAdministrador;
+        public System.Windows.Forms.TextBox txtFotoPro;
     }
 }

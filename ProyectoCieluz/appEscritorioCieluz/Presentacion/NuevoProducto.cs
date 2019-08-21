@@ -45,6 +45,7 @@ namespace appEscritorioCieluz.Presentacion
 
             objProducto.Nombre = txtNombrePro.Text;
             objProducto.Codigo = txtCodigoPro.Text;
+            objProducto.Foto = txtFotoPro.Text;
             objProducto.Color = txtColorPro.Text;
             objProducto.Diseño = txtDiseñoPro.Text;
             objProducto.Precio = txtPrecioPro.Text;
@@ -79,6 +80,7 @@ namespace appEscritorioCieluz.Presentacion
 
             objProducto.Nombre = txtNombrePro.Text;
             objProducto.Codigo = txtCodigoPro.Text;
+            objProducto.Foto = txtFotoPro.Text;
             objProducto.Color = txtColorPro.Text;
             objProducto.Diseño = txtDiseñoPro.Text;
             objProducto.Precio = txtPrecioPro.Text;
@@ -103,6 +105,7 @@ namespace appEscritorioCieluz.Presentacion
 
             objProducto.Nombre = txtNombrePro.Text;
             objProducto.Codigo = txtCodigoPro.Text;
+            objProducto.Foto = txtFotoPro.Text;
             objProducto.Color = txtColorPro.Text;
             objProducto.Diseño = txtDiseñoPro.Text;
             objProducto.Precio = txtPrecioPro.Text;

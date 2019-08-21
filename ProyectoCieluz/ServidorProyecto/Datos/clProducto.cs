@@ -12,7 +12,7 @@ namespace ServidorProyecto.Datos
         public int IdProducto {get; set;}
         public string Nombre {get; set;}
         public string Codigo {get; set;}
-        //public string Foto {get; set;}
+        public string Foto {get; set;}
         public string Precio {get; set;}
         public string Color {get; set;}
         public string Diseño {get; set;}
@@ -21,7 +21,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListar()
         {
-            string consulta = "Select * From Producto";
+            string consulta = "Select * From Producto;";
             DataSet dsProducto = new DataSet();
             clConexion objConexion = new clConexion();
             dsProducto = objConexion.mtdDesconectado(consulta);
@@ -30,8 +30,8 @@ namespace ServidorProyecto.Datos
 
         public int mtdRegistrar(clProducto objPr)
         {
-            string consulta = "Insert Into Producto (Nombre, Codigo, Precio, Color, Diseño, Descripcion, idAdministrador)" +
-                "Values ('" + objPr.Nombre + "','" + objPr.Codigo + "','" + objPr.Precio + "','" + objPr.Color + "','" + objPr.Diseño + "','" + objPr.Descripcion + "','" + objPr.idAdministrador + "')";
+            string consulta = "Insert Into Producto (Nombre, Codigo, Foto, Precio, Color, Diseño, Descripcion, idAdministrador)" +
+                "Values ('" + objPr.Nombre + "','" + objPr.Codigo + "', '" + objPr.Foto + "','" + objPr.Precio + "','" + objPr.Color + "','" + objPr.Diseño + "','" + objPr.Descripcion + "','" + objPr.idAdministrador + "')";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
