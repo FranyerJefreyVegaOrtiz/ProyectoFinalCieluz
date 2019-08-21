@@ -101,6 +101,10 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="GuiaTallas.aspx" />
+    <Content Include="img\GUIACALZADOMUJER.png" />
+    <Content Include="img\GUIACALZADONI.png" />
+    <Content Include="TerminosCondiciones.aspx" />
     <Content Include="img\Cieluz.png" />
     <Content Include="RegistrarCliente.aspx" />
     <Content Include="img\.DS_Store" />
@@ -376,6 +380,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="GuiaTallas.aspx.cs">
+      <DependentUpon>GuiaTallas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuiaTallas.aspx.designer.cs">
+      <DependentUpon>GuiaTallas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TerminosCondiciones.aspx.cs">
+      <DependentUpon>TerminosCondiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TerminosCondiciones.aspx.designer.cs">
+      <DependentUpon>TerminosCondiciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarCliente.aspx.cs">
       <DependentUpon>RegistrarCliente.aspx</DependentUpon>
