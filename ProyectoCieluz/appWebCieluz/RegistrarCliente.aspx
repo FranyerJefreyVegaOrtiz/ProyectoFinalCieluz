@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="RegistrarCliente.aspx.cs" Inherits="appWebCieluz.Formulario_web1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
 </asp:Content>
@@ -22,6 +23,7 @@
                             Ya Puedes Hacer Compras 
                             En Nuestra Pagina Web
                         </h1>
+                        <img class="img-fluid" src="img/check.jpg" alt="">
                     </div>
                 </div>
             </div>
