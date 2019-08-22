@@ -185,5 +185,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\servicioEscritorioCieluz\" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

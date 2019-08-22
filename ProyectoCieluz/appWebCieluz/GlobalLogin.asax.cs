@@ -10,10 +10,10 @@ namespace appWebCieluz
 {
     public class GlobalLogin : System.Web.HttpApplication
     {
-        ServicioWebCieluz.clCliente servi = new ServicioWebCieluz.clCliente();
         protected void Application_Start(object sender, EventArgs e)
         {
-
+            ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
+            Session["Correo"] = objCliente.Correo;
         }
 
         protected void Session_Start(object sender, EventArgs e)

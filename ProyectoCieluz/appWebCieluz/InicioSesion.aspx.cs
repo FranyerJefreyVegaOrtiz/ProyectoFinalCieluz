@@ -24,7 +24,7 @@ namespace appWebCieluz
             if (tblLogin.Rows.Count > 0)
             {
                 Session["Correo"] = Correo;
-                Response.Redirect("index.html");
+                Response.Redirect("default.aspx");
             }
             else
             {

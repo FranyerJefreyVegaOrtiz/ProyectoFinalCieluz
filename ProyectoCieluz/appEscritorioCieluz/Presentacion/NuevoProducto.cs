@@ -124,33 +124,40 @@ namespace appEscritorioCieluz.Presentacion
             }
         }
 
-        private string pathimagen = "";
+        
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-            string destino = Path.Combine(Application.StartupPath, string.Format("~/img/", Path.GetFileName(pathimagen)));
+            string nombreArchivo = openFileDialog.FileName;
+            string ruta = "/~img/" + nombreArchivo;
+            //string destino = Path.Combine(Application.StartupPath, string.Format("../../img/", Path.GetFileName(pathimagen)));
             try
             {
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string imagen = openFileDialog.FileName;
-                    imgFoto.Image = Image.FromFile(imagen);
-                    
+                    imgFoto.Image = Image.FromFile(nombreArchivo);
+
                 }
-                pathimagen = openFileDialog.FileName;
-                txtFotoPro.Text = destino;
+               
+                Path.GetFileNameWithoutExtension(ruta);
+                imgFoto.ImageLocation = ruta;
+                txtFotoPro.Text = ruta;
+                File.Copy(nombreArchivo, ruta);
+
+                //pathimagen = openFileDialog.FileName;
+                //txtFotoPro.Text = destino;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Elivo seleccionado no es un tipo de imagen válido");
+                MessageBox.Show("Elijio seleccionado no es un tipo de imagen válido" + ex);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string destino = Path.Combine(Application.StartupPath, string.Format("~/img/", Path.GetFileName(pathimagen)));
-
-            File.Copy(pathimagen, destino);
+            //string destino = Path.Combine(Application.StartupPath, string.Format("..\\..\\img", Path.GetFileName(pathimagen)));
+            //File.Copy(nombreArchivo, ruta);
+            //File.Copy(pathimagen, destino);
         }
     }
 }
