@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -40,7 +41,6 @@ namespace appEscritorioCieluz.Presentacion
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
-
             servicioEscritorioCieluz.clProducto objProducto = new servicioEscritorioCieluz.clProducto();
 
             objProducto.Nombre = txtNombrePro.Text;
@@ -122,6 +122,35 @@ namespace appEscritorioCieluz.Presentacion
             {
                 MessageBox.Show("No Creado");
             }
+        }
+
+        private string pathimagen = "";
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            string destino = Path.Combine(Application.StartupPath, string.Format("~/img/", Path.GetFileName(pathimagen)));
+            try
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imagen = openFileDialog.FileName;
+                    imgFoto.Image = Image.FromFile(imagen);
+                    
+                }
+                pathimagen = openFileDialog.FileName;
+                txtFotoPro.Text = destino;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Elivo seleccionado no es un tipo de imagen válido");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string destino = Path.Combine(Application.StartupPath, string.Format("~/img/", Path.GetFileName(pathimagen)));
+
+            File.Copy(pathimagen, destino);
         }
     }
 }
