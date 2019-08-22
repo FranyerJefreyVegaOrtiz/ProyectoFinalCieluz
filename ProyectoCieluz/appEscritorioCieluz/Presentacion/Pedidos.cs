@@ -21,5 +21,21 @@ namespace appEscritorioCieluz
         {
 
         }
+
+        servicioEscritorioCieluz.ServidorProyectoSoapClient miServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
+
+        public void mtdCargarDatos()
+        {
+            DataSet dsPedidos = new DataSet();
+            dsPedidos = miServicio.mtdListarPed();
+            DataTable tblPedido = dsPedidos.Tables["tblDatos"];
+            dgvPedidos.DataSource = tblPedido;
+            this.dgvPedidos.Columns["IdPedido"].Visible = false;
+        }
+
+        private void Pedidos_Load(object sender, EventArgs e)
+        {
+            mtdCargarDatos();
+        }
     }
 }

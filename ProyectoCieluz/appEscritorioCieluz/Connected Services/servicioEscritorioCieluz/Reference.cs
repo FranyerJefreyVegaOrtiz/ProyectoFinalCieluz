@@ -71,10 +71,24 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCli();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPed();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync();
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -246,7 +260,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -362,7 +376,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -594,6 +608,22 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync() {
             return base.Channel.mtdListarProAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCli() {
+            return base.Channel.mtdListarCli();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync() {
+            return base.Channel.mtdListarCliAsync();
+        }
+        
+        public System.Data.DataSet mtdListarPed() {
+            return base.Channel.mtdListarPed();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync() {
+            return base.Channel.mtdListarPedAsync();
         }
     }
 }

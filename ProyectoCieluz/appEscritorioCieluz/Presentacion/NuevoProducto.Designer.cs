@@ -91,7 +91,7 @@
             this.txtFotoPro.Location = new System.Drawing.Point(777, 460);
             this.txtFotoPro.Name = "txtFotoPro";
             this.txtFotoPro.Size = new System.Drawing.Size(190, 20);
-            this.txtFotoPro.TabIndex = 21;
+            this.txtFotoPro.TabIndex = 8;
             // 
             // cmbAdministrador
             // 
@@ -99,7 +99,7 @@
             this.cmbAdministrador.Location = new System.Drawing.Point(177, 376);
             this.cmbAdministrador.Name = "cmbAdministrador";
             this.cmbAdministrador.Size = new System.Drawing.Size(519, 21);
-            this.cmbAdministrador.TabIndex = 20;
+            this.cmbAdministrador.TabIndex = 6;
             // 
             // btnCerrar
             // 
@@ -168,7 +168,7 @@
             this.txtDescripcionPro.Multiline = true;
             this.txtDescripcionPro.Name = "txtDescripcionPro";
             this.txtDescripcionPro.Size = new System.Drawing.Size(519, 122);
-            this.txtDescripcionPro.TabIndex = 13;
+            this.txtDescripcionPro.TabIndex = 7;
             // 
             // txtPrecioPro
             // 
@@ -177,7 +177,7 @@
             this.txtPrecioPro.Location = new System.Drawing.Point(177, 314);
             this.txtPrecioPro.Name = "txtPrecioPro";
             this.txtPrecioPro.Size = new System.Drawing.Size(519, 20);
-            this.txtPrecioPro.TabIndex = 12;
+            this.txtPrecioPro.TabIndex = 5;
             // 
             // txtDiseñoPro
             // 
@@ -186,7 +186,7 @@
             this.txtDiseñoPro.Location = new System.Drawing.Point(177, 250);
             this.txtDiseñoPro.Name = "txtDiseñoPro";
             this.txtDiseñoPro.Size = new System.Drawing.Size(519, 20);
-            this.txtDiseñoPro.TabIndex = 11;
+            this.txtDiseñoPro.TabIndex = 4;
             // 
             // txtColorPro
             // 
@@ -195,7 +195,7 @@
             this.txtColorPro.Location = new System.Drawing.Point(177, 182);
             this.txtColorPro.Name = "txtColorPro";
             this.txtColorPro.Size = new System.Drawing.Size(519, 20);
-            this.txtColorPro.TabIndex = 10;
+            this.txtColorPro.TabIndex = 3;
             // 
             // txtCodigoPro
             // 
@@ -204,7 +204,7 @@
             this.txtCodigoPro.Location = new System.Drawing.Point(177, 123);
             this.txtCodigoPro.Name = "txtCodigoPro";
             this.txtCodigoPro.Size = new System.Drawing.Size(519, 20);
-            this.txtCodigoPro.TabIndex = 9;
+            this.txtCodigoPro.TabIndex = 2;
             // 
             // txtNombrePro
             // 
@@ -213,7 +213,7 @@
             this.txtNombrePro.Location = new System.Drawing.Point(177, 58);
             this.txtNombrePro.Name = "txtNombrePro";
             this.txtNombrePro.Size = new System.Drawing.Size(519, 20);
-            this.txtNombrePro.TabIndex = 8;
+            this.txtNombrePro.TabIndex = 1;
             // 
             // label8
             // 

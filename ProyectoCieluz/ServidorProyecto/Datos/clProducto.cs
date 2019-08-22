@@ -39,7 +39,7 @@ namespace ServidorProyecto.Datos
 
         public int mtdEditar(clProducto objPr)
         {
-            string consulta = "Update Producto Set Nombre = '"+objPr.Nombre+ "', Precio = '" + objPr.Precio + "', Color = '" + objPr.Color + "', Diseño = '" + objPr.Diseño + "', Descripcion = '" + objPr.Descripcion + "'";
+            string consulta = "Update Producto Set Nombre = '"+objPr.Nombre+ "', Precio = '" + objPr.Precio + "', Color = '" + objPr.Color + "', Diseño = '" + objPr.Diseño + "', Descripcion = '" + objPr.Descripcion + "' where Codigo = '"+objPr.Codigo+"'";
             clConexion objConexion = new clConexion();
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;

@@ -387,10 +387,9 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.panelContenedor.Controls.Add(this.pictureBox1);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(220, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(220, 46);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1080, 650);
+            this.panelContenedor.Size = new System.Drawing.Size(1080, 592);
             this.panelContenedor.TabIndex = 2;
             // 
             // pictureBox1

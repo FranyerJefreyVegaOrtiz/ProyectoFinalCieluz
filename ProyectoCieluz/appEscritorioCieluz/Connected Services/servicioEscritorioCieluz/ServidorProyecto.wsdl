@@ -174,6 +174,40 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarCli">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCliResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCliResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarPed">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdRegistrarClientesSoapIn">
@@ -224,6 +258,18 @@
   <wsdl:message name="mtdListarProSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarProResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdListarCliSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCli" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCliSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCliResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPed" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPedResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServidorProyectoSoap">
     <wsdl:operation name="mtdRegistrarClientes">
       <wsdl:input message="tns:mtdRegistrarClientesSoapIn" />
@@ -256,6 +302,14 @@
     <wsdl:operation name="mtdListarPro">
       <wsdl:input message="tns:mtdListarProSoapIn" />
       <wsdl:output message="tns:mtdListarProSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCli">
+      <wsdl:input message="tns:mtdListarCliSoapIn" />
+      <wsdl:output message="tns:mtdListarCliSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPed">
+      <wsdl:input message="tns:mtdListarPedSoapIn" />
+      <wsdl:output message="tns:mtdListarPedSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServidorProyectoSoap" type="tns:ServidorProyectoSoap">
@@ -332,6 +386,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarCli">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCli" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPed">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServidorProyectoSoap12" type="tns:ServidorProyectoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -400,6 +472,24 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPro">
       <soap12:operation soapAction="http://tempuri.org/mtdListarPro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCli">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCli" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPed">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPed" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

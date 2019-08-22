@@ -21,16 +21,16 @@ namespace appEscritorioCieluz
 
         public void mtdCargarDatos()
         {
-            //DataSet dsProducto = new DataSet();
-            //dsProducto = miServicio.mtdListarPro();
-            //DataTable tblAdmin = dsProducto.Tables["tblDatos"];
-            //dgvProductos.DataSource = tblAdmin;
-            //this.dgvProductos.Columns["IdProducto"].Visible = false;
+            DataSet dsCliente = new DataSet();
+            dsCliente = miServicio.mtdListarCli();
+            DataTable tblCliente = dsCliente.Tables["tblDatos"];
+            dgvCliente.DataSource = tblCliente;
+            this.dgvCliente.Columns["IdCliente"].Visible = false;
         }
 
         private void Cliente_Load(object sender, EventArgs e)
         {
-
+            mtdCargarDatos();
         }
     }
 }
