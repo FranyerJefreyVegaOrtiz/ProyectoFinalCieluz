@@ -19,7 +19,18 @@ namespace appEscritorioCieluz
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void btnSlide_Click_1(object sender, EventArgs e)
-        {
+        { 
+            //----Con efecto
+            /*if (MenuVertical.Width == 220)
+            {
+                this.tmContraerMenu.Start();
+            }
+            else if (MenuVertical.Width == 55)
+            {
+                this.tmExpandirMenu.Start();
+            }*/
+
+            //----Sin efecto
             if (MenuVertical.Width == 220)
             {
                 MenuVertical.Width = 55;
@@ -85,7 +96,10 @@ namespace appEscritorioCieluz
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("¿Esta seguro de cerrar?", "Alerta!!", MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+            {
+                Application.Exit();
+            }
         }
 
         int LX, LY;
@@ -107,6 +121,28 @@ namespace appEscritorioCieluz
             this.Location = new Point(LX,LY);
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
+        }
+
+        private void tmContraerMenu_Tick(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width <= 55)
+                this.tmContraerMenu.Stop();
+            else
+                MenuVertical.Width = MenuVertical.Width - 5;
+        }
+
+        private void tmExpandirMenu_Tick(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width >= 220)
+                this.tmExpandirMenu.Stop();
+            else
+                MenuVertical.Width = MenuVertical.Width + 5;
+        }
+
+        private void tmFechaHora_Tick(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
