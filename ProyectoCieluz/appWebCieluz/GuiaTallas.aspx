@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
-    <h3 align="center"> GUÍA DE TALLAS </h3>
+  
 
     <div>
         <img src="img/GUIACALZADOMUJER.png" />
