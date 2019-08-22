@@ -51,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.SuspendLayout();
@@ -303,6 +304,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,5 +348,6 @@
         private System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.ComboBox cmbAdministrador;
         public System.Windows.Forms.TextBox txtFotoPro;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
