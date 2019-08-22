@@ -106,6 +106,10 @@
     <Content Include="img\error.jpg" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="GuiaTallas.aspx" />
+    <Content Include="img\001-facebook.png" />
+    <Content Include="img\002-instagram.png" />
+    <Content Include="img\003-pinterest.png" />
+    <Content Include="img\004-twitter.png" />
     <Content Include="img\GUIACALZADOMUJER.png" />
     <Content Include="img\GUIACALZADONI.png" />
     <Content Include="TerminosCondiciones.aspx" />
