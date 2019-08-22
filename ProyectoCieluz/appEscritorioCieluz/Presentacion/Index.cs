@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using appEscritorioCieluz.Presentacion;
+using System.Drawing;
 
 namespace appEscritorioCieluz
 {
@@ -87,16 +88,23 @@ namespace appEscritorioCieluz
             Application.Exit();
         }
 
+        int LX, LY;
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+            LX = this.Location.X;
+            LY = this.Location.Y;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            //this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(1300, 650);
+            this.Location = new Point(LX,LY);
             btnRestaurar.Visible = false;
             btnMaximizar.Visible = true;
         }

@@ -31,14 +31,14 @@ namespace appEscritorioCieluz.Presentacion
             NuevoProducto frmNewPro = new NuevoProducto();
             if (dgvProductos.SelectedRows.Count > 0)
             {
-                frmNewPro.txtNombrePro.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
-                frmNewPro.txtCodigoPro.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-                frmNewPro.txtFotoPro.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
-                frmNewPro.txtPrecioPro.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
-                frmNewPro.txtColorPro.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
-                frmNewPro.txtDiseñoPro.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
-                frmNewPro.txtDescripcionPro.Text = dgvProductos.CurrentRow.Cells[6].Value.ToString();
-                frmNewPro.cmbAdministrador.SelectedValue = dgvProductos.CurrentRow.Cells[7].Value.ToString();
+                frmNewPro.txtNombrePro.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
+                frmNewPro.txtCodigoPro.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
+                frmNewPro.txtColorPro.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
+                frmNewPro.txtDiseñoPro.Text = dgvProductos.CurrentRow.Cells[6].Value.ToString();
+                frmNewPro.txtPrecioPro.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
+                frmNewPro.cmbAdministrador.Text = dgvProductos.CurrentRow.Cells[8].Value.ToString();
+                frmNewPro.txtDescripcionPro.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();
+                frmNewPro.txtFotoPro.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
                 frmNewPro.ShowDialog();
             }
             else
@@ -51,8 +51,8 @@ namespace appEscritorioCieluz.Presentacion
         {
             DataSet dsProducto = new DataSet();
             dsProducto = miServicio.mtdListarPro();
-            DataTable tblAdmin = dsProducto.Tables["tblDatos"];
-            dgvProductos.DataSource = tblAdmin;
+            DataTable tblProductos = dsProducto.Tables["tblDatos"];
+            dgvProductos.DataSource = tblProductos;
             this.dgvProductos.Columns["IdProducto"].Visible = false;
         }
 

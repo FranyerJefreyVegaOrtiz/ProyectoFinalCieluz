@@ -100,10 +100,10 @@ namespace ServidorProyecto
         [WebMethod]
         public DataSet mtdListarPed()
         {
-            DataSet dsProducto = new DataSet();
-            clProducto objPro = new clProducto();
-            dsProducto = objPro.mtdListar();
-            return dsProducto;
+            DataSet dsPedidos = new DataSet();
+            clPedido objPro = new clPedido();
+            dsPedidos = objPro.mtdListar();
+            return dsPedidos;
         }
     }
 }
