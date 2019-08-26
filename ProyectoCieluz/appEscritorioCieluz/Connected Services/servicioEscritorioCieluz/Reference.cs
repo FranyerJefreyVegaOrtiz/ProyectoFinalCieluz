@@ -25,10 +25,10 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarClientes();
+        System.Data.DataSet mtdListarClientes(string Correo, string Clave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(string Correo, string Clave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -554,12 +554,12 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdRegistrarClientesAsync(ObjCliente);
         }
         
-        public System.Data.DataSet mtdListarClientes() {
-            return base.Channel.mtdListarClientes();
+        public System.Data.DataSet mtdListarClientes(string Correo, string Clave) {
+            return base.Channel.mtdListarClientes(Correo, Clave);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync() {
-            return base.Channel.mtdListarClientesAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(string Correo, string Clave) {
+            return base.Channel.mtdListarClientesAsync(Correo, Clave);
         }
         
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {
