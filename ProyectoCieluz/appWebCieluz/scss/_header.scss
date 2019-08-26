@@ -34,7 +34,7 @@
             font-size: 18px;
             line-height: 80px;
             display: inline-block;
-            color: #000000;
+            color: black;
             min-width: 70px;
             min-height: 80px;
             text-align: center;
@@ -196,7 +196,7 @@
             transform: translateY(70px);
             transition: transform 500ms ease, background 500ms ease;
             -webkit-transition: transform 500ms ease, background 500ms ease;
-            box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 16px 0px #ffffff;
             .navbar {
                 .nav {
                     .nav-item {
