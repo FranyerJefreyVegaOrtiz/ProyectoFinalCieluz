@@ -172,7 +172,7 @@ a {
   z-index: 99;
   transition: background 0.4s, all 0.3s linear; }
   .header_area .main_menu {
-    background: #000000; }
+    background: #fff; }
   .header_area .navbar {
     padding: 0px;
     border: 0px;
@@ -322,7 +322,7 @@ a {
     transform: translateY(70px);
     transition: transform 500ms ease, background 500ms ease;
     -webkit-transition: transform 500ms ease, background 500ms ease;
-    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 3px 16px 0px #fff; }
     .header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
       line-height: 70px; }
 
