@@ -29,11 +29,11 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
-        public DataSet mtdListarClientes()
+        public DataSet mtdListarClientes(string Correo, string Clave)
         {
             DataSet dsCliente = new DataSet();
             clCliente objCliente = new clCliente();
-            dsCliente = objCliente.mtdListar();
+            dsCliente = objCliente.mtdListar2(Correo, Clave);
             return dsCliente;
         }
 

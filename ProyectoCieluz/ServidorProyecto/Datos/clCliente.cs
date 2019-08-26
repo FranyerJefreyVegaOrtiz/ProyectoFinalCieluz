@@ -52,5 +52,13 @@ namespace ServidorProyecto.Datos
             int resul = objconexion.mtdConectado(consulta);
             return resul;
         }
+        public DataSet mtdListar2(string Correo, string Clave)
+        {
+            string consulta = "Select * From Cliente Where Correo='"+  Correo +"'and Clave='"+ Clave +"'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
     }
 }

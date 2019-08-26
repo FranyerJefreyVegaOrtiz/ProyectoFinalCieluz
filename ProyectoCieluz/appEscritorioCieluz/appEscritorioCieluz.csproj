@@ -188,5 +188,11 @@
   <ItemGroup>
     <Folder Include="img\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServidorProyecto\ServidorProyecto.csproj">
+      <Project>{c4a066a3-8114-430b-b487-eb593ab669a9}</Project>
+      <Name>ServidorProyecto</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

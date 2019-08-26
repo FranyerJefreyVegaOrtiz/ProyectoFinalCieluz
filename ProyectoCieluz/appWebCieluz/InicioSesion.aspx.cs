@@ -14,8 +14,8 @@ namespace appWebCieluz
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Correo = "";
-            string Clave = "";
+            string Correo = Request.Form["Correo"];
+            string Clave = Request.Form["Clave"];
             ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
             DataSet dsCliente = new DataSet();
             dsCliente = miservice.mtdListarClientes(Correo, Clave);

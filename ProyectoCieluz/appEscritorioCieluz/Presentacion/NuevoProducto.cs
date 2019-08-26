@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ServidorProyecto;
 
 
 namespace appEscritorioCieluz.Presentacion
@@ -129,7 +130,9 @@ namespace appEscritorioCieluz.Presentacion
         private void btnExaminar_Click(object sender, EventArgs e)
         {
             string nombreArchivo = openFileDialog.FileName;
-            string ruta = "/~img/" + nombreArchivo;
+            string ruta = "../../img/" + nombreArchivo;
+            //string ruta2 = ServidorProyecto.Datos + "nombreArchivo";
+            
             //string destino = Path.Combine(Application.StartupPath, string.Format("../../img/", Path.GetFileName(pathimagen)));
             try
             {
@@ -139,7 +142,7 @@ namespace appEscritorioCieluz.Presentacion
 
                 }
                
-                Path.GetFileNameWithoutExtension(ruta);
+                Path.GetExtension(ruta);
                 imgFoto.ImageLocation = ruta;
                 txtFotoPro.Text = ruta;
                 File.Copy(nombreArchivo, ruta);
