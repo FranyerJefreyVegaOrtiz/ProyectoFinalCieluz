@@ -53,7 +53,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnArchivobytes = new System.Windows.Forms.Button();
+            this.btnBytesarchivo = new System.Windows.Forms.Button();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +63,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.txtResultado);
+            this.panel1.Controls.Add(this.btnBytesarchivo);
+            this.panel1.Controls.Add(this.btnArchivobytes);
             this.panel1.Controls.Add(this.btnExaminar);
             this.panel1.Controls.Add(this.txtFotoPro);
             this.panel1.Controls.Add(this.cmbAdministrador);
@@ -135,7 +139,7 @@
             // 
             this.imgFoto.Location = new System.Drawing.Point(748, 94);
             this.imgFoto.Name = "imgFoto";
-            this.imgFoto.Size = new System.Drawing.Size(307, 293);
+            this.imgFoto.Size = new System.Drawing.Size(307, 125);
             this.imgFoto.TabIndex = 18;
             this.imgFoto.TabStop = false;
             // 
@@ -322,15 +326,33 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnArchivobytes
             // 
-            this.button1.Location = new System.Drawing.Point(974, 478);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnArchivobytes.Location = new System.Drawing.Point(777, 478);
+            this.btnArchivobytes.Name = "btnArchivobytes";
+            this.btnArchivobytes.Size = new System.Drawing.Size(110, 23);
+            this.btnArchivobytes.TabIndex = 21;
+            this.btnArchivobytes.Text = "Archivo - Bytes";
+            this.btnArchivobytes.UseVisualStyleBackColor = true;
+            this.btnArchivobytes.Click += new System.EventHandler(this.btnArchivobytes_Click);
+            // 
+            // btnBytesarchivo
+            // 
+            this.btnBytesarchivo.Location = new System.Drawing.Point(941, 478);
+            this.btnBytesarchivo.Name = "btnBytesarchivo";
+            this.btnBytesarchivo.Size = new System.Drawing.Size(108, 23);
+            this.btnBytesarchivo.TabIndex = 22;
+            this.btnBytesarchivo.Text = "Bytes - Archivo";
+            this.btnBytesarchivo.UseVisualStyleBackColor = true;
+            this.btnBytesarchivo.Click += new System.EventHandler(this.btnBytesarchivo_Click);
+            // 
+            // txtResultado
+            // 
+            this.txtResultado.Location = new System.Drawing.Point(777, 256);
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(272, 153);
+            this.txtResultado.TabIndex = 23;
             // 
             // NuevoProducto
             // 
@@ -374,6 +396,8 @@
         public System.Windows.Forms.TextBox txtFotoPro;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBytesarchivo;
+        private System.Windows.Forms.Button btnArchivobytes;
+        private System.Windows.Forms.TextBox txtResultado;
     }
 }

@@ -46,7 +46,7 @@ namespace appEscritorioCieluz.Presentacion
 
             objProducto.Nombre = txtNombrePro.Text;
             objProducto.Codigo = txtCodigoPro.Text;
-            objProducto.Foto = txtFotoPro.Text;
+            objProducto.Foto = txtResultado.Text;
             objProducto.Color = txtColorPro.Text;
             objProducto.Diseño = txtDiseñoPro.Text;
             objProducto.Precio = txtPrecioPro.Text;
@@ -129,38 +129,32 @@ namespace appEscritorioCieluz.Presentacion
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-            string nombreArchivo = openFileDialog.FileName;
-            string ruta = "../../img/" + nombreArchivo;
-            //string ruta2 = ServidorProyecto.Datos + "nombreArchivo";
-            
-            //string destino = Path.Combine(Application.StartupPath, string.Format("../../img/", Path.GetFileName(pathimagen)));
-            try
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    imgFoto.Image = Image.FromFile(nombreArchivo);
+                string imagen = openFileDialog.FileName;
+                imgFoto.Image = Image.FromFile(imagen);
 
-                }
-               
-                Path.GetExtension(ruta);
-                imgFoto.ImageLocation = ruta;
-                txtFotoPro.Text = ruta;
-                File.Copy(nombreArchivo, ruta);
-
-                //pathimagen = openFileDialog.FileName;
-                //txtFotoPro.Text = destino;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Elijio seleccionado no es un tipo de imagen válido" + ex);
+                txtFotoPro.Text = openFileDialog.FileName;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnArchivobytes_Click(object sender, EventArgs e)
         {
-            //string destino = Path.Combine(Application.StartupPath, string.Format("..\\..\\img", Path.GetFileName(pathimagen)));
-            //File.Copy(nombreArchivo, ruta);
-            //File.Copy(pathimagen, destino);
+            string ruta = txtFotoPro.Text;
+
+            byte[] archivoBytes = File.ReadAllBytes(ruta);
+
+            string archivoBase64 = Convert.ToBase64String(archivoBytes);
+
+            txtResultado.Text = archivoBase64;
+        }
+
+        private void btnBytesarchivo_Click(object sender, EventArgs e)
+        {
+            string archivoBase64 = txtResultado.Text;
+            byte[] archivoByte = Convert.FromBase64String(archivoBase64);
+            File.WriteAllBytes(txtFotoPro.Text, archivoByte);
+            MessageBox.Show("Archivo creado correctamente");
         }
     }
 }
