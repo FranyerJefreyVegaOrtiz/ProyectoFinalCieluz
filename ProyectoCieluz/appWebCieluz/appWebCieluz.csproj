@@ -104,6 +104,7 @@
     <Content Include="default.aspx" />
     <Content Include="GlobalLogin.asax" />
     <Content Include="img\banner\banner-bg.jpg" />
+    <Content Include="img\breadcrumb\checkout-bg.jpg" />
     <Content Include="img\CieluzBlanco.png" />
     <Content Include="img\error.jpg" />
     <Content Include="InicioSesion.aspx" />
@@ -269,7 +270,6 @@
     <Content Include="img\blog\post-img1.jpg" />
     <Content Include="img\blog\post-img2.jpg" />
     <Content Include="img\blog\prev.jpg" />
-    <Content Include="img\breadcrumb\checkout-bg.jpg" />
     <Content Include="img\clients-logo\c-logo-1.png" />
     <Content Include="img\clients-logo\c-logo-2.png" />
     <Content Include="img\clients-logo\c-logo-3.png" />
