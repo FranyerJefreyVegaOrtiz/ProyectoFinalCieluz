@@ -6,9 +6,9 @@
   
 
     <div>
-        <img src="img/GUIACALZADOMUJER.png" />
+        <img src="img/GUIA CALZADO MUJER.png" />
     </div>
       <div>
-        <img src="img/GUIACALZADONI.png" />
+        <img src="img/GUIA TALLA NIÑAS 2.png" />
     </div>
 </asp:Content>
