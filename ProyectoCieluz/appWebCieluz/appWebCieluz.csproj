@@ -103,6 +103,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="default.aspx" />
     <Content Include="GlobalLogin.asax" />
+    <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\CieluzBlanco.png" />
     <Content Include="img\error.jpg" />
     <Content Include="InicioSesion.aspx" />
@@ -234,7 +235,6 @@
     <Content Include="Fashiop-doc\syntax-highlighter\styles\shThemeRDark.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\banner\banner-2.jpg" />
-    <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\banner\banner.jpg" />
     <Content Include="img\banner\home-banner.jpg" />
     <Content Include="img\blog\add.jpg" />
