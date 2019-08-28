@@ -104,6 +104,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="default.aspx" />
     <Content Include="Formulario web1.aspx" />
+    <Content Include="QuienesSomos .aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="GlobalLogin.asax" />
     <Content Include="img\banner\banner-bg.jpg" />
@@ -411,6 +412,13 @@
     </Compile>
     <Compile Include="Formulario web1.aspx.designer.cs">
       <DependentUpon>Formulario web1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuienesSomos .aspx.cs">
+      <DependentUpon>QuienesSomos .aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuienesSomos .aspx.designer.cs">
+      <DependentUpon>QuienesSomos .aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
