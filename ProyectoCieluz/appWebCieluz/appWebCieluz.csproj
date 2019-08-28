@@ -102,6 +102,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="default.aspx" />
+    <Content Include="Formulario web1.aspx" />
     <Content Include="GlobalLogin.asax" />
     <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\breadcrumb\checkout-bg.jpg" />
@@ -398,6 +399,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario web1.aspx.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formulario web1.aspx.designer.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
     </Compile>
     <Compile Include="GlobalLogin.asax.cs">
       <DependentUpon>GlobalLogin.asax</DependentUpon>
