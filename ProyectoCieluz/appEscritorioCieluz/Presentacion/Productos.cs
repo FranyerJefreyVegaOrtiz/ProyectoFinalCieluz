@@ -50,7 +50,7 @@ namespace appEscritorioCieluz.Presentacion
         public void mtdCargarDatos()
         {
             DataSet dsProducto = new DataSet();
-            dsProducto = miServicio.mtdListarPro();
+            dsProducto = miServicio.mtdListarProEscritorio();
             DataTable tblProductos = dsProducto.Tables["tblDatos"];
             dgvProductos.DataSource = tblProductos;
             this.dgvProductos.Columns["IdProducto"].Visible = false;

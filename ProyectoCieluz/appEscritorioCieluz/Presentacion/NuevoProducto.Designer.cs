@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.txtFotoPro = new System.Windows.Forms.TextBox();
             this.cmbAdministrador = new System.Windows.Forms.ComboBox();
@@ -53,9 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.btnArchivobytes = new System.Windows.Forms.Button();
-            this.btnBytesarchivo = new System.Windows.Forms.Button();
-            this.txtResultado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +62,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.panel1.Controls.Add(this.txtResultado);
-            this.panel1.Controls.Add(this.btnBytesarchivo);
-            this.panel1.Controls.Add(this.btnArchivobytes);
             this.panel1.Controls.Add(this.btnExaminar);
             this.panel1.Controls.Add(this.txtFotoPro);
             this.panel1.Controls.Add(this.cmbAdministrador);
@@ -94,6 +90,15 @@
             this.panel1.Size = new System.Drawing.Size(1080, 541);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // txtResultado
+            // 
+            this.txtResultado.Location = new System.Drawing.Point(756, 84);
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(282, 325);
+            this.txtResultado.TabIndex = 23;
+            this.txtResultado.Visible = false;
             // 
             // btnExaminar
             // 
@@ -137,9 +142,10 @@
             // 
             // imgFoto
             // 
-            this.imgFoto.Location = new System.Drawing.Point(748, 94);
+            this.imgFoto.Location = new System.Drawing.Point(730, 84);
             this.imgFoto.Name = "imgFoto";
-            this.imgFoto.Size = new System.Drawing.Size(307, 125);
+            this.imgFoto.Size = new System.Drawing.Size(325, 325);
+            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFoto.TabIndex = 18;
             this.imgFoto.TabStop = false;
             // 
@@ -326,34 +332,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // btnArchivobytes
-            // 
-            this.btnArchivobytes.Location = new System.Drawing.Point(777, 478);
-            this.btnArchivobytes.Name = "btnArchivobytes";
-            this.btnArchivobytes.Size = new System.Drawing.Size(110, 23);
-            this.btnArchivobytes.TabIndex = 21;
-            this.btnArchivobytes.Text = "Archivo - Bytes";
-            this.btnArchivobytes.UseVisualStyleBackColor = true;
-            this.btnArchivobytes.Click += new System.EventHandler(this.btnArchivobytes_Click);
-            // 
-            // btnBytesarchivo
-            // 
-            this.btnBytesarchivo.Location = new System.Drawing.Point(941, 478);
-            this.btnBytesarchivo.Name = "btnBytesarchivo";
-            this.btnBytesarchivo.Size = new System.Drawing.Size(108, 23);
-            this.btnBytesarchivo.TabIndex = 22;
-            this.btnBytesarchivo.Text = "Bytes - Archivo";
-            this.btnBytesarchivo.UseVisualStyleBackColor = true;
-            this.btnBytesarchivo.Click += new System.EventHandler(this.btnBytesarchivo_Click);
-            // 
-            // txtResultado
-            // 
-            this.txtResultado.Location = new System.Drawing.Point(777, 256);
-            this.txtResultado.Multiline = true;
-            this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(272, 153);
-            this.txtResultado.TabIndex = 23;
-            // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,8 +374,6 @@
         public System.Windows.Forms.TextBox txtFotoPro;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.Button btnBytesarchivo;
-        private System.Windows.Forms.Button btnArchivobytes;
         private System.Windows.Forms.TextBox txtResultado;
     }
 }

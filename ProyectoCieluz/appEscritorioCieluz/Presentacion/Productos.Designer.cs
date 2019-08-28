@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.btnEliminarProducto);
             this.panel1.Controls.Add(this.btnEditarProducto);
             this.panel1.Controls.Add(this.btnNuevoProducto);
@@ -54,19 +52,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(800, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 610);
+            this.panel1.Size = new System.Drawing.Size(280, 541);
             this.panel1.TabIndex = 0;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(66, 553);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(165, 45);
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
             // 
             // btnEliminarProducto
             // 
@@ -119,7 +106,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 610);
+            this.panel2.Size = new System.Drawing.Size(800, 541);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -139,7 +126,7 @@
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(34, 72);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(729, 505);
+            this.dgvProductos.Size = new System.Drawing.Size(729, 440);
             this.dgvProductos.TabIndex = 0;
             // 
             // Productos
@@ -147,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1080, 610);
+            this.ClientSize = new System.Drawing.Size(1080, 541);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -170,7 +157,6 @@
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.Button btnEditarProducto;
         private System.Windows.Forms.Button btnNuevoProducto;
