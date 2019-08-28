@@ -67,10 +67,17 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarPro();
+        System.Data.DataSet mtdListarPro(string Nombre, string Precio);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync();
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarProEscritorio();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -602,12 +609,20 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdListarAdminAsync(ObjAdmin);
         }
         
-        public System.Data.DataSet mtdListarPro() {
-            return base.Channel.mtdListarPro();
+        public System.Data.DataSet mtdListarPro(string Nombre, string Precio) {
+            return base.Channel.mtdListarPro(Nombre, Precio);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync() {
-            return base.Channel.mtdListarProAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio) {
+            return base.Channel.mtdListarProAsync(Nombre, Precio);
+        }
+        
+        public System.Data.DataSet mtdListarProEscritorio() {
+            return base.Channel.mtdListarProEscritorio();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync() {
+            return base.Channel.mtdListarProEscritorioAsync();
         }
         
         public System.Data.DataSet mtdListarCli() {

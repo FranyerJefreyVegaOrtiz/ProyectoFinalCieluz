@@ -135,26 +135,34 @@ namespace appEscritorioCieluz.Presentacion
                 imgFoto.Image = Image.FromFile(imagen);
 
                 txtFotoPro.Text = openFileDialog.FileName;
+
+                string ruta = txtFotoPro.Text;
+
+                byte[] archivoBytes = File.ReadAllBytes(ruta);
+
+                string archivoBase64 = Convert.ToBase64String(archivoBytes);
+
+                txtResultado.Text = archivoBase64;
             }
         }
 
-        private void btnArchivobytes_Click(object sender, EventArgs e)
-        {
-            string ruta = txtFotoPro.Text;
+        //private void btnArchivobytes_Click(object sender, EventArgs e)
+        //{
+        //    string ruta = txtFotoPro.Text;
 
-            byte[] archivoBytes = File.ReadAllBytes(ruta);
+        //    byte[] archivoBytes = File.ReadAllBytes(ruta);
 
-            string archivoBase64 = Convert.ToBase64String(archivoBytes);
+        //    string archivoBase64 = Convert.ToBase64String(archivoBytes);
 
-            txtResultado.Text = archivoBase64;
-        }
+        //    txtResultado.Text = archivoBase64;
+        //}
 
-        private void btnBytesarchivo_Click(object sender, EventArgs e)
-        {
-            string archivoBase64 = txtResultado.Text;
-            byte[] archivoByte = Convert.FromBase64String(archivoBase64);
-            File.WriteAllBytes(txtFotoPro.Text, archivoByte);
-            MessageBox.Show("Archivo creado correctamente");
-        }
+        //private void btnBytesarchivo_Click(object sender, EventArgs e)
+        //{
+        //    string archivoBase64 = txtResultado.Text;
+        //    byte[] archivoByte = Convert.FromBase64String(archivoBase64);
+        //    File.WriteAllBytes(txtFotoPro.Text, archivoByte);
+        //    MessageBox.Show("Archivo creado correctamente");
+        //}
     }
 }
