@@ -19,9 +19,9 @@ namespace ServidorProyecto.Datos
         public string Descripcion {get; set;}
         public int idAdministrador {get; set;}
 
-        public DataSet mtdListar()
+        public DataSet mtdListar(string Nombre, string Precio)
         {
-            string consulta = "Select * From Producto;";
+            string consulta = "Select * From Producto Where Nombre='"+ Nombre +"' and Precio='"+ Precio +"'";
             DataSet dsProducto = new DataSet();
             clConexion objConexion = new clConexion();
             dsProducto = objConexion.mtdDesconectado(consulta);
