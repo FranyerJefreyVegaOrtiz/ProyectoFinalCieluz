@@ -184,6 +184,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarPro1">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPro1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPro1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdListarCli">
         <s:complexType />
       </s:element>
@@ -268,6 +285,12 @@
   <wsdl:message name="mtdListarProSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarProResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdListarPro1SoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPro1" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPro1SoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPro1Response" />
+  </wsdl:message>
   <wsdl:message name="mtdListarCliSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarCli" />
   </wsdl:message>
@@ -312,6 +335,10 @@
     <wsdl:operation name="mtdListarPro">
       <wsdl:input message="tns:mtdListarProSoapIn" />
       <wsdl:output message="tns:mtdListarProSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPro1">
+      <wsdl:input message="tns:mtdListarPro1SoapIn" />
+      <wsdl:output message="tns:mtdListarPro1SoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdListarCli">
       <wsdl:input message="tns:mtdListarCliSoapIn" />
@@ -389,6 +416,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPro">
       <soap:operation soapAction="http://tempuri.org/mtdListarPro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPro1">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPro1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -482,6 +518,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPro">
       <soap12:operation soapAction="http://tempuri.org/mtdListarPro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPro1">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPro1" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

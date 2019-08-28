@@ -93,6 +93,7 @@
     <Content Include="Fashiop-doc\fonts\fontawesome-webfont.woff" />
     <Content Include="Fashiop-doc\fonts\FontAwesome.otf" />
     <Content Include="Fashiop-doc\fonts\_DS_Store" />
+    <Content Include="Fashiop-doc\img\logo.png" />
     <Content Include="Fashiop-doc\js\_DS_Store" />
     <Content Include="Fashiop-doc\syntax-highlighter\_DS_Store" />
     <Content Include="Fashiop-doc\_DS_Store" />
@@ -186,7 +187,6 @@
     <Content Include="Fashiop-doc\css\main.css" />
     <Content Include="Fashiop-doc\css\normalize.min.css" />
     <Content Include="Fashiop-doc\fonts\fontawesome-webfont.svg" />
-    <Content Include="Fashiop-doc\img\logo.png" />
     <Content Include="Fashiop-doc\index.html" />
     <Content Include="Fashiop-doc\js\custom.js" />
     <Content Include="Fashiop-doc\js\jquery-1.11.0.min.js" />

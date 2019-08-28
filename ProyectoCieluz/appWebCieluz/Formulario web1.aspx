@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <form id="form1" runat="server">
     <!--================Hot Deals Area =================-->
 	<section class="hot_deals_area section_gap">
 		<div class="container-fluid">
@@ -48,8 +49,6 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
 					<div id="mc_embed_signup">
-						<form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
-						 method="get" class="subscription relative">
 							<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
 							 required="">
 							<!-- <div style="position: absolute; left: -5000px;">
@@ -57,7 +56,6 @@
 							</div> -->
 							<button type="submit" class="newsl-btn">Get Started</button>
 							<div class="info"></div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -360,7 +358,6 @@
                         <div class="col-lg-6">
                             <div class="review_box">
                                 <h4>Post a comment</h4>
-                                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
@@ -384,7 +381,6 @@
                                     <div class="col-md-12 text-right">
                                         <button type="submit" value="submit" class="btn submit_btn">Submit Now</button>
                                     </div>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -550,7 +546,6 @@
                                     </li>
                                 </ul>
                                 <p>Outstanding</p>
-                                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
@@ -574,13 +569,19 @@
                                     <div class="col-md-12 text-right">
                                         <button type="submit" value="submit" class="btn submit_btn">Submit Now</button>
                                     </div>
-                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div style="height: 153px">
+            <asp:GridView ID="dgvProdu" runat="server">
+            </asp:GridView>
+        </div>
     </section>
-    <!--================End Product Description Area =================-->s
+    <!--================End Product Description Area =================--> 
+
+    </form>
+
 </asp:Content>

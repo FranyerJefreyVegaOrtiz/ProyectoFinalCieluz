@@ -89,6 +89,15 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
+        public DataSet mtdListarPro1()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListar1();
+            return dsProducto;
+        }
+
+        [WebMethod]
         public DataSet mtdListarCli()
         {
             DataSet dsCliente = new DataSet();
