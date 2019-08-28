@@ -28,6 +28,15 @@ namespace ServidorProyecto.Datos
             return dsProducto;
         }
 
+        public DataSet mtdListarEscritorio()
+        {
+            string consulta = "Select * From Producto";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+
         public int mtdRegistrar(clProducto objPr)
         {
             string consulta = "Insert Into Producto (Nombre, Codigo, Foto, Precio, Color, Diseño, Descripcion, idAdministrador)" +
