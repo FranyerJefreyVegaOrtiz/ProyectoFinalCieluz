@@ -14,7 +14,7 @@ namespace ServidorProyecto.Datos
         {
             try
             {
-                objConexion = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=[DataDirectory]\bdCieluz.mdf;Integrated Security=True");
+                objConexion = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\bdCieluz.mdf;Integrated Security=True");
             }
             catch (Exception error)
             {

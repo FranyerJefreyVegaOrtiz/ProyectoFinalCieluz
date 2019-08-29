@@ -183,9 +183,6 @@
     <Content Include="Recursos\Cieluz.png" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\servicioEscritorioCieluz\" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +190,9 @@
       <Project>{c4a066a3-8114-430b-b487-eb593ab669a9}</Project>
       <Name>ServidorProyecto</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\servicioEscritorioCieluz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
