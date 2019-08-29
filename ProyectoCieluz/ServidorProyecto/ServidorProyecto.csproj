@@ -75,9 +75,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\bdCalzadoCie.mdf" />
-    <Content Include="App_Data\bdCalzadoCie_log.ldf">
-      <DependentUpon>bdCalzadoCie.mdf</DependentUpon>
+    <Content Include="App_Data\bdCieluz.mdf" />
+    <Content Include="App_Data\bdCieluz_log.ldf">
+      <DependentUpon>bdCieluz.mdf</DependentUpon>
     </Content>
     <Content Include="ServidorProyecto.asmx" />
     <Content Include="Web.config" />
