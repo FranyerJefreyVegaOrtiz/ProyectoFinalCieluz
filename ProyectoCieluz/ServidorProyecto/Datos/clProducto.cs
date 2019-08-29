@@ -61,5 +61,13 @@ namespace ServidorProyecto.Datos
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
         }
+        public DataSet mtdListar1()
+        {
+            string consulta = "Select * From Producto ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
     }
 }

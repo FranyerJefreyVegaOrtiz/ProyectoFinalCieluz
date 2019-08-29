@@ -72,6 +72,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro1", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPro1();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro1", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPro1Async();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdListarCli();
@@ -608,6 +615,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio) {
             return base.Channel.mtdListarProAsync(Nombre, Precio);
+        }
+        
+        public System.Data.DataSet mtdListarPro1() {
+            return base.Channel.mtdListarPro1();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPro1Async() {
+            return base.Channel.mtdListarPro1Async();
         }
         
         public System.Data.DataSet mtdListarCli() {
