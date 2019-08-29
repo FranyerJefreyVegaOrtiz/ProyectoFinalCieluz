@@ -184,13 +184,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="mtdListarPro1">
+      <s:element name="mtdListarProEscritorio">
         <s:complexType />
       </s:element>
-      <s:element name="mtdListarPro1Response">
+      <s:element name="mtdListarProEscritorioResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPro1Result">
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarProEscritorioResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -285,11 +285,11 @@
   <wsdl:message name="mtdListarProSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarProResponse" />
   </wsdl:message>
-  <wsdl:message name="mtdListarPro1SoapIn">
-    <wsdl:part name="parameters" element="tns:mtdListarPro1" />
+  <wsdl:message name="mtdListarProEscritorioSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarProEscritorio" />
   </wsdl:message>
-  <wsdl:message name="mtdListarPro1SoapOut">
-    <wsdl:part name="parameters" element="tns:mtdListarPro1Response" />
+  <wsdl:message name="mtdListarProEscritorioSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarProEscritorioResponse" />
   </wsdl:message>
   <wsdl:message name="mtdListarCliSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarCli" />
@@ -336,9 +336,9 @@
       <wsdl:input message="tns:mtdListarProSoapIn" />
       <wsdl:output message="tns:mtdListarProSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="mtdListarPro1">
-      <wsdl:input message="tns:mtdListarPro1SoapIn" />
-      <wsdl:output message="tns:mtdListarPro1SoapOut" />
+    <wsdl:operation name="mtdListarProEscritorio">
+      <wsdl:input message="tns:mtdListarProEscritorioSoapIn" />
+      <wsdl:output message="tns:mtdListarProEscritorioSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdListarCli">
       <wsdl:input message="tns:mtdListarCliSoapIn" />
@@ -423,8 +423,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mtdListarPro1">
-      <soap:operation soapAction="http://tempuri.org/mtdListarPro1" style="document" />
+    <wsdl:operation name="mtdListarProEscritorio">
+      <soap:operation soapAction="http://tempuri.org/mtdListarProEscritorio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -525,8 +525,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="mtdListarPro1">
-      <soap12:operation soapAction="http://tempuri.org/mtdListarPro1" style="document" />
+    <wsdl:operation name="mtdListarProEscritorio">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarProEscritorio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

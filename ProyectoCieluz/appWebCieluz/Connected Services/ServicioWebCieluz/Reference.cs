@@ -72,12 +72,12 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro1", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarPro1();
+        System.Data.DataSet mtdListarProEscritorio();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro1", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPro1Async();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -617,12 +617,12 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdListarProAsync(Nombre, Precio);
         }
         
-        public System.Data.DataSet mtdListarPro1() {
-            return base.Channel.mtdListarPro1();
+        public System.Data.DataSet mtdListarProEscritorio() {
+            return base.Channel.mtdListarProEscritorio();
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPro1Async() {
-            return base.Channel.mtdListarPro1Async();
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync() {
+            return base.Channel.mtdListarProEscritorioAsync();
         }
         
         public System.Data.DataSet mtdListarCli() {
