@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -66,10 +66,10 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.ForeColor = System.Drawing.Color.Black;
             this.txtContraseña.Location = new System.Drawing.Point(323, 122);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(347, 20);
@@ -82,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(486, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 30);
@@ -91,13 +91,13 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnIngresar.BackColor = System.Drawing.Color.Black;
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
             this.btnIngresar.Location = new System.Drawing.Point(330, 218);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(347, 40);
@@ -111,6 +111,7 @@
             this.linkContraseña.ActiveLinkColor = System.Drawing.Color.Blue;
             this.linkContraseña.AutoSize = true;
             this.linkContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkContraseña.ForeColor = System.Drawing.Color.Black;
             this.linkContraseña.LinkColor = System.Drawing.Color.DimGray;
             this.linkContraseña.Location = new System.Drawing.Point(437, 284);
             this.linkContraseña.Name = "linkContraseña";
@@ -122,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(327, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(343, 13);
@@ -132,7 +133,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(327, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(343, 13);
@@ -141,10 +142,10 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txtCorreo.BackColor = System.Drawing.Color.White;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCorreo.ForeColor = System.Drawing.Color.Black;
             this.txtCorreo.Location = new System.Drawing.Point(323, 66);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(347, 20);
@@ -161,7 +162,7 @@
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(734, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(743, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(46, 25);
             this.btnCerrar.TabIndex = 5;
@@ -172,8 +173,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(789, 330);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label3);
@@ -183,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Opacity = 0.9D;

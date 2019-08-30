@@ -136,6 +136,22 @@
         TkSuQmCC
 </value>
   </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAuSURBVDhPYxgF
+        gwH8//+fA4iVyMQcIAMuAzG54BLIgEsQNlngIuVeGAUDDhgYAOSs4kXro++yAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACnSURBVDhPpZNR
+        DsIwDEN3CRDc/yaMv+0LPjhOeEaN1C3NWsCS1zRxXC1VJzO7wwWep0FIC1c4a6NAeMKuiTRFKyxKnODj
+        szV7wWvRBlDbay9ZIZiQazc7SKQmxMfNDgrBBI41OxDUQ9Jax2M3hbA+VeifXANxyyC9nQ0Q/v4LCMLA
+        YBhskW9BIZ028bEJibTZQa5tQtBtdlCLJnz+fkyzAvjtc6bHbm83defE38eUVQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -316,16 +332,6 @@
         6ROPWneDSalD8X8by8GNx3IRe+3+MdF+DXVVDwfSlY2+Yf0xcUmjM4oqzBNAx6bZzeZCstKRbjzknjcj
         VaqmV4xo6Dxjjapta5jI/jkVz/45NbLdOmqDqv1WSKmL/Mo4zXAUqqbcozg5z1NX+RX7fpT62ar2qg43
         vHR73r/Dg78xThni7QAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH4wgQAAoiE+J2vAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB/SURBVFhH
-        7Za7DYAwDESTEcgksAMzwWR8FgFGIEwR7kjoaNEV8ZOe5M4n2ZbsDCOl5GEj0jPAClXMDBBzLeFkgA6O
-        AgfYlk0wjJrBKQTYiwwMcEAVOwPsuZawqUfQlE0wjJrBKageEtoxwAVVRAZYci1hesfw9TL/7tPcqBzn
-        bk3xY8sNV7TpAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="tmContraerMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
