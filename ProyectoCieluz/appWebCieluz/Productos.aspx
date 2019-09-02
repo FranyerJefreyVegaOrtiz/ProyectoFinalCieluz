@@ -53,8 +53,10 @@
                         <div class="col-md-4">
 
                             <img class="img-fluid" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
-                            <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
-                            <%#DataBinder.Eval(Container.DataItem,"Precio")%>
+                            <br />
+                             <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
+                            <br />
+                            <%#DataBinder.Eval(Container.DataItem,"Precio")%> 
                             <br />
                         </div>
                     </ItemTemplate>
