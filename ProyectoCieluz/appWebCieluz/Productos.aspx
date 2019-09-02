@@ -55,7 +55,7 @@
                             <br />
                              <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
                             <br />
-                            <%#DataBinder.Eval(Container.DataItem,"Precio")%> 
+                            <a>$</a><%#DataBinder.Eval(Container.DataItem,"Precio")%> 
                             <br />
                             <a class="main_btn" href="#">Ver Detalles</a>
                             <br />
