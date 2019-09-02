@@ -57,7 +57,7 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #eeeeee; }
+  color: black; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
@@ -659,7 +659,7 @@ a {
     font-size: 14px;
     font-weight: 500; }
     .causes_item .causes_bottom a + a {
-      border-color: #eeeeee;
+      border-color: black;
       background: #fff;
       font-size: 14px;
       color: #222222; }
@@ -916,13 +916,13 @@ a {
       font-size: 12px;
       line-height: 36px;
       padding: 0px 0px 0px 15px;
-      border: 1px solid #eeeeee;
+      border: 1px solid black;
       border-right: 0px; }
     .blog_right_sidebar .newsletter_widget .form-control {
       font-size: 12px;
       line-height: 24px;
       color: #cccccc;
-      border: 1px solid #eeeeee;
+      border: 1px solid black;
       border-left: 0px;
       border-radius: 0px; }
       .blog_right_sidebar .newsletter_widget .form-control.placeholder {
@@ -964,7 +964,7 @@ a {
   .blog_right_sidebar .br {
     width: 100%;
     height: 1px;
-    background: #eeeeee;
+    background: black;
     margin: 30px 0px; }
 
 .blog-pagination {
@@ -1229,7 +1229,7 @@ a {
 .reservation_form .form-group input {
   height: 40px;
   border-radius: 0px;
-  border: 1px solid #eeeeee;
+  border: 1px solid black;
   outline: none;
   box-shadow: none;
   padding: 0px 15px;
