@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,20 +15,27 @@ namespace appWebCieluz
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Nombre = Request.Form["Nombre"];
-            string Precio = Request.Form["Precio"];
-            ServicioWebCieluz.clProducto objCliente = new ServicioWebCieluz.clProducto();
-            DataSet dsProducto = new DataSet();
-            dsProducto = miservice.mtdListarPro(Nombre, Precio);
-            DataTable  tblPro = dsProducto.Tables["tblDatos"];
+            mtdCargarPto();
+            //string Nombre = Request.Form["Nombre"];
+            ////string Precio = Request.Form["Precio"];
 
-            if (tblPro.Rows.Count > 0)
-            {
-                clProducto prop = new clProducto();
-                prop.Nombre = Convert.ToString(tblPro.Rows[Nombre.Length]);
-                prop.Precio = Convert.ToString(tblPro.Rows[Precio.Length]);
+            //DataSet dsProductos = new DataSet();
+            //dsProductos = miservice.mtdListarProWeb();
+            //DataTable tblProductos = dsProductos.Tables["tblDatos"];
+            //txtNombre.DataSource = tblProductos;
+            //txtNombre.DataValueField = "Nombre";
+            //txtNombre.DataTextField = "IdProducto";
+            //txtNombre.DataBind();
+        }
+        protected void mtdCargarPto()
+        {
+            DataSet dsProucto = new DataSet();
+            dsProucto = miservice.mtdListarProWeb();
+            DataTable tblProducto = dsProucto.Tables["tblDatos"];
 
-            }
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
         }
     }
 }

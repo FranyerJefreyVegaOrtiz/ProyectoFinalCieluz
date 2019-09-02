@@ -13,11 +13,11 @@ namespace appWebCieluz
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-             DataSet dsprodu = new DataSet();
-            dsprodu = miservice.mtdListarPro1();
-            DataTable tblPro = dsprodu.Tables["tblDatos"];
-            dgvProdu.DataSource = dsprodu;
-            dgvProdu.DataBind();
+            // DataSet dsprodu = new DataSet();
+            //dsprodu = miservice.mtdListarPro1();
+            //DataTable tblPro = dsprodu.Tables["tblDatos"];
+            //dgvProdu.DataSource = dsprodu;
+            //dgvProdu.DataBind();
         }
     }
 }

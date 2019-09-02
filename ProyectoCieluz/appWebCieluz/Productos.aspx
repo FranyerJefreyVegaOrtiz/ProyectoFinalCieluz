@@ -4,7 +4,69 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <!--================Category Product Area =================-->
+   <%-- <section class="cat_product_area section_gap">
+        <div class="container-fluid">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-9">
+                    <div class="product_top_bar">
+                        <div class="right_page ml-auto">
+                            <nav class="cat_page" aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item blank">
+                                        <a class="page-link" href="#">...</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">6</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">
+                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+      --%>             
 
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row">
+                <asp:Repeater ID="Repeater1" runat="server">
+                    <ItemTemplate>
+                        <div class="col-md-4">
+
+                            <img class="img-fluid" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
+                            <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
+                            <%#DataBinder.Eval(Container.DataItem,"Precio")%>
+                            <br />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+    </form>
+</body>
+
+
+
+    <!--================End Category Product Area =================-->
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
         <div class="container">

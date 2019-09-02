@@ -19,13 +19,39 @@ namespace ServidorProyecto.Datos
         public string Descripcion {get; set;}
         public int idAdministrador {get; set;}
 
-        public DataSet mtdListar(string Nombre, string Precio)
+        public DataSet mtdListar()
         {
-            string consulta = "Select * From Producto Where Nombre='"+ Nombre +"' and Precio='"+ Precio +"'";
+            string consulta = "Select Foto, Nombre, Precio, Descripcion From Producto ORDER BY IdProducto DESC ";
             DataSet dsProducto = new DataSet();
             clConexion objConexion = new clConexion();
             dsProducto = objConexion.mtdDesconectado(consulta);
             return dsProducto;
+        }
+
+        List<clProducto> listaPoducto = new List<clProducto>();
+        public List<clProducto> mtdListarP()
+        {
+            clConexion objConexion = new clConexion();
+            string consulta = "Select * From Producto";
+            DataSet dsProducto = new DataSet();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+            for (int i = 0;i < tblProducto.Rows.Count; i++)
+            {
+                clProducto objProducto = new clProducto();
+                objProducto.IdProducto = int.Parse(tblProducto.Rows[i]["IdProducto"].ToString());
+                objProducto.Nombre = tblProducto.Rows[i]["Nombre"].ToString();
+                objProducto.Codigo = tblProducto.Rows[i]["Codigo"].ToString();
+                objProducto.Foto = tblProducto.Rows[i]["Foto"].ToString();
+                objProducto.Precio = tblProducto.Rows[i]["Precio"].ToString();
+                objProducto.Color = tblProducto.Rows[i]["Color"].ToString();
+                objProducto.Diseño = tblProducto.Rows[i]["Diseño"].ToString();
+                objProducto.Descripcion = tblProducto.Rows[i]["Descripcion"].ToString();
+                objProducto.IdProducto = int.Parse(tblProducto.Rows[i]["IdProducto"].ToString());
+                listaPoducto.Add(objProducto);
+            }
+            return listaPoducto;
+            
         }
 
         public DataSet mtdListarEscritorio()
