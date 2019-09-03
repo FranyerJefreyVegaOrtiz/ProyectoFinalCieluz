@@ -51,7 +51,8 @@
                 <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
                         <div class="col-md-4">
-                            <img class="icon" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
+                            <img class ="img-responsive" width="200" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
+                            <%--<img class="icon" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>--%>
                             <br />
                              <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
                             <br />
