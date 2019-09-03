@@ -52,10 +52,13 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
+                <%--<asp:Image ID="Image1" Width="200" runat="server" />--%>
                 <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
                         <div class="col-md-4">
-                            <img class="img-fluid" width="200" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
+                             <%--<asp:Image ID="Image1" Width="200" runat="server" />--%>
+                            <%--<asp:Image ID="Image1" runat="server" ImageUrl="<%# DataBinder.Eval(Container.DataItem,"imgSalida")%>" />--%>
+                           <img class="img-fluid" width="200" src="data:image/jpg;base64,<%# Eval("Foto")%>"/>
                             <br />
                              <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
                             <br />
