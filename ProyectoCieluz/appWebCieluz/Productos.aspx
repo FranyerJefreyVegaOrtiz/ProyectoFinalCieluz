@@ -4,6 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    </head>
     <!--================Category Product Area =================-->
    <%-- <section class="cat_product_area section_gap">
         <div class="container-fluid">
@@ -51,7 +55,7 @@
                 <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
                         <div class="col-md-4">
-                            <img class="icon" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
+                            <img class="img-fluid" width="200" src="data:image/jpg;Base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem,"Foto"))%>"/>
                             <br />
                              <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
                             <br />
