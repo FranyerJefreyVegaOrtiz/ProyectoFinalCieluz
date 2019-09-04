@@ -77,7 +77,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="css\agency.min.css" />
     <Content Include="css\breadcrumb.css.map" />
+    <Content Include="css\creative.min.css" />
     <Content Include="css\style.css.map" />
     <Content Include="css\_about.css.map" />
     <Content Include="css\_client.css.map" />
@@ -105,6 +107,12 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="default.aspx" />
     <Content Include="Formulario web1.aspx" />
+    <Content Include="img\index\backiee-122691.jpg" />
+    <Content Include="img\index\backiee-123489.jpg" />
+    <Content Include="img\index\backiee-123754.jpg" />
+    <Content Include="img\index\backiee-123808.jpg" />
+    <Content Include="img\index\backiee-123867.jpg" />
+    <Content Include="img\index\backiee-88635.jpg" />
     <Content Include="Perfil.aspx" />
     <Content Include="QuienesSomos .aspx" />
     <Content Include="Productos.aspx" />
@@ -153,6 +161,7 @@
     <Content Include="scss\_timer.scss" />
     <Content Include="scss\_variables.scss" />
     <Content Include="vendors\.DS_Store" />
+    <Content Include="vendors\bootstrap\bootstrap.min.css" />
     <Content Include="vendors\linericon\.DS_Store" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.eot" />
     <Content Include="vendors\linericon\fonts\Linearicons-Free.ttf" />

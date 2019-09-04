@@ -96,9 +96,13 @@ namespace appEscritorioCieluz
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro de cerrar?", "Alerta!!", MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+            if (MessageBox.Show("¿Esta seguro de cerrar?", "Alerta!!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+            else
+	        {
+
             }
         }
 

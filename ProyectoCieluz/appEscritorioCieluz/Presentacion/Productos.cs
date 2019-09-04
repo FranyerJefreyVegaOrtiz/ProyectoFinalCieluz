@@ -60,5 +60,10 @@ namespace appEscritorioCieluz.Presentacion
         {
             mtdCargarDatos();
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            mtdCargarDatos();
+        }
     }
 }

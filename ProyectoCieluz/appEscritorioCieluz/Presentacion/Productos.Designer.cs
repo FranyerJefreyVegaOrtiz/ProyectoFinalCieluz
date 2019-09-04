@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.btnEditarProducto = new System.Windows.Forms.Button();
             this.btnNuevoProducto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.btnRecargar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -45,7 +45,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.Controls.Add(this.btnEliminarProducto);
             this.panel1.Controls.Add(this.btnEditarProducto);
             this.panel1.Controls.Add(this.btnNuevoProducto);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -55,17 +54,6 @@
             this.panel1.Size = new System.Drawing.Size(280, 541);
             this.panel1.TabIndex = 0;
             // 
-            // btnEliminarProducto
-            // 
-            this.btnEliminarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarProducto.Location = new System.Drawing.Point(66, 434);
-            this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(165, 45);
-            this.btnEliminarProducto.TabIndex = 7;
-            this.btnEliminarProducto.Text = "Eliminar";
-            this.btnEliminarProducto.UseVisualStyleBackColor = true;
-            // 
             // btnEditarProducto
             // 
             this.btnEditarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -74,7 +62,7 @@
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(165, 45);
             this.btnEditarProducto.TabIndex = 6;
-            this.btnEditarProducto.Text = "Editar";
+            this.btnEditarProducto.Text = "Editar / Eliminar";
             this.btnEditarProducto.UseVisualStyleBackColor = true;
             this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
@@ -101,6 +89,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnRecargar);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvProductos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -131,6 +120,16 @@
             this.dgvProductos.Size = new System.Drawing.Size(729, 440);
             this.dgvProductos.TabIndex = 0;
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Location = new System.Drawing.Point(688, 33);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(75, 23);
+            this.btnRecargar.TabIndex = 2;
+            this.btnRecargar.Text = "Recargar";
+            this.btnRecargar.UseVisualStyleBackColor = true;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,8 +158,8 @@
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.Button btnEditarProducto;
         private System.Windows.Forms.Button btnNuevoProducto;
+        private System.Windows.Forms.Button btnRecargar;
     }
 }

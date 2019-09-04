@@ -30,8 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvEntregados = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -40,8 +41,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgvEntregados);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1080, 541);
@@ -58,13 +59,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Listado Entregados";
             // 
-            // panel2
+            // dgvEntregados
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel2.Location = new System.Drawing.Point(29, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1023, 461);
-            this.panel2.TabIndex = 0;
+            this.dgvEntregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntregados.Location = new System.Drawing.Point(42, 58);
+            this.dgvEntregados.Name = "dgvEntregados";
+            this.dgvEntregados.ReadOnly = true;
+            this.dgvEntregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEntregados.Size = new System.Drawing.Size(995, 450);
+            this.dgvEntregados.TabIndex = 2;
             // 
             // Entregados
             // 
@@ -77,6 +80,7 @@
             this.Text = "Entregados";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,6 +89,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvEntregados;
     }
 }
