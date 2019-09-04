@@ -57,6 +57,14 @@ namespace appEscritorioCieluz.Presentacion
             if(resultado > 0)
             {
                 MessageBox.Show("Creado");
+                txtNombrePro.Text = "";
+                txtCodigoPro.Text = "";
+                txtResultado.Text = "";
+                txtColorPro.Text = "";
+                txtDiseñoPro.Text = "";
+                txtPrecioPro.Text = "";
+                txtDescripcionPro.Text = "";
+                txtFotoPro.Text = "";
             }
             else
             {
