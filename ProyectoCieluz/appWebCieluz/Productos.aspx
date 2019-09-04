@@ -8,8 +8,24 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     </head>
+     <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center" style="left: 3px; top: -141px">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>Categoria de Compra</h2>
+                    <div class="page_link">
+                        <a href="index.html">Inicio</a>
+                        <a href="category.html">Categoria</a>
+                        <a href="Productos.aspx">Diseño Mujer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
     <%--<!--================Category Product Area =================-->--%>
-  <section class="cat_product_area section_gap">
+  <%--<section class="cat_product_area section_gap">
         <div class="container-fluid">
             <div class="row flex-row-reverse">
                 <div class="col-lg-9">
@@ -46,25 +62,25 @@
                             </nav>
                         </div>
                     </div>
-               
+               --%>
 
 <body>
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
                 <%--<asp:Image ID="Image1" Width="200" runat="server" />--%>
-                <asp:Repeater ID="Repeater1" runat="server">
+                <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                     <ItemTemplate>
                         <div class="col-md-4">
                              <%--<asp:Image ID="Image1" Width="200" runat="server" />--%>
                             <%--<asp:Image ID="Image1" runat="server" ImageUrl="<%# DataBinder.Eval(Container.DataItem,"imgSalida")%>" />--%>
-                           <img class="img-fluid" width="200" src="data:image/jpg;base64,<%# Eval("Foto")%>"/>
+                           <img class="img-fluid" width="200" height="200"  src="data:image/jpg;base64,<%# Eval("Foto")%>"/>
                             <br />
                              <%#DataBinder.Eval(Container.DataItem,"Nombre")%>
                             <br />
-                            <a>$</a><%#DataBinder.Eval(Container.DataItem,"Precio")%> 
+                            <a>$</a><%#DataBinder.Eval(Container.DataItem,"Precio")%><br />
                             <br />
-                            <a class="main_btn" href="#">Ver Detalles</a>
+                            <p><a href='DetalleProductos.aspx?IdProducto=<%# Eval("IdProducto") %>'>Ver Detalles</a></p>
                             <br />
                         </div>
                     </ItemTemplate>

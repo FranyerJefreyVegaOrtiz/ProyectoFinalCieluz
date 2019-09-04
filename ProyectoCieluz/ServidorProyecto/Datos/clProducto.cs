@@ -21,7 +21,15 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListar()
         {
-            string consulta = "Select Foto, Nombre, Precio, Descripcion From Producto ORDER BY IdProducto DESC ";
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListar2(int IdProducto)
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion, Color, Diseño From Producto Where IdProducto='"+ IdProducto +"'";
             DataSet dsProducto = new DataSet();
             clConexion objConexion = new clConexion();
             dsProducto = objConexion.mtdDesconectado(consulta);

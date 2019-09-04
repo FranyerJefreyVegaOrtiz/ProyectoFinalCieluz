@@ -32,19 +32,16 @@ namespace appWebCieluz
         {
             try
             {
-                
 
+                ServicioWebCieluz.clProducto objProducto = new ServicioWebCieluz.clProducto();
                 DataSet dsProucto = new DataSet();
                 dsProucto = miservice.mtdListarProWeb();
                 DataTable tblProducto = dsProucto.Tables["tblDatos"];
-                tblProducto.Columns.Add("imgSalida");
-                var dato= "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
-                tblProducto.Rows[0]["imgSalida"] = dato;
-               // Image1.ImageUrl = "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
-                if (tblProducto.Rows[0][0].ToString() == "")
-                {
-                   // Image1.ImageUrl = "~/img/favicon.png";
-                }
+                //var dato = tblProducto.Rows[0][3];
+                //dato = Session["IdProducto"].ToString();
+                //tblProducto.Rows[0]["imgSalida"] = dato;
+                //Response.Redirect("DetalleProductos.aspx" + dato);
+                // Image1.ImageUrl = "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
 
                 Repeater1.DataSource = tblProducto;
                 Repeater1.DataBind();
@@ -65,5 +62,11 @@ namespace appWebCieluz
             return NuevaImagenRedimencional;
         }
 
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            
+        }
+
+        
     }
 }

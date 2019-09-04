@@ -107,6 +107,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="default.aspx" />
     <Content Include="Formulario web1.aspx" />
+    <Content Include="DetalleProductos.aspx" />
     <Content Include="img\index\backiee-122691.jpg" />
     <Content Include="img\index\backiee-123489.jpg" />
     <Content Include="img\index\backiee-123754.jpg" />
@@ -423,6 +424,13 @@
     </Compile>
     <Compile Include="Formulario web1.aspx.designer.cs">
       <DependentUpon>Formulario web1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleProductos.aspx.cs">
+      <DependentUpon>DetalleProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleProductos.aspx.designer.cs">
+      <DependentUpon>DetalleProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>

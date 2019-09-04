@@ -21,6 +21,7 @@ namespace appWebCieluz
             ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
             Session["Correo"] = objCliente.Correo;
             Session["Clave"] = objCliente.Clave;
+           
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
