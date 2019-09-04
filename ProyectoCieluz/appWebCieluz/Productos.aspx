@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     </head>
-    <!--================Category Product Area =================-->
-   <%-- <section class="cat_product_area section_gap">
+    <%--<!--================Category Product Area =================-->--%>
+  <section class="cat_product_area section_gap">
         <div class="container-fluid">
             <div class="row flex-row-reverse">
                 <div class="col-lg-9">
@@ -46,7 +46,7 @@
                             </nav>
                         </div>
                     </div>
-      --%>             
+               
 
 <body>
     <form id="form1" runat="server">
