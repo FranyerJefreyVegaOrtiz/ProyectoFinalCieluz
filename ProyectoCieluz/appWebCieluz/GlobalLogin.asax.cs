@@ -12,15 +12,13 @@ namespace appWebCieluz
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
-            Session["Correo"] = objCliente.Correo;
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
-            Session["Correo"] = objCliente.Correo;
-            Session["Clave"] = objCliente.Clave;
+            Session["Correo"] = "";
+            Session["IdCliente"] = "";
+            Session["Clave"] = "";
            
         }
 

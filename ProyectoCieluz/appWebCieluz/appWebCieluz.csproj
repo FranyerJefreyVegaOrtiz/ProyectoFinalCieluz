@@ -109,6 +109,7 @@
     <Content Include="Formulario web1.aspx" />
     <Content Include="DetalleProductos.aspx" />
     <Content Include="Carro.aspx" />
+    <Content Include="LoginWeb.aspx" />
     <Content Include="img\index\backiee-122691.jpg" />
     <Content Include="img\index\backiee-123489.jpg" />
     <Content Include="img\index\backiee-123754.jpg" />
@@ -439,6 +440,13 @@
     </Compile>
     <Compile Include="Carro.aspx.designer.cs">
       <DependentUpon>Carro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWeb.aspx.cs">
+      <DependentUpon>LoginWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginWeb.aspx.designer.cs">
+      <DependentUpon>LoginWeb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>

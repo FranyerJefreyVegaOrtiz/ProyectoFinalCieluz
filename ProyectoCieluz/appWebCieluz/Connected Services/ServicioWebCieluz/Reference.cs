@@ -37,6 +37,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdLoginWeb(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro);
@@ -109,7 +116,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -281,7 +288,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -397,7 +404,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -589,6 +596,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave) {
             return base.Channel.mtdLoginEscritorioAsync(Correo, Clave);
+        }
+        
+        public System.Data.DataSet mtdLoginWeb(string Correo, string Clave) {
+            return base.Channel.mtdLoginWeb(Correo, Clave);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave) {
+            return base.Channel.mtdLoginWebAsync(Correo, Clave);
         }
         
         public int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro) {

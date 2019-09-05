@@ -61,5 +61,14 @@ namespace ServidorProyecto.Datos
             dsCliente = clConexion.mtdDesconectado(consulta);
             return dsCliente;
         }
+
+        public DataSet mtdLogin(string Correo, string Clave)
+        {
+            string consulta = "Select IdCliente, Correo, Clave From Cliente where Correo = '" + Correo + "' and Clave = '" + Clave + "'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
     }
 }
