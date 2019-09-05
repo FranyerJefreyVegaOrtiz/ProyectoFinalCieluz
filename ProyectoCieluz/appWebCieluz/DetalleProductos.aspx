@@ -27,8 +27,8 @@
                         <br />
                         <asp:Label ID="lblDiseño" runat="server" Text=""></asp:Label>
                         <br />
-                        <asp:button class="main_btn"  ID="btnCarro" runat="server" text="Añadir al carrito" OnClick="btnCarro_Click" />
                      </div>
+                        <asp:button class="main_btn"  ID="btnCarro" runat="server" text="Añadir al carrito" OnClick="btnCarro_Click" />
                     </div>
                 </div>
             </div>
