@@ -67,10 +67,10 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarPro(string Nombre, string Precio);
+        System.Data.DataSet mtdListarPro(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPro", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio);
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -78,6 +78,20 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProEscritorio", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProWeb2", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarProWeb2(int IdProducto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarProWeb2", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProWeb2Async(int IdProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -95,7 +109,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -267,7 +281,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -383,7 +397,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -609,12 +623,12 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdListarAdminAsync(ObjAdmin);
         }
         
-        public System.Data.DataSet mtdListarPro(string Nombre, string Precio) {
-            return base.Channel.mtdListarPro(Nombre, Precio);
+        public System.Data.DataSet mtdListarPro(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objProducto) {
+            return base.Channel.mtdListarPro(objProducto);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(string Nombre, string Precio) {
-            return base.Channel.mtdListarProAsync(Nombre, Precio);
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProAsync(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objProducto) {
+            return base.Channel.mtdListarProAsync(objProducto);
         }
         
         public System.Data.DataSet mtdListarProEscritorio() {
@@ -623,6 +637,22 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProEscritorioAsync() {
             return base.Channel.mtdListarProEscritorioAsync();
+        }
+        
+        public System.Data.DataSet mtdListarProWeb() {
+            return base.Channel.mtdListarProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProWebAsync() {
+            return base.Channel.mtdListarProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarProWeb2(int IdProducto) {
+            return base.Channel.mtdListarProWeb2(IdProducto);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarProWeb2Async(int IdProducto) {
+            return base.Channel.mtdListarProWeb2Async(IdProducto);
         }
         
         public System.Data.DataSet mtdListarCli() {

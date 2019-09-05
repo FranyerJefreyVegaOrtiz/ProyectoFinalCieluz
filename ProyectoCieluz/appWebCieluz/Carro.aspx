@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="DetalleProductos.aspx.cs" Inherits="appWebCieluz.Formulario_web23" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Carro.aspx.cs" Inherits="appWebCieluz.Formulario_web24" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,13 +10,8 @@
                 <asp:TextBox ID="txtRecive"  runat="server"></asp:TextBox>
                 <asp:Image ID="ImgProducto" Width="200" runat="server" />
                 <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblColor" runat="server" Text=""></asp:Label>
                 <asp:Label ID="LblPrecio" runat="server" Text="$"></asp:Label>
-                <asp:Label ID="lblDescripcion" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblDiseño" runat="server" Text=""></asp:Label>
              </div>
         </div>
-        <asp:button  ID="btnCarro" runat="server" text="Añadir al carrito" OnClick="btnCarro_Click" />
-        <%--    <p><a href='Carro.aspx?IdProducto=txtRecive.Text'>Añadir al carrito</a></p>--%>
     </form>
 </asp:Content>
