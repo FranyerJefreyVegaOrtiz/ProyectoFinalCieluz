@@ -12,11 +12,10 @@
                 <div class="col-lg-6">
                     <div class="login_box_img">
                        <asp:TextBox ID="txtRecive"  runat="server" Visible="False"></asp:TextBox>
-                        <asp:Image class="img-fluid" ID="ImgProducto" Width="200" runat="server" />
+                        <asp:Image class="img-fluid" ID="ImgProducto" Width="800" runat="server" />
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="login_form_inner reg_form">
                         <div class="s_product_text">
                         <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
                         <br />
@@ -31,7 +30,7 @@
                      </div>
                         <asp:button class="main_btn"  ID="btnCarro" runat="server" text="Añadir al carrito" OnClick="btnCarro_Click" />
                     </div>
-                </div>
+                
             </div>
         </div>
             </form>
