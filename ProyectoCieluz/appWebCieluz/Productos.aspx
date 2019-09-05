@@ -25,44 +25,6 @@
     </section>
     <!--================End Home Banner Area =================-->
     <%--<!--================Category Product Area =================-->--%>
-  <%--<section class="cat_product_area section_gap">
-        <div class="container-fluid">
-            <div class="row flex-row-reverse">
-                <div class="col-lg-9">
-                    <div class="product_top_bar">
-                        <div class="right_page ml-auto">
-                            <nav class="cat_page" aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item blank">
-                                        <a class="page-link" href="#">...</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">6</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-               --%>
 
     <form id="form1" runat="server">
         <div class="container">
