@@ -6,6 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
                  <!--================Single Product Area =================-->
     <section class="login_box_area p_120">
+        <form id="form1" runat="server">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -33,6 +34,7 @@
                 </div>
             </div>
         </div>
+            </form>
     </section>
         <%--    <p><a href='Carro.aspx?IdProducto=txtRecive.Text'>Añadir al carrito</a></p>--%>
 </asp:Content>
