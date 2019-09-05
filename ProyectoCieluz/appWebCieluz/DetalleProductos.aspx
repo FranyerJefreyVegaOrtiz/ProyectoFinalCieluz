@@ -12,25 +12,28 @@
                 <div class="col-lg-6">
                     <div class="login_box_img">
                        <asp:TextBox ID="txtRecive"  runat="server" Visible="False"></asp:TextBox>
-                        <asp:Image class="img-fluid" ID="ImgProducto" Width="800" runat="server" />
+                        <asp:Image class="img-fluid" ID="ImgProducto" Width="700" runat="server" />
                     </div>
                 </div>
                 <div class="col-lg-6">
+                    <div class="col-lg-5 offset-lg-1">
+                    <div class="s_product_text">
                         <div class="s_product_text">
-                        <asp:Label ID="lblNombre" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblNombre" runat="server" Font-Size="Medium"></asp:Label>
                         <br />
-                        <asp:Label ID="lblColor" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblColor" runat="server" Text="" Font-Size="Medium"></asp:Label>
                         <br />
-                        <asp:Label ID="LblPrecio" runat="server" Text="$"></asp:Label>
+                        <asp:Label ID="LblPrecio" runat="server" Text="$" Font-Size="Medium"></asp:Label>
                         <br />
-                        <asp:Label ID="lblDescripcion" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblDescripcion" runat="server" Text="" Font-Size="Medium"></asp:Label>
                         <br />
-                        <asp:Label ID="lblDiseño" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblDiseño" runat="server" Text="" Font-Size="Medium"></asp:Label>
                         <br />
                      </div>
                         <asp:button class="main_btn"  ID="btnCarro" runat="server" text="Añadir al carrito" OnClick="btnCarro_Click" />
                     </div>
-                
+                </div>
+                    </div>
             </div>
         </div>
             </form>
