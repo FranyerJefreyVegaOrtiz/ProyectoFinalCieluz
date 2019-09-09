@@ -58,13 +58,13 @@ namespace appWebCieluz {
         protected global::System.Web.UI.WebControls.Label lblColor;
         
         /// <summary>
-        /// Control LblPrecio.
+        /// Control lblPrecio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPrecio;
+        protected global::System.Web.UI.WebControls.Label lblPrecio;
         
         /// <summary>
         /// Control lblDescripcion.

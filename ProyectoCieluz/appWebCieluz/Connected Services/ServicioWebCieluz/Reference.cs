@@ -113,10 +113,17 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdIndex(int IdCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -288,7 +295,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -404,7 +411,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -684,6 +691,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync() {
             return base.Channel.mtdListarPedAsync();
+        }
+        
+        public System.Data.DataSet mtdIndex(int IdCliente) {
+            return base.Channel.mtdIndex(IdCliente);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente) {
+            return base.Channel.mtdIndexAsync(IdCliente);
         }
     }
 }

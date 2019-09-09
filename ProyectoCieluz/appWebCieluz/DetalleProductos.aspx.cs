@@ -23,7 +23,7 @@ namespace appWebCieluz
             ImgProducto.ImageUrl = "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
             lblNombre.Text = tblProducto.Rows[0][1].ToString();
             lblColor.Text = tblProducto.Rows[0][5].ToString();
-            LblPrecio.Text = tblProducto.Rows[0][2].ToString();
+            lblPrecio.Text = tblProducto.Rows[0][2].ToString();
             lblDescripcion.Text = tblProducto.Rows[0][4].ToString();
             lblDiseño.Text = tblProducto.Rows[0][6].ToString();
 

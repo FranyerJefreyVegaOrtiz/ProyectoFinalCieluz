@@ -140,5 +140,14 @@ namespace ServidorProyecto
             dsPedidos = objPro.mtdListar();
             return dsPedidos;
         }
+
+        [WebMethod]
+        public DataSet mtdIndex(int IdCliente)
+        {
+            DataSet dsCliente = new DataSet();
+            clCliente objCli = new clCliente();
+            dsCliente = objCli.mtdIndex(IdCliente);
+            return dsCliente;
+        }
     }
 }

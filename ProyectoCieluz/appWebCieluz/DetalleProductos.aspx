@@ -23,7 +23,7 @@
                         <br />
                         <asp:Label ID="lblColor" runat="server" Text="" Font-Size="Medium"></asp:Label>
                         <br />
-                        <asp:Label ID="LblPrecio" runat="server" Text="$" Font-Size="Medium"></asp:Label>
+                        <asp:Label ID="lblPrecio" runat="server" Text="$" Font-Size="Medium"></asp:Label>
                         <br />
                         <asp:Label ID="lblDescripcion" runat="server" Text="" Font-Size="Medium"></asp:Label>
                         <br />

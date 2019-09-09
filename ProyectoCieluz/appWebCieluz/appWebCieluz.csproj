@@ -109,13 +109,13 @@
     <Content Include="Formulario web1.aspx" />
     <Content Include="DetalleProductos.aspx" />
     <Content Include="Carro.aspx" />
-    <Content Include="LoginWeb.aspx" />
-    <Content Include="img\index\backiee-122691.jpg" />
-    <Content Include="img\index\backiee-123489.jpg" />
-    <Content Include="img\index\backiee-123754.jpg" />
-    <Content Include="img\index\backiee-123808.jpg" />
-    <Content Include="img\index\backiee-123867.jpg" />
-    <Content Include="img\index\backiee-88635.jpg" />
+    <Content Include="img\index\fabrica.jpg" />
+    <Content Include="img\index\fabrica1.jpg" />
+    <Content Include="img\index\fabrica2.jpg" />
+    <Content Include="img\index\fabrica3.jpg" />
+    <Content Include="img\index\fabrica4.jpg" />
+    <Content Include="img\index\fabrica5.jpg" />
+    <Content Include="Index.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="QuienesSomos .aspx" />
     <Content Include="Productos.aspx" />
@@ -441,12 +441,12 @@
     <Compile Include="Carro.aspx.designer.cs">
       <DependentUpon>Carro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginWeb.aspx.cs">
-      <DependentUpon>LoginWeb.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginWeb.aspx.designer.cs">
-      <DependentUpon>LoginWeb.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
