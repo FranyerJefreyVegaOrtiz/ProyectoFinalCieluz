@@ -18,21 +18,22 @@ namespace appWebCieluz
         {
             string Correo = Request.Form["Correo"];
             string Clave = Request.Form["Clave"];
+
             ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
             DataSet dsCliente = new DataSet();
-            dsCliente = miservice.mtdListarClientes(Correo, Clave);
+            dsCliente = miservice.mtdLoginWeb(Correo, Clave);
             DataTable tblLogin = dsCliente.Tables["tblDatos"];
 
             if (tblLogin.Rows.Count > 0)
             {
                 Session["Correo"] = Correo;
-                Response.Redirect("default.aspx");
+                Session["IdUsuario"] = tblLogin.Rows[0][0].ToString();
+                Response.Redirect("index.html");
             }
             else
             {
                 lblMensaje.Text = "Error al ingresar...";
             }
         }
-
     }
 }

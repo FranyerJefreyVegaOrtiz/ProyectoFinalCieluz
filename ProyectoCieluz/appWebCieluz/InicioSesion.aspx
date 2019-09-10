@@ -17,7 +17,7 @@
                 <div class="col-lg-6">
                     <div class="login_form_inner reg_form">
                         <h2>¡A ocurrido un ploblema!</h2>
-                        <asp:label id="lblMensaje" runat="server" text="Label"></asp:label>bel>
+                        <asp:label id="lblMensaje" runat="server" text="Label"></asp:label>
                         <img class="img-fluid" src="img/error.jpg" alt="">
                     </div>
                 </div>

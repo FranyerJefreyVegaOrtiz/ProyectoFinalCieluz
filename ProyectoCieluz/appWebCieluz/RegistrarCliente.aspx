@@ -19,7 +19,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="login_form_inner reg_form">
-                        <h1>Registrado Exitosamente
+                        <h1>
+                            Registrado Exitosamente
                             Ya Puedes Hacer Compras 
                             En Nuestra Pagina Web
                         </h1>
@@ -29,7 +30,6 @@
             </div>
         </div>
     </section>
-       </div>
 </asp:Content>
 
            

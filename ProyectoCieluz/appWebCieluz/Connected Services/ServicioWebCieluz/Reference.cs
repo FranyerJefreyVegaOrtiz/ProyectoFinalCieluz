@@ -37,6 +37,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginEscritorioAsync(string Correo, string Clave);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdLoginWeb(string Correo, string Clave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro);
@@ -106,6 +113,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdIndex(int IdCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente);
     }
     
     /// <remarks/>
@@ -591,6 +605,14 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdLoginEscritorioAsync(Correo, Clave);
         }
         
+        public System.Data.DataSet mtdLoginWeb(string Correo, string Clave) {
+            return base.Channel.mtdLoginWeb(Correo, Clave);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave) {
+            return base.Channel.mtdLoginWebAsync(Correo, Clave);
+        }
+        
         public int mtdRegistrarProducto(appWebCieluz.ServicioWebCieluz.clProducto objPro) {
             return base.Channel.mtdRegistrarProducto(objPro);
         }
@@ -669,6 +691,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync() {
             return base.Channel.mtdListarPedAsync();
+        }
+        
+        public System.Data.DataSet mtdIndex(int IdCliente) {
+            return base.Channel.mtdIndex(IdCliente);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente) {
+            return base.Channel.mtdIndexAsync(IdCliente);
         }
     }
 }
