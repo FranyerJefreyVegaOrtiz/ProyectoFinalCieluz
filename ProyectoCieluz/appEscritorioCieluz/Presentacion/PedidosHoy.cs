@@ -16,5 +16,81 @@ namespace appEscritorioCieluz
         {
             InitializeComponent();
         }
+
+        servicioEscritorioCieluz.ServidorProyectoSoapClient miServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
+
+        private void PedidosHoy_Load(object sender, EventArgs e)
+        {
+            DataSet dsPedidos = new DataSet();
+            dsPedidos = miServicio.mtdListarPedHoy();
+            DataTable tblPedido = dsPedidos.Tables["tblDatos"];
+            dgvPedidosHoy.DataSource = tblPedido;
+            this.dgvPedidosHoy.Columns["IdPedido"].Visible = false;
+            this.dgvPedidosHoy.Columns["idProducto"].Visible = false;
+            this.dgvPedidosHoy.Columns["IdProducto1"].Visible = false;
+            this.dgvPedidosHoy.Columns["idCliente"].Visible = false;
+            this.dgvPedidosHoy.Columns["Foto"].Visible = false;
+            this.dgvPedidosHoy.Columns["Descripcion"].Visible = false;
+            this.dgvPedidosHoy.Columns["idAdministrador"].Visible = false;
+            this.dgvPedidosHoy.Columns["IdCliente1"].Visible = false;
+            this.dgvPedidosHoy.Columns["Clave"].Visible = false;
+        }
+
+        int renglon;
+        private void dgvPedidosHoy_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvPedidosHoy.SelectedCells.Count > 0)
+                {
+                    renglon = e.RowIndex;
+                    string Documento;
+                    string Nombre;
+                    string Apellido;
+                    string Telefono;
+                    string Municipio;
+                    string Nombre1;
+                    string Codigo;
+                    string Precio;
+
+                    Documento = dgvPedidosHoy.Rows[renglon].Cells["Documento"].Value.ToString();
+                    dgvPedidosHoy.Columns["Documento"].ReadOnly = true;
+                    txtDocumentoPH.Text = Documento;
+
+                    Nombre = dgvPedidosHoy.Rows[renglon].Cells["Nombre"].Value.ToString();
+                    dgvPedidosHoy.Columns["Nombre"].ReadOnly = true;
+                    txtNombrePedHP.Text = Nombre;
+
+                    Apellido = dgvPedidosHoy.Rows[renglon].Cells["Apellido"].Value.ToString();
+                    dgvPedidosHoy.Columns["Apellido"].ReadOnly = true;
+                    txtApellidoPH.Text = Apellido;
+
+                    Telefono = dgvPedidosHoy.Rows[renglon].Cells["Telefono"].Value.ToString();
+                    dgvPedidosHoy.Columns["Telefono"].ReadOnly = true;
+                    txtTelefonoPH.Text = Telefono;
+
+                    Municipio = dgvPedidosHoy.Rows[renglon].Cells["Municipio"].Value.ToString();
+                    dgvPedidosHoy.Columns["Municipio"].ReadOnly = true;
+                    txtMunicipioPH.Text = Municipio;
+
+                    Nombre1 = dgvPedidosHoy.Rows[renglon].Cells["Nombre1"].Value.ToString();
+                    dgvPedidosHoy.Columns["Nombre1"].ReadOnly = true;
+                    txtNombrePedHP.Text = Nombre1;
+
+                    Codigo = dgvPedidosHoy.Rows[renglon].Cells["Codigo"].Value.ToString();
+                    dgvPedidosHoy.Columns["Codigo"].ReadOnly = true;
+                    txtCodigoPH.Text = Codigo;
+
+                    Precio = dgvPedidosHoy.Rows[renglon].Cells["Precio"].Value.ToString();
+                    dgvPedidosHoy.Columns["Precio"].ReadOnly = true;
+                    txtPrecioPH.Text = Precio;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

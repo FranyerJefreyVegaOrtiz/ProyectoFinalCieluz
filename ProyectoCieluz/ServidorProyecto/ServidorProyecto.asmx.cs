@@ -131,5 +131,14 @@ namespace ServidorProyecto
             dsPedidos = objPro.mtdListar();
             return dsPedidos;
         }
+
+        [WebMethod]
+        public DataSet mtdListarPedHoy()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedido objPro = new clPedido();
+            dsPedidos = objPro.mtdListarHoy();
+            return dsPedidos;
+        }
     }
 }

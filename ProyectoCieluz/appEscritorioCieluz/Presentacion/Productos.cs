@@ -54,6 +54,7 @@ namespace appEscritorioCieluz.Presentacion
             DataTable tblProductos = dsProducto.Tables["tblDatos"];
             dgvProductos.DataSource = tblProductos;
             this.dgvProductos.Columns["IdProducto"].Visible = false;
+            this.dgvProductos.Columns["Foto"].Visible = false;
         }
 
         private void Productos_Load(object sender, EventArgs e)
