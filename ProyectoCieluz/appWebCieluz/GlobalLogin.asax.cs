@@ -12,6 +12,7 @@ namespace appWebCieluz
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["Validar"] = 0;
         }
 
         protected void Session_Start(object sender, EventArgs e)

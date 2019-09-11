@@ -10,9 +10,14 @@ namespace appWebCieluz
 {
     public partial class Formulario_web24 : System.Web.UI.Page
     {
+        
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //var Foto = "FotoPro";
+            //var Nombre = "NombrePro";
+            //var Precio ="PrecioPro";
             if (Request.Params["IdProducto"] != null)
             {
                 string Valor = Request.Params["IdProducto"];
@@ -21,10 +26,36 @@ namespace appWebCieluz
                 DataSet dsProductos = new DataSet();
                 dsProductos = miservice.mtdListarProWeb2(IdProduto);
                 DataTable tblProducto = dsProductos.Tables["tblDatos"];
-                ImgProducto.ImageUrl = "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
-                lblNombre.Text = tblProducto.Rows[0][1].ToString();
-                LblPrecio.Text = tblProducto.Rows[0][2].ToString();
+                imgFoto.ImageUrl = "data:image/jpg;base64," + tblProducto.Rows[0][0].ToString();
+                Nombre.Text = tblProducto.Rows[0][1].ToString();
+                Precio.Text = tblProducto.Rows[0][2].ToString();
             }
+        }
+        public void mtdRegistrarPedido()
+        {
+            ServicioWebCieluz.clPedido objPedido = new ServicioWebCieluz.clPedido();
+            objPedido.idProducto = int.Parse(txtRecive.Text);
+            objPedido.Cantidad = int.Parse(txtCantidad.Text);
+            objPedido.Talla = int.Parse(txtTalla.Text);
+            objPedido.PrecioTotal = int.Parse(txtPrecioTotal.Text);
+            objPedido.TipoPago = txtTipoPago.Text;
+            objPedido.idCliente = int.Parse(Session["IdCliente"].ToString());
+
+            int resultado = miservice.mtdRegistrarPedido(objPedido);
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["Correo"] != null)
+            {
+                mtdRegistrarPedido();
+            }
+            else
+            {
+                Response.Redirect("login.html");
+            }
+            
         }
     }
 }

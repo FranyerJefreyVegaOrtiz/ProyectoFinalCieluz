@@ -18,17 +18,20 @@ namespace appWebCieluz
         {
             string Correo = Request.Form["Correo"];
             string Clave = Request.Form["Clave"];
+            int IdCliente = 1;
 
             ServicioWebCieluz.clCliente objCliente = new ServicioWebCieluz.clCliente();
             DataSet dsCliente = new DataSet();
-            dsCliente = miservice.mtdLoginWeb(Correo, Clave);
+            dsCliente = miservice.mtdLoginWeb(IdCliente,Correo, Clave);
             DataTable tblLogin = dsCliente.Tables["tblDatos"];
-
+            IdCliente = int.Parse(tblLogin.Rows[0][0].ToString());
             if (tblLogin.Rows.Count > 0)
             {
                 Session["Correo"] = Correo;
-                Session["IdUsuario"] = tblLogin.Rows[0][0].ToString();
-                Response.Redirect("index.html");
+
+                Session["IdUsuario"] = IdCliente;
+                Application["Validar"] = 1;
+                Response.Redirect("Index.aspx");
             }
             else
             {

@@ -4,12 +4,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    </head>
+
      <!--================Home Banner Area =================-->
-    <section class="banner_area">
+   
+    <!--================End Home Banner Area =================-->
+    <%--<!--================Category Product Area =================-->--%>
+
+    <form id="form1" runat="server">
+        <div class="container">
+            <section class="banner_area">
         <div class="banner_inner d-flex align-items-center" style="left: 3px; top: -141px">
             <div class="container">
                 <div class="banner_content text-center">
@@ -23,13 +26,10 @@
             </div>
         </div>
     </section>
-    <!--================End Home Banner Area =================-->
-    <%--<!--================Category Product Area =================-->--%>
+                
 
-    <form id="form1" runat="server">
-        <div class="container">
             <div class="row">
-                <%--<asp:Image ID="Image1" Width="200" runat="server" />--%>
+                    <%-- <asp:Image ID="Image1" Width="200" runat="server" />--%>
                 <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                     <ItemTemplate>
                         <div class="col-md-4">

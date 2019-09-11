@@ -43,11 +43,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                Mi Cuenta
-                            </a>
-                        </li>
-                        <li>
                             <a class="nav-link" href="contact.html">
                                 Contáctanos
                             </a>
@@ -156,7 +151,20 @@
                                             <i class="lnr lnr lnr-cart"></i>
                                         </a>
                                     </li>
-
+                                    <form action="Index.aspx" method="post">
+                                        <li class="nav-item submenu dropdown">
+                                            <a href="#" id="Correo1" name="Correo1" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" runat="Server">Mi Cuenta</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="IdCliente" name="IdCliente" href="Productos.aspx" runat="Server">
+                                                        Perfil
+                                                    </a>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="single-product.html">Cerra Sesion</a>
+                                                <li class="nav-item">
+                                            </ul>
+                                        </li>
+                                    </form>
                                     <hr>
                                 </ul>
                             </div>

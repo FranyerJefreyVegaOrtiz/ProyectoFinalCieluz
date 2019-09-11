@@ -3,171 +3,152 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Fashiop</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Fashiop</title>
+    <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
 </head>
-<header class="header_area">
-		<div class="top_menu row m0">
-			<div class="container-fluid">
-				<div class="float-left">
-					<p>Call Us: 012 44 5698 7456 896</p>
-				</div>
-				<div class="float-right">
-					<ul class="right_side">
-						<li>
-							<a class="nav-link" href="login.html">
-								Iniciar Sesion/Registrarse
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								My Cuenta
-							</a>
-						</li>
-						<li>
-							<a class="nav-link" href="contact.html">
-								Contactanos
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-                      <asp:ContentPlaceHolder ID="head" runat="server">
+
+<body>
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+        <div class="top_menu row m0">
+            <div class="container-fluid">
+                <div class="float-left">
+                    <p>Llamanos: 3143956111</p>
+                </div>
+                <div class="float-right">
+                    <ul class="right_side">
+                        <li>
+                            <form class="nav-link" action="Index.aspx" method="post">
+                                <label  id="Label1" name="" runat="server" placeholder="Correo" required></label>
+                            </form>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="login.html">
+                                Iniciar Sesion/Registrarse
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="contact.html">
+                                Contáctanos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <asp:ContentPlaceHolder ID="Head" runat="server">
                     </asp:ContentPlaceHolder>
-                    
-					<a class="navbar-brand logo_h" href="index.html">
-						<img src="img/CieluzBlanco.png" alt="">
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					 aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<div class="row w-100">
-							<div class="col-lg-7 pr-0">
-								<ul class="nav navbar-nav center_nav pull-right">
-									<li class="nav-item active">
-										<a class="nav-link" href="index.html">Inicio</a>
-									</li>
-									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tienda</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item">
-                                                <a class="nav-link" href="category.html">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html">
+                        <img src="img/CieluzBlanco.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <div class="row w-100">
+                            <div class="col-lg-7 pr-0">
+                                <ul class="nav navbar-nav center_nav pull-right">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item submenu dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tienda</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="Productos.aspx">
                                                     Categoría de tienda
                                                 </a>
-												<li class="nav-item">
-													<a class="nav-link" href="single-product.html">Detalles Productos></a>
-													<li class="nav-item">
-                                                        <a class="nav-link" href="checkout.html">
-                                                            Pago del producto
-                                                        </a>
-														<li class="nav-item">
-															<a class="nav-link" href="confirmation.html">Confirmacion</a>
-														</li>
-										</ul>
-									</li>
-									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item">
-												<a class="nav-link" href="blog.html">Blog</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" href="single-blog.html">Blog Detalles</a>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pagos</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item">
-												<a class="nav-link" href="login.html">Login</a>
-												<li class="nav-item">
-													<a class="nav-link" href="tracking.html">Rastreo</a>
-													<li class="nav-item">
-														<a class="nav-link" href="elements.html">Elementos</a>
-													</li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="contact.html">Contactos</a>
-									</li>
-								</ul>
-							</div>
-
-							<div class="col-lg-5">
-								<ul class="nav navbar-nav navbar-right right_nav pull-right">
-									<hr>
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</a>
-									</li>
-
-									<hr>
-
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-user" aria-hidden="true"></i>
-										</a>
-									</li>
-
-									<hr>
-
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-heart-o" aria-hidden="true"></i>
-										</a>
-									</li>
-
-									<hr>
-
-									<li class="nav-item">
-										<a href="cart.html" class="icons">
-											<i class="lnr lnr lnr-cart"></i>
-										</a>
-									</li>
-
-									<hr>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                    
+                                    <!--<li class="nav-item submenu dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="blog.html">Blog</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="single-blog.html">Blog Detalles</a>
+                                            </li>
+                                        </ul>
+                                    </li>-->
+                                    <!--<li class="nav-item submenu dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pagos</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="login.html">Login</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="tracking.html">Rastreo</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="elements.html">Elementos</a>
+                                            </li>
+                                        </ul>
+                                    </li>-->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contactos</a>
+                                    </li>
+                                </ul>
+                                   <li class="nav-item submenu dropdown">
+                                            <asp:label  class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="Correo" name="Correo" runat="server" text="Mi Cuenta"></asp:label>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="A1" name="IdCliente" href="Productos.aspx" runat="Server">
+                                                        Perfil
+                                                    </a>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="login.html">Cerrar Sesion</a>
+                                                <li class="nav-item">
+                                            </ul>
+                                        </li>
+                            </div>
+                                    <hr>
+                                    <li class="nav-item">
+                                        <a href="Carro.aspx" class="icons">
+                                            <i class="lnr lnr lnr-cart"></i>
+                                        </a>
+                                    </li>
+                                    <hr>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+         
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                     </asp:ContentPlaceHolder>
-	</header>
-	<!--================Header Menu Area =================-->
-
+    </header>
+    </body>
 </html>
+    <!--================Header Menu Area =================-->
+

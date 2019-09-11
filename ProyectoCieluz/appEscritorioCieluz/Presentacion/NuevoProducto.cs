@@ -89,7 +89,7 @@ namespace appEscritorioCieluz.Presentacion
 
             objProducto.Nombre = txtNombrePro.Text;
             objProducto.Codigo = txtCodigoPro.Text;
-            objProducto.Foto = txtFotoPro.Text;
+            objProducto.Foto = "data:image/jpg;base64," + imgFoto;
             objProducto.Color = txtColorPro.Text;
             objProducto.Diseño = txtDiseñoPro.Text;
             objProducto.Precio = txtPrecioPro.Text;
@@ -104,7 +104,7 @@ namespace appEscritorioCieluz.Presentacion
             }
             else
             {
-                MessageBox.Show("No Creado");
+                MessageBox.Show("No Se Puede Editar");
             }
         }
 

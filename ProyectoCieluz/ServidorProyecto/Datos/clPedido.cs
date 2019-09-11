@@ -12,7 +12,7 @@ namespace ServidorProyecto.Datos
         public int Cantidad { get; set; }
         public int Talla { get; set; }
         public int PrecioTotal { get; set; }
-        public float TipoPago { get; set; }
+        public string TipoPago { get; set; }
         public int idProducto { get; set; }
         public int idCliente { get; set; }
         public int idAdministrador { get; set; }

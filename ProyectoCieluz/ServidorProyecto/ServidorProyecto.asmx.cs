@@ -29,11 +29,11 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
-        public DataSet mtdListarClientes(string Correo, string Clave)
+        public DataSet mtdListarClientes(int IdCliente,string Correo, string Clave)
         {
             DataSet dsCliente = new DataSet();
             clCliente objCliente = new clCliente();
-            dsCliente = objCliente.mtdListar2(Correo, Clave);
+            dsCliente = objCliente.mtdListar2(IdCliente,Correo, Clave);
             return dsCliente;
         }
 
@@ -47,12 +47,19 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
-        public DataSet mtdLoginWeb(string Correo, string Clave)
+        public DataSet mtdLoginWeb(int IdCliente, string Correo, string Clave)
         {
             DataSet dsLogin = new DataSet();
             clCliente objCliente = new clCliente();
-            dsLogin = objCliente.mtdLogin(Correo, Clave);
+            dsLogin = objCliente.mtdListar2(IdCliente, Correo, Clave);
             return dsLogin;
+        }
+        [WebMethod]
+        public int mtdRegistrarPedido(clPedido objPed)
+        {
+            clPedido objPedido = new clPedido();
+            int resul = objPedido.mtdRegistrar(objPed);
+            return resul;
         }
 
         [WebMethod]
