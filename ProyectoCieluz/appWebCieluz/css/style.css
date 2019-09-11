@@ -514,7 +514,10 @@ a {
 .banner_area {
   position: relative;
   z-index: 1;
-  min-height: 395px; }
+  min-height: 395px;
+    top: -74px;
+    left: 0px;
+}
   .banner_area .banner_inner {
     position: relative;
     overflow: hidden;
@@ -522,7 +525,10 @@ a {
     min-height: 395px;
     background: url(../img/breadcrumb/checkout-bg.jpg) no-repeat center bottom;
     background-size: contain;
-    z-index: 1; }
+    z-index: 1;
+    top: -97px;
+    left: 8px;
+}
     .banner_area .banner_inner .overlay {
       background: rgba(0, 0, 0, 0.33);
       position: absolute;

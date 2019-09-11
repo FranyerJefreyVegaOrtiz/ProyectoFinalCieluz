@@ -562,7 +562,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -574,6 +574,8 @@ namespace appWebCieluz.ServicioWebCieluz {
         private int cantidadField;
         
         private int tallaField;
+        
+        private System.DateTime fechaField;
         
         private int precioTotalField;
         
@@ -623,6 +625,18 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("Fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public int PrecioTotal {
             get {
                 return this.precioTotalField;
@@ -634,7 +648,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string TipoPago {
             get {
                 return this.tipoPagoField;
@@ -646,7 +660,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public int idProducto {
             get {
                 return this.idProductoField;
@@ -658,7 +672,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int idCliente {
             get {
                 return this.idClienteField;
@@ -670,7 +684,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public int idAdministrador {
             get {
                 return this.idAdministradorField;

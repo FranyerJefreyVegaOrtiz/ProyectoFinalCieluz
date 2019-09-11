@@ -20,7 +20,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListar()
         {
-            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente where IdPedido=" + IdPedido + "";
+            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente";
             DataSet dsPedido = new DataSet();
             clConexion objConexion = new clConexion();
             dsPedido = objConexion.mtdDesconectado(consulta);

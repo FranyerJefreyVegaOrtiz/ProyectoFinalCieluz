@@ -111,6 +111,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="IdPedido" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Talla" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
           <s:element minOccurs="1" maxOccurs="1" name="PrecioTotal" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="TipoPago" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="idProducto" type="s:int" />

@@ -80,7 +80,7 @@
                             <div class="col-lg-7 pr-0">
                                 <ul class="nav navbar-nav center_nav pull-right">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Inicio</a>
+                                        <a class="nav-link" href="Index.aspx">Inicio</a>
                                     </li>
                                     <li class="nav-item submenu dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tienda</a>
@@ -89,36 +89,12 @@
                                                 <a class="nav-link" href="Productos.aspx">
                                                     Categoría de tienda
                                                 </a>
-                                    
-                                    <!--<li class="nav-item submenu dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="blog.html">Blog</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="single-blog.html">Blog Detalles</a>
-                                            </li>
-                                        </ul>
-                                    </li>-->
-                                    <!--<li class="nav-item submenu dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pagos</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="login.html">Login</a>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="tracking.html">Rastreo</a>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="elements.html">Elementos</a>
-                                            </li>
-                                        </ul>
-                                    </li>-->
                                     <li class="nav-item">
                                         <a class="nav-link" href="contact.html">Contactos</a>
                                     </li>
                                 </ul>
                                    <li class="nav-item submenu dropdown">
-                                            <asp:label  class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="Correo" name="Correo" runat="server" text="Mi Cuenta"></asp:label>
+                                            <asp:label   class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="Correo" name="Correo" runat="server" text="Mi Cuenta"></asp:label>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
                                                     <a class="nav-link" id="A1" name="IdCliente" href="Productos.aspx" runat="Server">
@@ -130,18 +106,18 @@
                                             </ul>
                                         </li>
                             </div>
-                                    <hr>
+                             <div class="col-lg-5">
+                                <ul class="nav navbar-nav navbar-right right_nav pull-right">
                                     <li class="nav-item">
                                         <a href="Carro.aspx" class="icons">
                                             <i class="lnr lnr lnr-cart"></i>
                                         </a>
                                     </li>
-                                    <hr>
-                                </ul>
+                                    </ul>
+                            </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </nav>
         </div>
          
