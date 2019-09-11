@@ -25,10 +25,10 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarClientes(int IdCliente, string Correo, string Clave);
+        System.Data.DataSet mtdListarClientes(int IdCliente);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente, string Correo, string Clave);
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -39,10 +39,10 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdLoginWeb(int IdCliente, string Correo, string Clave);
+        System.Data.DataSet mtdLoginWeb(string Correo, string Clave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginWeb", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(int IdCliente, string Correo, string Clave);
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedido", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -562,7 +562,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -575,6 +575,8 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         private int tallaField;
         
+        private System.DateTime fechaField;
+        
         private int precioTotalField;
         
         private string tipoPagoField;
@@ -582,8 +584,6 @@ namespace appWebCieluz.ServicioWebCieluz {
         private int idProductoField;
         
         private int idClienteField;
-        
-        private int idAdministradorField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -623,6 +623,18 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime Fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("Fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public int PrecioTotal {
             get {
                 return this.precioTotalField;
@@ -634,7 +646,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string TipoPago {
             get {
                 return this.tipoPagoField;
@@ -646,7 +658,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public int idProducto {
             get {
                 return this.idProductoField;
@@ -658,7 +670,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int idCliente {
             get {
                 return this.idClienteField;
@@ -666,18 +678,6 @@ namespace appWebCieluz.ServicioWebCieluz {
             set {
                 this.idClienteField = value;
                 this.RaisePropertyChanged("idCliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public int idAdministrador {
-            get {
-                return this.idAdministradorField;
-            }
-            set {
-                this.idAdministradorField = value;
-                this.RaisePropertyChanged("idAdministrador");
             }
         }
         
@@ -726,12 +726,12 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdRegistrarClientesAsync(ObjCliente);
         }
         
-        public System.Data.DataSet mtdListarClientes(int IdCliente, string Correo, string Clave) {
-            return base.Channel.mtdListarClientes(IdCliente, Correo, Clave);
+        public System.Data.DataSet mtdListarClientes(int IdCliente) {
+            return base.Channel.mtdListarClientes(IdCliente);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente, string Correo, string Clave) {
-            return base.Channel.mtdListarClientesAsync(IdCliente, Correo, Clave);
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente) {
+            return base.Channel.mtdListarClientesAsync(IdCliente);
         }
         
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {
@@ -742,12 +742,12 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdLoginEscritorioAsync(Correo, Clave);
         }
         
-        public System.Data.DataSet mtdLoginWeb(int IdCliente, string Correo, string Clave) {
-            return base.Channel.mtdLoginWeb(IdCliente, Correo, Clave);
+        public System.Data.DataSet mtdLoginWeb(string Correo, string Clave) {
+            return base.Channel.mtdLoginWeb(Correo, Clave);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(int IdCliente, string Correo, string Clave) {
-            return base.Channel.mtdLoginWebAsync(IdCliente, Correo, Clave);
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdLoginWebAsync(string Correo, string Clave) {
+            return base.Channel.mtdLoginWebAsync(Correo, Clave);
         }
         
         public int mtdRegistrarPedido(appWebCieluz.ServicioWebCieluz.clPedido objPed) {

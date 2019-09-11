@@ -117,8 +117,10 @@
                                         <a class="nav-link" href="contact.html">Contactos</a>
                                     </li>
                                 </ul>
+                                        <asp:label  class="nav-link dropdown-toggle" id="id" name="id" runat="server" Visible="False"></asp:label>
                                    <li class="nav-item submenu dropdown">
-                                            <asp:label  class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="Correo" name="Correo" runat="server" text="Mi Cuenta"></asp:label>
+                                            <asp:label  class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="Correo" name="Correo" runat="server" text=""></asp:label>
+
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
                                                     <a class="nav-link" id="A1" name="IdCliente" href="Productos.aspx" runat="Server">

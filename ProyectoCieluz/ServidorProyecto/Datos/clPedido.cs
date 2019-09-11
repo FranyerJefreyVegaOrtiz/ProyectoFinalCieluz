@@ -16,7 +16,6 @@ namespace ServidorProyecto.Datos
         public string TipoPago { get; set; }
         public int idProducto { get; set; }
         public int idCliente { get; set; }
-        public int idAdministrador { get; set; }
 
         public DataSet mtdListar()
         {
@@ -30,8 +29,8 @@ namespace ServidorProyecto.Datos
 
         public int mtdRegistrar(clPedido objPedido)
         {
-            string consulta = "insert into Pedido (Cantidad, Talla, PrecioTotal, TipoPago, idProducto, idCliente, idAdministrador )" +
-               "Values('" + Cantidad + "','" + Talla + "','" + PrecioTotal + "','" + TipoPago + "', " + idProducto + ", " + idCliente + ", " + idAdministrador + ")";
+            string consulta = "insert into Pedido (Cantidad, Talla, PrecioTotal, TipoPago, IdProducto, IdCliente)" +
+               "Values('" + Cantidad + "','" + Talla + "','" + PrecioTotal + "','" + TipoPago + "', '" + idProducto + "', '" + idCliente + "')";
             clConexion objconexion = new clConexion();
             int result = objconexion.mtdConectado(consulta);
             return result;

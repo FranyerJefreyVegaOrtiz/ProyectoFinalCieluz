@@ -12,22 +12,6 @@
 
     <form id="form1" runat="server">
         <div class="container">
-            <section class="banner_area">
-        <div class="banner_inner d-flex align-items-center" style="left: 3px; top: -141px">
-            <div class="container">
-                <div class="banner_content text-center">
-                    <h2>Categoria de Compra</h2>
-                    <div class="page_link">
-                        <a href="index.html">Inicio</a>
-                        <a href="category.html">Categoria</a>
-                        <a href="Productos.aspx">Diseño Mujer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-                
-
             <div class="row">
                     <%-- <asp:Image ID="Image1" Width="200" runat="server" />--%>
                 <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
