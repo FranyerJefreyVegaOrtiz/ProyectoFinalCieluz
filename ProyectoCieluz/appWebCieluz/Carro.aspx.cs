@@ -14,7 +14,7 @@ namespace appWebCieluz
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             //var Foto = "FotoPro";
             //var Nombre = "NombrePro";
             //var Precio ="PrecioPro";
@@ -33,18 +33,34 @@ namespace appWebCieluz
         }
         public void mtdRegistrarPedido()
         {
-            ServicioWebCieluz.clPedido objPedido = new ServicioWebCieluz.clPedido();
+
+            try
+            {
+                 ServicioWebCieluz.clPedido objPedido = new ServicioWebCieluz.clPedido();
             objPedido.idProducto = int.Parse(txtRecive.Text);
             objPedido.Cantidad = int.Parse(txtCantidad.Text);
             objPedido.Talla = int.Parse(txtTalla.Text);
             objPedido.PrecioTotal = int.Parse(txtPrecioTotal.Text);
             objPedido.TipoPago = txtTipoPago.Text;
-            objPedido.idCliente = int.Parse(Session["IdCliente"].ToString());
+            objPedido.idCliente = 1;
 
             int resultado = miservice.mtdRegistrarPedido(objPedido);
 
-        }
+            if (resultado > 0)
+            {
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
+                
+            }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (Session["Correo"] != null)

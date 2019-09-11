@@ -22,6 +22,7 @@ namespace appWebCieluz
             if (Session["Correo"]!=null)
             {
                 Correo.Text = Session["Correo"].ToString();
+                id.Text = Session["IdCliente"].ToString();
             }
         }
     }

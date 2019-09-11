@@ -53,9 +53,9 @@ namespace ServidorProyecto.Datos
             return resul;
         }
 
-        public DataSet mtdListar2(int IdCliente,string Correo, string Clave)
+        public DataSet mtdListar2(string Correo, string Clave)
         {
-            string consulta = "Select IdCliente, Correo, Clave From Cliente Where IdCliente='" + IdCliente +"' and Correo='"+  Correo +"'and Clave='"+ Clave +"'";
+            string consulta = "Select IdCliente, Correo, Clave From Cliente Where Correo='"+  Correo +"'and Clave='"+ Clave +"'";
             DataSet dsCliente = new DataSet();
             clConexion clConexion = new clConexion();
             dsCliente = clConexion.mtdDesconectado(consulta);

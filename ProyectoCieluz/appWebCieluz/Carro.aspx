@@ -40,6 +40,7 @@
                 <asp:Label ID="Label4" runat="server" Text="TIPOPAGO"></asp:Label>
                 <asp:TextBox class="form-control" ID="txtTipoPago" runat="server"></asp:TextBox>
                 <br />
+                <asp:Label ID="id" runat="server" Text=""></asp:Label>
                 <asp:Button class="main_btn"  ID="Button1" runat="server" Text="Registra Pedidos" OnClick="Button1_Click" />
                
              </div>
