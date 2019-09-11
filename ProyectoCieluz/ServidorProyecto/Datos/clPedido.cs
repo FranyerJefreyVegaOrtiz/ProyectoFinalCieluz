@@ -11,6 +11,7 @@ namespace ServidorProyecto.Datos
         public int IdPedido { get; set; }
         public int Cantidad { get; set; }
         public int Talla { get; set; }
+        public DateTime Fecha { get; set; }
         public int PrecioTotal { get; set; }
         public string TipoPago { get; set; }
         public int idProducto { get; set; }
@@ -19,7 +20,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListar()
         {
-            string consulta = "Select * From Pedido";
+            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente where IdPedido=" + IdPedido + "";
             DataSet dsPedido = new DataSet();
             clConexion objConexion = new clConexion();
             dsPedido = objConexion.mtdDesconectado(consulta);
@@ -43,6 +44,16 @@ namespace ServidorProyecto.Datos
             clConexion objconexion = new clConexion();
             int resultado = objconexion.mtdConectado(consulta);
             return resultado;
+        }
+
+        public DataSet mtdListarHoy()
+        {
+            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente ";
+            DataSet dsPedido = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsPedido = objConexion.mtdDesconectado(consulta);
+            return dsPedido;
+
         }
     }
 }

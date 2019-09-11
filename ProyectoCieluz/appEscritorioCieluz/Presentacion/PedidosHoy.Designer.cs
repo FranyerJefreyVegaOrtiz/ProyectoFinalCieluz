@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PH = new System.Windows.Forms.TextBox();
+            this.txtPrecioPH = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCodigoPH = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,15 +64,15 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvPedidosHoy);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 541);
+            this.panel1.Size = new System.Drawing.Size(1081, 542);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.PH);
+            this.panel2.Controls.Add(this.txtPrecioPH);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtCodigoPH);
             this.panel2.Controls.Add(this.label10);
@@ -95,12 +95,12 @@
             this.panel2.Size = new System.Drawing.Size(422, 469);
             this.panel2.TabIndex = 2;
             // 
-            // PH
+            // txtPrecioPH
             // 
-            this.PH.Location = new System.Drawing.Point(165, 411);
-            this.PH.Name = "PH";
-            this.PH.Size = new System.Drawing.Size(209, 20);
-            this.PH.TabIndex = 37;
+            this.txtPrecioPH.Location = new System.Drawing.Point(165, 411);
+            this.txtPrecioPH.Name = "txtPrecioPH";
+            this.txtPrecioPH.Size = new System.Drawing.Size(209, 20);
+            this.txtPrecioPH.TabIndex = 37;
             // 
             // label11
             // 
@@ -282,6 +282,7 @@
             this.dgvPedidosHoy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPedidosHoy.Size = new System.Drawing.Size(580, 469);
             this.dgvPedidosHoy.TabIndex = 0;
+            this.dgvPedidosHoy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidosHoy_CellClick);
             // 
             // PedidosHoy
             // 
@@ -292,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PedidosHoy";
             this.Text = "PedidosHoy";
+            this.Load += new System.EventHandler(this.PedidosHoy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -307,7 +309,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPedidosHoy;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox PH;
+        private System.Windows.Forms.TextBox txtPrecioPH;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCodigoPH;
         private System.Windows.Forms.Label label10;
