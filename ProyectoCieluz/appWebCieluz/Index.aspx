@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
           <!--================Home Banner Area =================-->
-    <section class="home_banner_area">
+      <section class="home_banner_area">
         <div class="overlay"></div>
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
@@ -72,7 +72,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/index/fabrica3.jpg" alt="">
+                                <img class="rounded-circle img-fluid" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -86,7 +86,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/index/fabrica.jpg" alt="">
+                                <img class="rounded-circle img-fluid" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -100,7 +100,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/index/fabrica1.jpg" alt="">
+                                <img class="rounded-circle img-fluid" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -114,7 +114,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/index/fabrica2.jpg" alt="">
+                                <img class="rounded-circle img-fluid"alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -146,25 +146,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3  col-md-6 col-sm-6">
+                        
                     <div class="single-footer-widget">
                         <h6 class="footer_title">Información</h6>
-                        <a class="main_btn" href="GuiaTallas.aspx">Guía de Tallas</a>
+                        <br />
+                        <a class="genric-btn info-border radius" href="GuiaTallas.aspx">Guía de Tallas</a>
                     </div>
                     <br />
                     <div class="single-footer-widget">
-                        <a class="main_btn" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
+                        <a class="genric-btn info-border radius" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6 class="footer_title">Servicio al Cliente</h6>
-                        <a class="main_btn" href="contact.html">Contáctanos</a>
+                        <br />
+                        <a class="genric-btn info-border radius" href="contact.html">Contáctanos</a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget f_social_wd">
                         <h6 class="footer_title">Redes</h6>
+                        <br />
                         <div class="f_social">
                             <a href="#">
                                 <img src="img/facebook.png" />
@@ -194,7 +198,7 @@
             </div>
         </div>
     </footer>
-
+    
     <!--================ End footer Area  =================-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

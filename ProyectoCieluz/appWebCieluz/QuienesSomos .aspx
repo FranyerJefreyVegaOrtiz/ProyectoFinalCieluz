@@ -11,42 +11,46 @@
    
     </asp:panel>
  &nbsp;
-   <!--================ start footer Area  =================-->
+    <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3  col-md-6 col-sm-6">
+                        
                     <div class="single-footer-widget">
                         <h6 class="footer_title">Información</h6>
-                        <a class="main_btn" href="GuiaTallas.aspx">Guía de Tallas</a>
+                        <br />
+                        <a class="genric-btn info-border radius" href="GuiaTallas.aspx">Guía de Tallas</a>
                     </div>
                     <br />
                     <div class="single-footer-widget">
-                        <a class="main_btn" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
+                        <a class="genric-btn info-border radius" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6 class="footer_title">Servicio al Cliente</h6>
-                        <a class="main_btn" href="contact.html">Contáctanos</a>
+                        <br />
+                        <a class="genric-btn info-border radius" href="contact.html">Contáctanos</a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget f_social_wd">
                         <h6 class="footer_title">Redes</h6>
+                        <br />
                         <div class="f_social">
-                            <a href="https://es-la.facebook.com/">
+                            <a href="#">
                                 <img src="img/facebook.png" />
                             </a>
-                            <a href="https://www.instagram.com/?hl=es-la">
+                            <a href="#">
                                 <img src="img/instagram.png" />
                             </a>
 
-                            <a href="https://co.pinterest.com/">
+                            <a href="#">
                                 <img src="img/pinterest.png" />
                             </a>
-                            <a href="https://twitter.com/login?lang=es">
+                            <a href="#">
                                 <img src="img/twitter.png" />
                             </a>
 
