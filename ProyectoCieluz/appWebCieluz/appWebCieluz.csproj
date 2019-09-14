@@ -109,6 +109,8 @@
     <Content Include="Formulario web1.aspx" />
     <Content Include="DetalleProductos.aspx" />
     <Content Include="Carro.aspx" />
+    <Content Include="img\banner\bannher-bg.jpg" />
+    <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\cotizas-calzado-para-dama-alpargatas-moda-mujer-artesanal-D_NQ_NP_752774-MCO31560138034_072019-Q.jpg" />
     <Content Include="img\index\fabrica.jpg" />
     <Content Include="img\index\fabrica1.jpg" />
@@ -121,7 +123,7 @@
     <Content Include="QuienesSomos .aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="GlobalLogin.asax" />
-    <Content Include="img\banner\banner-bg.jpg" />
+    <Content Include="img\banner\banner-bpg.jpg" />
     <Content Include="img\breadcrumb\checkout-bg.jpg" />
     <Content Include="img\CieluzBlanco.png" />
     <Content Include="img\error.jpg" />

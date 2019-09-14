@@ -29,7 +29,7 @@ namespace appEscritorioCieluz
             if(txtContraseña.Text == "CONTRASEÑA")
             {
                 txtContraseña.Text = "";
-                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.ForeColor = Color.Black;
                 txtContraseña.UseSystemPasswordChar = true;
              
             }
@@ -40,7 +40,7 @@ namespace appEscritorioCieluz
             if (txtContraseña.Text =="")
             {
                 txtContraseña.Text = "CONTRASEÑA";
-                txtContraseña.ForeColor = Color.DimGray;
+                txtContraseña.ForeColor = Color.Black;
             }
         }
 
@@ -107,7 +107,7 @@ namespace appEscritorioCieluz
             if (txtCorreo.Text == "")
             {
                 txtCorreo.Text = "CORREO";
-                txtCorreo.ForeColor = Color.DimGray;
+                txtCorreo.ForeColor = Color.Black;
             }
         }
 
@@ -116,7 +116,7 @@ namespace appEscritorioCieluz
             if (txtCorreo.Text == "CORREO")
             {
                 txtCorreo.Text = "";
-                txtCorreo.ForeColor = Color.LightGray;
+                txtCorreo.ForeColor = Color.Black;
 
             }
         }

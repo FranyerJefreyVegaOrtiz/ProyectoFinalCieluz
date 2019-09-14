@@ -28,29 +28,30 @@
         <div class="top_menu row m0">
             <div class="container-fluid">
                 <div class="float-left">
-                    <p>Call Us: 012 44 5698 7456 896</p>
+                    <p>Llamanos: 3143956111</p>
                 </div>
                 <div class="float-right">
                     <ul class="right_side">
+                        <li>
+                            <form class="nav-link" action="Index.aspx" method="post">
+                                <label id="Label1" name="" runat="server" placeholder="Correo" required></label>
+                            </form>
+                        </li>
                         <li>
                             <a class="nav-link" href="login.html">
                                 Iniciar Sesion/Registrarse
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                My Cuenta
-                            </a>
-                        </li>
-                        <li>
                             <a class="nav-link" href="contact.html">
-                                Contactanos
+                                Contáctanos
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -70,26 +71,18 @@
                             <div class="col-lg-7 pr-0">
                                 <ul class="nav navbar-nav center_nav pull-right">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Inicio</a>
+                                        <a class="nav-link" href="Index.aspx">Inicio</a>
                                     </li>
                                     <li class="nav-item submenu dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tienda</a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="category.html">
+                                                <a class="nav-link" href="Productos.aspx">
                                                     Categoría de tienda
                                                 </a>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="single-product.html">Detalles Productos></a>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="checkout.html">
-                                                    Pago del producto
-                                                </a>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="confirmation.html">Confirmacion</a>
-                                            </li>
                                         </ul>
                                     </li>
+
+
                                     <!--<li class="nav-item submenu dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                                         <ul class="dropdown-menu">
@@ -100,8 +93,8 @@
                                                 <a class="nav-link" href="single-blog.html">Blog Detalles</a>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li class="nav-item submenu dropdown">
+                                    </li>-->
+                                    <!--<li class="nav-item submenu dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pagos</a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
@@ -119,337 +112,317 @@
                                 </ul>
                             </div>
 
-                            <div class="col-lg-5">
-                                <ul class="nav navbar-nav navbar-right right_nav pull-right">
-                                    <hr>
-                                    <li class="nav-item">
-                                        <a href="#" class="icons">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-
-                                    <hr>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="icons">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-
-                                    <hr>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="icons">
-                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-
-                                    <hr>
-
-                                    <li class="nav-item">
-                                        <a href="cart.html" class="icons">
-                                            <i class="lnr lnr lnr-cart"></i>
-                                        </a>
-                                    </li>
-
-                                    <hr>
-                                </ul>
-                            </div>
+                            <hr>
+                            <li class="nav-item">
+                                <a href="cart.html" class="icons">
+                                    <i class="lnr lnr lnr-cart"></i>
+                                </a>
+                            </li>
+                            <hr>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </nav>
         </div>
+
+
+
     </header>
+
     <!--================Header Menu Area =================-->
     <!--================Home Banner Area =================-->
     <section class="banner_area">
-        <div class="banner_inner d-flex align-items-center">
+        <!--<div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>Order Confirmation</h2>
+                    <h2>Pedido</h2>
                     <div class="page_link">
-                        <a href="index.html">Home</a>
-                        <a href="confirmation.html">Confirmation</a>
+                        <a href="Index.aspx">Home</a>
+                        <a href="confirmation.html">Compra</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <!--================End Home Banner Area =================-->
     <!--================Order Details Area =================-->
     <section class="order_details p_120">
         <div class="container">
-            <h3 class="title_confirmation">Thank you. Your order has been received.</h3>
+            <h3 class="title_confirmation">GRACIAS TU PEDIDO FUE REALIZADO EXITOSAMENTE</h3>
+            <!--<img class="img-fluid" src="img/check.jpg" alt="">-->
+            <h2 class="title_confirmation">Comprueba tu correo ver detalles del pago</h2>
             <div class="row order_d_inner">
                 <div class="col-lg-4">
                     <div class="details_item">
-                        <h4>Order Info</h4>
+
                         <ul class="list">
                             <li>
                                 <a href="#">
-                                    <span>Order number</span> : 60235
+                                    <!--<span>Order number</span> : 60235-->
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>Date</span> : Los Angeles
+                                    <!-- <span>Date</span> : Los Angeles-->
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>Total</span> : USD 2210
+                                    <!--<span>Total</span> : USD 2210-->
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>Payment method</span> : Check payments
+                                    <!--<span>Payment method</span> : Check payments-->
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="details_item">
-                        <h4>Billing Address</h4>
-                        <ul class="list">
-                            <li>
-                                <a href="#">
-                                    <span>Street</span> : 56/8
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>City</span> : Los Angeles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Country</span> : United States
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Postcode </span> : 36952
-                                </a>
-                            </li>
-                        </ul>
+                <!--<div class="col-lg-4">
+                        <div class="details_item">
+                            <h4>Billing Address</h4>
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <span>Street</span> : 56/8
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>City</span> : Los Angeles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Country</span> : United States
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Postcode </span> : 36952
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="details_item">
-                        <h4>Shipping Address</h4>
-                        <ul class="list">
-                            <li>
-                                <a href="#">
-                                    <span>Street</span> : 56/8
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>City</span> : Los Angeles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Country</span> : United States
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Postcode </span> : 36952
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="order_details_table">
-                <h2>Order Details</h2>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p>Pixelstore fresh Blackberry</p>
-                                </td>
-                                <td>
-                                    <h5>x 02</h5>
-                                </td>
-                                <td>
-                                    <p>$720.00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Pixelstore fresh Blackberry</p>
-                                </td>
-                                <td>
-                                    <h5>x 02</h5>
-                                </td>
-                                <td>
-                                    <p>$720.00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Pixelstore fresh Blackberry</p>
-                                </td>
-                                <td>
-                                    <h5>x 02</h5>
-                                </td>
-                                <td>
-                                    <p>$720.00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Subtotal</h4>
-                                </td>
-                                <td>
-                                    <h5></h5>
-                                </td>
-                                <td>
-                                    <p>$2160.00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Shipping</h4>
-                                </td>
-                                <td>
-                                    <h5></h5>
-                                </td>
-                                <td>
-                                    <p>Flat rate: $50.00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h4>Total</h4>
-                                </td>
-                                <td>
-                                    <h5></h5>
-                                </td>
-                                <td>
-                                    <p>$2210.00</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================End Order Details Area =================-->
-    <!--================ Subscription Area ================-->
-    <section class="subscription-area section_gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <h2>Subscribe for Our Newsletter</h2>
-                        <span>We won’t send any kind of spam</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div id="mc_embed_signup">
-                        <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
-                              method="get" class="subscription relative">
-                            <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
-                                   required="">
-                            <!-- <div style="position: absolute; left: -5000px;">
-                                    <input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
-                                </div> -->
-                            <button type="submit" class="newsl-btn">Get Started</button>
-                            <div class="info"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ End Subscription Area ================-->
-    <!--================ start footer Area  =================-->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">Información</h6>
-                        <a class="main_btn" href="GuiaTallas.aspx">Guía de Tallas</a>
-                    </div>
-                    <br />
-                    <div class="single-footer-widget">
-                        <a class="main_btn" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6 class="footer_title">Servicio al Cliente</h6>
-                        <a class="main_btn" href="contact.html">Contáctanos</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget f_social_wd">
-                        <h6 class="footer_title">Redes</h6>
-                        <div class="f_social">
-                            <a href="https://es-la.facebook.com/">
-                                <img src="img/facebook.png" />
-                            </a>
-                            <a href="https://www.instagram.com/?hl=es-la">
-                                <img src="img/instagram.png" />
-                            </a>
-
-                            <a href="https://co.pinterest.com/">
-                                <img src="img/pinterest.png" />
-                            </a>
-                            <a href="https://twitter.com/login?lang=es">
-                                <img src="img/twitter.png" />
-                            </a>
-
+                    <div class="col-lg-4">
+                        <div class="details_item">
+                            <h4>Shipping Address</h4>
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <span>Street</span> : 56/8
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>City</span> : Los Angeles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Country</span> : United States
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Postcode </span> : 36952
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row footer-bottom d-flex justify-content-between align-items-center">
-                    <p class="col-lg-12 footer-text text-center">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados  <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
+                <div class="order_details_table">
+                    <h2>Order Details</h2>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Pixelstore fresh Blackberry</p>
+                                    </td>
+                                    <td>
+                                        <h5>x 02</h5>
+                                    </td>
+                                    <td>
+                                        <p>$720.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Pixelstore fresh Blackberry</p>
+                                    </td>
+                                    <td>
+                                        <h5>x 02</h5>
+                                    </td>
+                                    <td>
+                                        <p>$720.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Pixelstore fresh Blackberry</p>
+                                    </td>
+                                    <td>
+                                        <h5>x 02</h5>
+                                    </td>
+                                    <td>
+                                        <p>$720.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Subtotal</h4>
+                                    </td>
+                                    <td>
+                                        <h5></h5>
+                                    </td>
+                                    <td>
+                                        <p>$2160.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Shipping</h4>
+                                    </td>
+                                    <td>
+                                        <h5></h5>
+                                    </td>
+                                    <td>
+                                        <p>Flat rate: $50.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Total</h4>
+                                    </td>
+                                    <td>
+                                        <h5></h5>
+                                    </td>
+                                    <td>
+                                        <p>$2210.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </section>
+        <!--================End Order Details Area =================-->
+                <!--================ Subscription Area ================-->
+                <!--<section class="subscription-area section_gap">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center">
+                            <h2>Subscribe for Our Newsletter</h2>
+                            <span>We won’t send any kind of spam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div id="mc_embed_signup">
+                            <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
+                                  method="get" class="subscription relative">
+                                <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+                                       required="">
+                                 <div style="position: absolute; left: -5000px;">
+                                        <input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
+                                    </div>
+                                <button type="submit" class="newsl-btn">Get Started</button>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+            </div>
         </div>
-    </footer>
-    <!--================ End footer Area  =================-->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendors/counter-up/jquery.counterup.js"></script>
-    <script src="js/theme.js"></script>
+            </section>
+                <!--================ End Subscription Area ================-->-->
+                <!--================ start footer Area  =================-->
+                <footer class="footer-area section_gap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3  col-md-6 col-sm-6">
+                                <div class="single-footer-widget">
+                                    <h6 class="footer_title">Información</h6>
+                                    <a class="main_btn" href="GuiaTallas.aspx">Guía de Tallas</a>
+                                </div>
+                                <br />
+                                <div class="single-footer-widget">
+                                    <a class="main_btn" href="TerminosCondiciones.aspx">Terminos y Condiciones</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-footer-widget">
+                                    <h6 class="footer_title">Servicio al Cliente</h6>
+                                    <a class="main_btn" href="contact.html">Contáctanos</a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-footer-widget f_social_wd">
+                                    <h6 class="footer_title">Redes</h6>
+                                    <div class="f_social">
+                                        <a href="https://es-la.facebook.com/">
+                                            <img src="img/facebook.png" />
+                                        </a>
+                                        <a href="https://www.instagram.com/?hl=es-la">
+                                            <img src="img/instagram.png" />
+                                        </a>
+
+                                        <a href="https://co.pinterest.com/">
+                                            <img src="img/pinterest.png" />
+                                        </a>
+                                        <a href="https://twitter.com/login?lang=es">
+                                            <img src="img/twitter.png" />
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                                <p class="col-lg-12 footer-text text-center">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados  <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--================ End footer Area  =================-->
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="js/jquery-3.2.1.min.js"></script>
+                <script src="js/popper.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/stellar.js"></script>
+                <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+                <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+                <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+                <script src="vendors/isotope/isotope-min.js"></script>
+                <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+                <script src="js/jquery.ajaxchimp.min.js"></script>
+                <script src="js/mail-script.js"></script>
+                <script src="vendors/jquery-ui/jquery-ui.js"></script>
+                <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+                <script src="vendors/counter-up/jquery.counterup.js"></script>
+                <script src="js/theme.js"></script>
 </body>
 
 </html>

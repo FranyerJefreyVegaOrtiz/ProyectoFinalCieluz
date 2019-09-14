@@ -19,7 +19,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListar()
         {
-            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente where IdPedido = "+IdPedido+"";
+            string consulta = "Select Pedido.*, Producto.*, Cliente.* From Pedido, Producto, Cliente";
             DataSet dsPedido = new DataSet();
             clConexion objConexion = new clConexion();
             dsPedido = objConexion.mtdDesconectado(consulta);
@@ -30,7 +30,7 @@ namespace ServidorProyecto.Datos
         public int mtdRegistrar(clPedido objPedido)
         {
             string consulta = "insert into Pedido (Cantidad, Talla, PrecioTotal, TipoPago, IdProducto, IdCliente)" +
-               "Values('" + Cantidad + "','" + Talla + "','" + PrecioTotal + "','" + TipoPago + "', '" + idProducto + "', '" + idCliente + "')";
+               "Values('"+Cantidad +"','" + Talla + "','" + PrecioTotal + "','" + TipoPago + "', '"+ idProducto +"', '" +idCliente +"')";
             clConexion objconexion = new clConexion();
             int result = objconexion.mtdConectado(consulta);
             return result;

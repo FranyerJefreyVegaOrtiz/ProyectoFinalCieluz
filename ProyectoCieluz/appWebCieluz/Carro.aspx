@@ -41,6 +41,8 @@
                             <tr>
                                 <th scope="col">Producto</th>
                                 <th scope="col">Precio</th>
+                                <th scope="col">Talla</th>
+                                <th scope="col">Tipo de Pago</th>
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Total</th>
                             </tr>
@@ -57,12 +59,23 @@
                 </div>
                                     </div>
                                 </td>
-                                <td>
-                        <h5>$<asp:Label ID="Precio" runat="server" Text="Label"></asp:Label></h5>
+                                 <td>
+                      <h5><asp:TextBox class="form-control" ID="Precio" runat="server" Visible="true"></asp:TextBox></h5>  
                 </td>
+                                 <td>
+                      <h5><asp:TextBox class="form-control" ID="txtTalla" runat="server" Visible="true"></asp:TextBox></h5>  
+                </td>
+                                 <td>
+                                     
+                     <h5><asp:DropDownList  class="form-control" ID="DropDownList1" runat="server">
+                                         <asp:ListItem>Efectivo</asp:ListItem>
+                                         <asp:ListItem>Tarjeta de Credito</asp:ListItem>
+                                     </asp:DropDownList></h5>  
+                </td>
+                            
                                     <td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Cantidad:" class="input-text qty">
+                                        <asp:TextBox ID="txtCantidad"  runat="server">1</asp:TextBox>
                                         <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
                                                 class="increase items-count" type="button">
                                             <i class="lnr lnr-chevron-up"></i>
@@ -74,27 +87,13 @@
                                     </div>
                                 </td>
                                      <td>
-                                    <h5>$720.00</h5>
+                                    <h5>
+                                        <a>$</a><asp:Label ID="lblTotal" runat="server"  Text=""></asp:Label> </h5>
+                                         <br />
+                                         <asp:Button Class="main_btn" ID="btnOperacion" runat="server" Text="Calcular" OnClick="btnOperacion_Click" />
                                 </td>
                             </tr>
                 <asp:TextBox ID="txtRecive"  runat="server" Visible="false"></asp:TextBox>
-                <asp:TextBox class="form-control" ID="txtCantidad" runat="server" Visible="false"></asp:TextBox>
-                <asp:TextBox class="form-control" ID="txtTalla" runat="server" Visible="false"></asp:TextBox>
-                <asp:TextBox class="form-control" ID="txtPrecioTotal" runat="server" Visible="false"></asp:TextBox>
-                <asp:TextBox class="form-control" ID="txtTipoPago" runat="server" Visible="false"></asp:TextBox>
-                <asp:Label ID="id" runat="server" Text="" Visible="false"></asp:Label>
-                             <tr class="bottom_button">
-                                 </tr>
-                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <h5>Subtotal</h5>
-                                </td>
-                                <td>
-                                    <h5>$2160.00</h5>
-                                </td>
-                            </tr>
                                <tr class="out_button_area">
                                 <td></td>
                                 <td></td>
@@ -102,7 +101,7 @@
                                 <td>
                                     <div class="checkout_btn_inner">
                                         <a class="gray_btn" href="Productos.aspx">Seguir Comprando</a>
-                                        <a class="main_btn" href="#">Proceder con la compra</a>
+                                         <asp:Button class="main_btn"  ID="btnCompra" runat="server" Text="Proceder con la compra" OnClick="btnCompra_Click" />
                                     </div>
                                 </td>
                             </tr>

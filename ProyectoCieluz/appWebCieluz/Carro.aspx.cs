@@ -40,8 +40,8 @@ namespace appWebCieluz
             objPedido.idProducto = int.Parse(txtRecive.Text);
             objPedido.Cantidad = int.Parse(txtCantidad.Text);
             objPedido.Talla = int.Parse(txtTalla.Text);
-            objPedido.PrecioTotal = int.Parse(txtPrecioTotal.Text);
-            objPedido.TipoPago = txtTipoPago.Text;
+            objPedido.PrecioTotal = int.Parse(lblTotal.Text);
+            //objPedido.TipoPago = txtTipoPago.Text;
             objPedido.idCliente = 1;
 
             int resultado = miservice.mtdRegistrarPedido(objPedido);
@@ -72,6 +72,28 @@ namespace appWebCieluz
                 Response.Redirect("login.html");
             }
             
+        }
+
+        protected void btnOperacion_Click(object sender, EventArgs e)
+        {
+            int pre = int.Parse(Precio.Text);
+            int can = int.Parse(txtCantidad.Text);
+            int valor = pre * can;
+            lblTotal.Text = valor.ToString();
+
+        }
+
+        protected void btnCompra_Click(object sender, EventArgs e)
+        {
+            if (Session["Correo"] != null)
+            {
+                //mtdRegistrarPedido();
+                Response.Redirect("confirmation.html");
+            }
+            else
+            {
+                Response.Redirect("login.html");
+            }
         }
     }
 }
