@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
+using System.Net.Mail;
 
 namespace appWebCieluz
 {
@@ -85,10 +87,31 @@ namespace appWebCieluz
 
         protected void btnCompra_Click(object sender, EventArgs e)
         {
+            txtFrom.Text = "Calzadocieluz@gmail.com";
+            txtClave.Text = "Cieluz-2019";
+            txtSubject.Text = "Tu Pedido - Calzado Cieluz";
+            txtBody.Text = "Tu pedido se esta creando...";
             if (Session["Correo"] != null)
             {
                 //mtdRegistrarPedido();
-                Response.Redirect("confirmation.html");
+                try
+                {
+                    MailMessage msg = new MailMessage();
+                    msg.From = new MailAddress(txtFrom.Text);
+                    msg.To.Add(Session["Correo"].ToString());
+                    msg.Subject = txtSubject.Text;
+                    msg.Body = txtBody.Text;
+                    SmtpClient sc = new SmtpClient("smtp.gmail.com");
+                    sc.Port = 25;
+                    sc.Credentials = new NetworkCredential(txtFrom.Text, txtClave.Text);
+                    sc.EnableSsl = true;
+                    sc.Send(msg);
+                    Response.Redirect("confirmation.html");
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
             }
             else
             {
