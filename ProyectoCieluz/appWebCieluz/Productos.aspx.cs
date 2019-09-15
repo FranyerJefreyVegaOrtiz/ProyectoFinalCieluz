@@ -13,6 +13,8 @@ namespace appWebCieluz
 {
     public partial class Formulario_web2 : System.Web.UI.Page
     {
+        ServicioWebCieluz.clProducto objProducto = new ServicioWebCieluz.clProducto();
+
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,9 +36,9 @@ namespace appWebCieluz
             {
 
                 ServicioWebCieluz.clProducto objProducto = new ServicioWebCieluz.clProducto();
-                DataSet dsProucto = new DataSet();
-                dsProucto = miservice.mtdListarProWeb();
-                DataTable tblProducto = dsProucto.Tables["tblDatos"];
+                DataSet dsProducto = new DataSet();
+                dsProducto = miservice.mtdListarProWeb();
+                DataTable tblProducto = dsProducto.Tables["tblDatos"];
                 //var dato = tblProducto.Rows[0][3];
                 //dato = Session["IdProducto"].ToString();
                 //tblProducto.Rows[0]["imgSalida"] = dato;
@@ -67,6 +69,184 @@ namespace appWebCieluz
             
         }
 
-        
+        protected void btnTodos_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDTodosProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnSencillas_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDSencillasProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnAnimales_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDAnimalesProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnFlores_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDFloresProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnPersonajes_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDPersonajesProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnEspecial_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarDEspecialProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnTodosColor_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCTodosProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnAmarillo_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCAmarilloProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnAzul_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCAzulProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnBlanco_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCBlancoProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnCafé_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCCafeProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnGris_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCGrisProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnNaranja_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCNaranjaProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnNegro_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCNegroProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnVerde_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCVerdeProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnRojo_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCRojoProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnMorado_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCMoradoProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
+
+        protected void btnRosado_Click(object sender, EventArgs e)
+        {
+            DataSet dsProducto = new DataSet();
+            dsProducto = miservice.mtdListarCRosadoProWeb();
+            DataTable tblProducto = dsProducto.Tables["tblDatos"];
+
+            Repeater1.DataSource = tblProducto;
+            Repeater1.DataBind();
+        }
     }
 }

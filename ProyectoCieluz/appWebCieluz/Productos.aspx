@@ -85,7 +85,6 @@
                        </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
-
                         <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
                                 <h3>Filtrar Productos</h3>
@@ -93,40 +92,64 @@
                             <div class="widgets_inner">
                                 <h4>Diseño</h4>
                                 <ul class="list">
-                                    <li  class="active">
-                                        <a href="#">Todos</a>
+                                    <li>
+                                        <asp:Button ID="btnTodos" class="genric-btn default-border circle" runat="server" Text="Todos" OnClick="btnTodos_Click" />
+                                    </li>
+                                    <li >
+                                        <asp:Button ID="btnSencillas" class="genric-btn default-border circle" runat="server" text="Sencillas" OnClick="btnSencillas_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Petalos</a>
+                                        <asp:Button ID="btnAnimales" class="genric-btn default-border circle"  runat="server" Text="Animales" OnClick="btnAnimales_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Mariposas</a>
+                                        <asp:Button ID="btnFlores" class="genric-btn default-border circle" runat="server" Text="Flores" OnClick="btnFlores_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Carros</a>
+                                        <asp:Button ID="btnPersonajes" class="genric-btn default-border circle" runat="server" Text="Personajes" OnClick="btnPersonajes_Click" />
                                     </li>
-                                    <li>
-                                        <a href="#">Flores</a>
+                                     <li>
+                                        <asp:Button ID="btnEspecial" class="genric-btn default-border circle" runat="server" Text="Especial" OnClick="btnEspecial_Click" />
                                     </li>
                                 </ul>
                             </div>
                             <div class="widgets_inner">
                                 <h4>Color</h4>
                                 <ul class="list">
-                                    <li class="active">
-                                        <a href="#">Todos</a>
+                                    <li>
+                                        <asp:Button ID="btnTodosColor" class="genric-btn default-border circle" runat="server" Text="Todos" OnClick="btnTodosColor_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Rojo</a>
+                                        <asp:Button ID="btnAmarillo" class="genric-btn default-border circle" runat="server" Text="Amarillo" OnClick="btnAmarillo_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Negro</a>
+                                        <asp:Button ID="btnAzul" class="genric-btn default-border circle" runat="server" Text="Azul" OnClick="btnAzul_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Verde</a>
+                                        <asp:Button ID="btnBlanco" class="genric-btn default-border circle" runat="server" Text="Blanco" OnClick="btnBlanco_Click" />
                                     </li>
                                     <li>
-                                        <a href="#">Blanco</a>
+                                        <asp:Button ID="btnCafé" class="genric-btn default-border circle" runat="server" Text="Café" OnClick="btnCafé_Click" />
+                                    </li>
+                                     <li>
+                                        <asp:Button ID="btnGris" class="genric-btn default-border circle" runat="server" Text="Gris" OnClick="btnGris_Click" />
+                                    </li>
+                                      <li>
+                                        <asp:button ID="btnMorado" class="genric-btn default-border circle" runat="server" Text="Morado" OnClick="btnMorado_Click" />
+                                    </li>
+                                     <li>
+                                        <asp:Button ID="btnNaranja" class="genric-btn default-border circle" runat="server" Text="Naranja" OnClick="btnNaranja_Click" />
+                                    </li>
+                                     <li>
+                                        <asp:Button ID="btnNegro" class="genric-btn default-border circle" runat="server" Text="Negro" OnClick="btnNegro_Click" />
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="btnRojo" class="genric-btn default-border circle" runat="server" Text="Rojo" OnClick="btnRojo_Click" />
+                                    </li> 
+                                    <li>
+                                        <asp:button ID="btnRosado" class="genric-btn default-border circle" runat="server" Text="Rosado" OnClick="btnRosado_Click" />
+                                    </li>
+                                      <li>
+                                        <asp:Button ID="btnVerde" class="genric-btn default-border circle" runat="server" Text="Verde" OnClick="btnVerde_Click" />
                                     </li>
                                 </ul>
                             </div>

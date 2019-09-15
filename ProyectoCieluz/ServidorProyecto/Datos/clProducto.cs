@@ -103,5 +103,149 @@ namespace ServidorProyecto.Datos
             dsProducto = objConexion.mtdDesconectado(consulta);
             return dsProducto;
         }
+        public DataSet mtdListarDTodos()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarDSencillas()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Diseño = 'Sencillas' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarDAnimales()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Diseño = 'Animales' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarDFlores()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Diseño = 'Flores' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarDPersonajes()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Diseño = 'Personajes'  ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarDEspeciales()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Diseño = 'Especiales'  ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCTodos()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCAmarillo()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Amarillo' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCAzul()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Azul' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCBlanco()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Blanco' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCCafe()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Cafe' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCGris()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Gris' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCMorado()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Morado' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCNaranja()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Naranja' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCNegro()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Negro' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCRojo()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Rojo' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCRosado()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Rosado' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
+        public DataSet mtdListarCVerde()
+        {
+            string consulta = "Select Foto, Nombre, Precio, IdProducto, Descripcion From Producto where Color = 'Verde' ORDER BY IdProducto DESC ";
+            DataSet dsProducto = new DataSet();
+            clConexion objConexion = new clConexion();
+            dsProducto = objConexion.mtdDesconectado(consulta);
+            return dsProducto;
+        }
     }
 }

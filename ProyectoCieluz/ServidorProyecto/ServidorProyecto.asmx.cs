@@ -156,5 +156,149 @@ namespace ServidorProyecto
             dsCliente = objCli.mtdIndex(IdCliente);
             return dsCliente;
         }
+        [WebMethod]
+        public DataSet mtdListarDTodosProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDTodos();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarDSencillasProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDSencillas();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarDAnimalesProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDAnimales();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarDFloresProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDFlores();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarDPersonajesProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDPersonajes();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarDEspecialProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarDEspeciales();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCTodosProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCTodos();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCAmarilloProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCAmarillo();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCAzulProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCAzul();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCBlancoProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCBlanco();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCCafeProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCCafe();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCGrisProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCGris();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCMoradoProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCMorado();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCNaranjaProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCNaranja();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCNegroProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCNegro();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCRojoProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCRojo();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCRosadoProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCRosado();
+            return dsProducto;
+        }
+        [WebMethod]
+        public DataSet mtdListarCVerdeProWeb()
+        {
+            DataSet dsProducto = new DataSet();
+            clProducto objPro = new clProducto();
+            dsProducto = objPro.mtdListarCVerde();
+            return dsProducto;
+        }
     }
 }

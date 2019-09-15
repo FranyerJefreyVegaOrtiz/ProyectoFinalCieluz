@@ -33,8 +33,8 @@ namespace appEscritorioCieluz.Presentacion
             {
                 frmNewPro.txtNombrePro.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
                 frmNewPro.txtCodigoPro.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
-                frmNewPro.txtColorPro.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
-                frmNewPro.txtDiseñoPro.Text = dgvProductos.CurrentRow.Cells[6].Value.ToString();
+                //frmNewPro.txtColorPro.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
+                //frmNewPro.txtDiseñoPro.Text = dgvProductos.CurrentRow.Cells[6].Value.ToString();
                 frmNewPro.txtPrecioPro.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
                 frmNewPro.cmbAdministrador.Text = dgvProductos.CurrentRow.Cells[8].Value.ToString();
                 frmNewPro.txtDescripcionPro.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoProducto));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDiseñoPro = new System.Windows.Forms.ComboBox();
+            this.txtColorPro = new System.Windows.Forms.ComboBox();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.txtFotoPro = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@
             this.btnNuevoProducto = new System.Windows.Forms.Button();
             this.txtDescripcionPro = new System.Windows.Forms.TextBox();
             this.txtPrecioPro = new System.Windows.Forms.TextBox();
-            this.txtDiseñoPro = new System.Windows.Forms.TextBox();
-            this.txtColorPro = new System.Windows.Forms.TextBox();
             this.txtCodigoPro = new System.Windows.Forms.TextBox();
             this.txtNombrePro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,6 +61,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.txtDiseñoPro);
+            this.panel1.Controls.Add(this.txtColorPro);
             this.panel1.Controls.Add(this.txtResultado);
             this.panel1.Controls.Add(this.btnExaminar);
             this.panel1.Controls.Add(this.txtFotoPro);
@@ -72,8 +74,6 @@
             this.panel1.Controls.Add(this.btnNuevoProducto);
             this.panel1.Controls.Add(this.txtDescripcionPro);
             this.panel1.Controls.Add(this.txtPrecioPro);
-            this.panel1.Controls.Add(this.txtDiseñoPro);
-            this.panel1.Controls.Add(this.txtColorPro);
             this.panel1.Controls.Add(this.txtCodigoPro);
             this.panel1.Controls.Add(this.txtNombrePro);
             this.panel1.Controls.Add(this.label8);
@@ -90,6 +90,40 @@
             this.panel1.Size = new System.Drawing.Size(1080, 541);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // txtDiseñoPro
+            // 
+            this.txtDiseñoPro.FormattingEnabled = true;
+            this.txtDiseñoPro.Items.AddRange(new object[] {
+            "Sencillas",
+            "Animales",
+            "Flores",
+            "Personajes",
+            "Especiales"});
+            this.txtDiseñoPro.Location = new System.Drawing.Point(174, 171);
+            this.txtDiseñoPro.Name = "txtDiseñoPro";
+            this.txtDiseñoPro.Size = new System.Drawing.Size(518, 21);
+            this.txtDiseñoPro.TabIndex = 25;
+            // 
+            // txtColorPro
+            // 
+            this.txtColorPro.FormattingEnabled = true;
+            this.txtColorPro.Items.AddRange(new object[] {
+            "Amarillo",
+            "Azul",
+            "Blanco",
+            "Cafe",
+            "Gris",
+            "Morado",
+            "Naranja",
+            "Negro",
+            "Rojo",
+            "Rosado",
+            "Verde"});
+            this.txtColorPro.Location = new System.Drawing.Point(173, 127);
+            this.txtColorPro.Name = "txtColorPro";
+            this.txtColorPro.Size = new System.Drawing.Size(518, 21);
+            this.txtColorPro.TabIndex = 24;
             // 
             // txtResultado
             // 
@@ -203,24 +237,6 @@
             this.txtPrecioPro.Name = "txtPrecioPro";
             this.txtPrecioPro.Size = new System.Drawing.Size(519, 20);
             this.txtPrecioPro.TabIndex = 5;
-            // 
-            // txtDiseñoPro
-            // 
-            this.txtDiseñoPro.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtDiseñoPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiseñoPro.Location = new System.Drawing.Point(173, 172);
-            this.txtDiseñoPro.Name = "txtDiseñoPro";
-            this.txtDiseñoPro.Size = new System.Drawing.Size(519, 20);
-            this.txtDiseñoPro.TabIndex = 4;
-            // 
-            // txtColorPro
-            // 
-            this.txtColorPro.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtColorPro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtColorPro.Location = new System.Drawing.Point(173, 128);
-            this.txtColorPro.Name = "txtColorPro";
-            this.txtColorPro.Size = new System.Drawing.Size(519, 20);
-            this.txtColorPro.TabIndex = 3;
             // 
             // txtCodigoPro
             // 
@@ -365,8 +381,6 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtDescripcionPro;
         public System.Windows.Forms.TextBox txtPrecioPro;
-        public System.Windows.Forms.TextBox txtDiseñoPro;
-        public System.Windows.Forms.TextBox txtColorPro;
         public System.Windows.Forms.TextBox txtCodigoPro;
         public System.Windows.Forms.TextBox txtNombrePro;
         private System.Windows.Forms.Button btnCerrar;
@@ -375,5 +389,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnExaminar;
         private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.ComboBox txtColorPro;
+        private System.Windows.Forms.ComboBox txtDiseñoPro;
     }
 }

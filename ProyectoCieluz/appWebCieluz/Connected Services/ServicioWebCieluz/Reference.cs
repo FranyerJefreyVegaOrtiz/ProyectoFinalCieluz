@@ -127,10 +127,136 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDTodosProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDTodosProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDTodosProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDTodosProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDSencillasProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDSencillasProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDSencillasProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDSencillasProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDAnimalesProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDAnimalesProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDAnimalesProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDAnimalesProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDFloresProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDFloresProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDFloresProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDFloresProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDPersonajesProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDPersonajesProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDPersonajesProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDPersonajesProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDEspecialProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarDEspecialProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarDEspecialProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDEspecialProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCTodosProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCTodosProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCTodosProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCTodosProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCAmarilloProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCAmarilloProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCAmarilloProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCAmarilloProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCAzulProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCAzulProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCAzulProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCAzulProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCBlancoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCBlancoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCBlancoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCBlancoProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCCafeProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCCafeProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCCafeProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCCafeProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCGrisProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCGrisProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCGrisProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCGrisProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCMoradoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCMoradoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCMoradoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCMoradoProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNaranjaProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCNaranjaProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNaranjaProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNaranjaProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNegroProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCNegroProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNegroProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNegroProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRojoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCRojoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRojoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRojoProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRosadoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCRosadoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRosadoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRosadoProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCVerdeProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCVerdeProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCVerdeProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCVerdeProWebAsync();
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -302,7 +428,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -418,7 +544,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -562,7 +688,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -844,6 +970,150 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdIndexAsync(int IdCliente) {
             return base.Channel.mtdIndexAsync(IdCliente);
+        }
+        
+        public System.Data.DataSet mtdListarDTodosProWeb() {
+            return base.Channel.mtdListarDTodosProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDTodosProWebAsync() {
+            return base.Channel.mtdListarDTodosProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarDSencillasProWeb() {
+            return base.Channel.mtdListarDSencillasProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDSencillasProWebAsync() {
+            return base.Channel.mtdListarDSencillasProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarDAnimalesProWeb() {
+            return base.Channel.mtdListarDAnimalesProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDAnimalesProWebAsync() {
+            return base.Channel.mtdListarDAnimalesProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarDFloresProWeb() {
+            return base.Channel.mtdListarDFloresProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDFloresProWebAsync() {
+            return base.Channel.mtdListarDFloresProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarDPersonajesProWeb() {
+            return base.Channel.mtdListarDPersonajesProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDPersonajesProWebAsync() {
+            return base.Channel.mtdListarDPersonajesProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarDEspecialProWeb() {
+            return base.Channel.mtdListarDEspecialProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarDEspecialProWebAsync() {
+            return base.Channel.mtdListarDEspecialProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCTodosProWeb() {
+            return base.Channel.mtdListarCTodosProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCTodosProWebAsync() {
+            return base.Channel.mtdListarCTodosProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCAmarilloProWeb() {
+            return base.Channel.mtdListarCAmarilloProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCAmarilloProWebAsync() {
+            return base.Channel.mtdListarCAmarilloProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCAzulProWeb() {
+            return base.Channel.mtdListarCAzulProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCAzulProWebAsync() {
+            return base.Channel.mtdListarCAzulProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCBlancoProWeb() {
+            return base.Channel.mtdListarCBlancoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCBlancoProWebAsync() {
+            return base.Channel.mtdListarCBlancoProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCCafeProWeb() {
+            return base.Channel.mtdListarCCafeProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCCafeProWebAsync() {
+            return base.Channel.mtdListarCCafeProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCGrisProWeb() {
+            return base.Channel.mtdListarCGrisProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCGrisProWebAsync() {
+            return base.Channel.mtdListarCGrisProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCMoradoProWeb() {
+            return base.Channel.mtdListarCMoradoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCMoradoProWebAsync() {
+            return base.Channel.mtdListarCMoradoProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCNaranjaProWeb() {
+            return base.Channel.mtdListarCNaranjaProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNaranjaProWebAsync() {
+            return base.Channel.mtdListarCNaranjaProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCNegroProWeb() {
+            return base.Channel.mtdListarCNegroProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNegroProWebAsync() {
+            return base.Channel.mtdListarCNegroProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCRojoProWeb() {
+            return base.Channel.mtdListarCRojoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRojoProWebAsync() {
+            return base.Channel.mtdListarCRojoProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCRosadoProWeb() {
+            return base.Channel.mtdListarCRosadoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRosadoProWebAsync() {
+            return base.Channel.mtdListarCRosadoProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCVerdeProWeb() {
+            return base.Channel.mtdListarCVerdeProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCVerdeProWebAsync() {
+            return base.Channel.mtdListarCVerdeProWebAsync();
         }
     }
 }

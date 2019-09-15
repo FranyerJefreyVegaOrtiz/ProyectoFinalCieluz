@@ -35,8 +35,6 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -79,7 +77,6 @@
       <s:element name="mtdLoginWeb">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
           </s:sequence>
@@ -116,7 +113,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="TipoPago" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="idProducto" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="idAdministrador" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:element name="mtdRegistrarPedidoResponse">
@@ -344,6 +340,261 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarDTodosProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDTodosProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDTodosProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarDSencillasProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDSencillasProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDSencillasProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarDAnimalesProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDAnimalesProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDAnimalesProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarDFloresProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDFloresProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDFloresProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarDPersonajesProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDPersonajesProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDPersonajesProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarDEspecialProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarDEspecialProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarDEspecialProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCTodosProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCTodosProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCTodosProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCAmarilloProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCAmarilloProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCAmarilloProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCAzulProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCAzulProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCAzulProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCBlancoProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCBlancoProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCBlancoProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCCafeProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCCafeProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCCafeProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCGrisProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCGrisProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCGrisProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCNaranjaProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCNaranjaProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCNaranjaProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCNegroProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCNegroProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCNegroProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCVerdeProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCVerdeProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCVerdeProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdRegistrarClientesSoapIn">
@@ -442,6 +693,96 @@
   <wsdl:message name="mtdIndexSoapOut">
     <wsdl:part name="parameters" element="tns:mtdIndexResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdListarDTodosProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDTodosProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDTodosProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDTodosProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDSencillasProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDSencillasProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDSencillasProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDSencillasProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDAnimalesProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDAnimalesProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDAnimalesProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDAnimalesProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDFloresProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDFloresProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDFloresProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDFloresProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDPersonajesProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDPersonajesProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDPersonajesProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDPersonajesProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDEspecialProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarDEspecialProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarDEspecialProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarDEspecialProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCTodosProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCTodosProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCTodosProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCTodosProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCAmarilloProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCAmarilloProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCAmarilloProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCAmarilloProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCAzulProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCAzulProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCAzulProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCAzulProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCBlancoProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCBlancoProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCBlancoProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCBlancoProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCCafeProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCCafeProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCCafeProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCCafeProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCGrisProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCGrisProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCGrisProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCGrisProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCNaranjaProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCNaranjaProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCNaranjaProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCNaranjaProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCNegroProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCNegroProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCNegroProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCNegroProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCVerdeProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCVerdeProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCVerdeProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCVerdeProWebResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServidorProyectoSoap">
     <wsdl:operation name="mtdRegistrarClientes">
       <wsdl:input message="tns:mtdRegistrarClientesSoapIn" />
@@ -506,6 +847,66 @@
     <wsdl:operation name="mtdIndex">
       <wsdl:input message="tns:mtdIndexSoapIn" />
       <wsdl:output message="tns:mtdIndexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDTodosProWeb">
+      <wsdl:input message="tns:mtdListarDTodosProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDTodosProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDSencillasProWeb">
+      <wsdl:input message="tns:mtdListarDSencillasProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDSencillasProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDAnimalesProWeb">
+      <wsdl:input message="tns:mtdListarDAnimalesProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDAnimalesProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDFloresProWeb">
+      <wsdl:input message="tns:mtdListarDFloresProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDFloresProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDPersonajesProWeb">
+      <wsdl:input message="tns:mtdListarDPersonajesProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDPersonajesProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDEspecialProWeb">
+      <wsdl:input message="tns:mtdListarDEspecialProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarDEspecialProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCTodosProWeb">
+      <wsdl:input message="tns:mtdListarCTodosProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCTodosProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAmarilloProWeb">
+      <wsdl:input message="tns:mtdListarCAmarilloProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCAmarilloProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAzulProWeb">
+      <wsdl:input message="tns:mtdListarCAzulProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCAzulProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCBlancoProWeb">
+      <wsdl:input message="tns:mtdListarCBlancoProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCBlancoProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCCafeProWeb">
+      <wsdl:input message="tns:mtdListarCCafeProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCCafeProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCGrisProWeb">
+      <wsdl:input message="tns:mtdListarCGrisProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCGrisProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNaranjaProWeb">
+      <wsdl:input message="tns:mtdListarCNaranjaProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCNaranjaProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNegroProWeb">
+      <wsdl:input message="tns:mtdListarCNegroProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCNegroProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCVerdeProWeb">
+      <wsdl:input message="tns:mtdListarCVerdeProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCVerdeProWebSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServidorProyectoSoap" type="tns:ServidorProyectoSoap">
@@ -654,6 +1055,141 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarDTodosProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDTodosProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDSencillasProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDSencillasProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDAnimalesProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDAnimalesProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDFloresProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDFloresProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDPersonajesProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDPersonajesProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDEspecialProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarDEspecialProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCTodosProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCTodosProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAmarilloProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCAmarilloProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAzulProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCAzulProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCBlancoProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCBlancoProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCCafeProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCCafeProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCGrisProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCGrisProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNaranjaProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCNaranjaProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNegroProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCNegroProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCVerdeProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCVerdeProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServidorProyectoSoap12" type="tns:ServidorProyectoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -794,6 +1330,141 @@
     </wsdl:operation>
     <wsdl:operation name="mtdIndex">
       <soap12:operation soapAction="http://tempuri.org/mtdIndex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDTodosProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDTodosProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDSencillasProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDSencillasProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDAnimalesProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDAnimalesProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDFloresProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDFloresProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDPersonajesProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDPersonajesProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarDEspecialProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarDEspecialProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCTodosProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCTodosProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAmarilloProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCAmarilloProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCAzulProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCAzulProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCBlancoProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCBlancoProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCCafeProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCCafeProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCGrisProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCGrisProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNaranjaProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCNaranjaProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCNegroProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCNegroProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCVerdeProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCVerdeProWeb" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
