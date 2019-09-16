@@ -36,6 +36,14 @@ namespace ServidorProyecto
             dsCliente = objCliente.mtdIndex(IdCliente);
             return dsCliente;
         }
+        [WebMethod]
+        public DataSet mtdListarPedidos()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListar();
+            return dsPedidos;
+        }
 
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
@@ -55,12 +63,13 @@ namespace ServidorProyecto
             return dsLogin;
         }
         [WebMethod]
-        public int mtdRegistrarPedido(clPedido objPed)
+        public int mtdRegistrarPedido(clPedidos objPed)
         {
-            clPedido objPedido = new clPedido();
-            int resul = objPedido.mtdRegistrar(objPed);
+            clPedidos oblPedidos = new clPedidos();
+            int resul = oblPedidos.mtdRegistrar(objPed);
             return resul;
         }
+
 
         [WebMethod]
         public int mtdRegistrarProducto(clProducto objPro)
@@ -139,14 +148,7 @@ namespace ServidorProyecto
             return dsCliente;
         }
 
-        [WebMethod]
-        public DataSet mtdListarPed()
-        {
-            DataSet dsPedidos = new DataSet();
-            clPedido objPro = new clPedido();
-            dsPedidos = objPro.mtdListar();
-            return dsPedidos;
-        }
+       
 
         [WebMethod]
         public DataSet mtdIndex(int IdCliente)

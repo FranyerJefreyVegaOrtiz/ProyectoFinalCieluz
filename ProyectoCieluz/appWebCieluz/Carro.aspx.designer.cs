@@ -67,13 +67,13 @@ namespace appWebCieluz {
         protected global::System.Web.UI.WebControls.TextBox txtTalla;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control cmbTipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList cmbTipo;
         
         /// <summary>
         /// Control txtCantidad.
@@ -101,6 +101,15 @@ namespace appWebCieluz {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnOperacion;
+        
+        /// <summary>
+        /// Control lblIdCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIdCliente;
         
         /// <summary>
         /// Control txtRecive.

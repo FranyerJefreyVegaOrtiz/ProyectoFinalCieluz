@@ -27,18 +27,16 @@ namespace appEscritorioCieluz
         public void mtdCargarDatos()
         {
             DataSet dsPedidos = new DataSet();
-            dsPedidos = miServicio.mtdListarPed();
+            dsPedidos = miServicio.mtdListarPedidos();
             DataTable tblPedido = dsPedidos.Tables["tblDatos"];
             dgvPedidos.DataSource = tblPedido;
-            this.dgvPedidos.Columns["IdPedido"].Visible = false;
-            this.dgvPedidos.Columns["idProducto"].Visible = false;
+            this.dgvPedidos.Columns["IdPedidos"].Visible = false;
+            this.dgvPedidos.Columns["IdProducto"].Visible = false;
             this.dgvPedidos.Columns["IdProducto1"].Visible = false;
-            this.dgvPedidos.Columns["idCliente"].Visible = false;
+            this.dgvPedidos.Columns["IdCliente"].Visible = false;
             this.dgvPedidos.Columns["Foto"].Visible = false;
             this.dgvPedidos.Columns["Descripcion"].Visible = false;
-            this.dgvPedidos.Columns["idAdministrador"].Visible = false;
             this.dgvPedidos.Columns["IdCliente1"].Visible = false;
-            this.dgvPedidos.Columns["Clave"].Visible = false;
         }
 
         private void Pedidos_Load(object sender, EventArgs e)

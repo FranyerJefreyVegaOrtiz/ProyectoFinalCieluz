@@ -52,6 +52,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarPedidos">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPedidosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedidosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdLoginEscritorio">
         <s:complexType>
           <s:sequence>
@@ -99,20 +116,19 @@
       <s:element name="mtdRegistrarPedido">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="objPed" type="tns:clPedido" />
+            <s:element minOccurs="0" maxOccurs="1" name="objPed" type="tns:clPedidos" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="clPedido">
+      <s:complexType name="clPedidos">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IdPedido" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Talla" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="PrecioTotal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdPedidos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cantidad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Talla" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrecioTotal" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TipoPago" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="idProducto" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdProducto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:element name="mtdRegistrarPedidoResponse">
@@ -292,23 +308,6 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="mtdListarCliResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="mtdListarPed">
-        <s:complexType />
-      </s:element>
-      <s:element name="mtdListarPedResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -544,6 +543,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarCMoradoProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCMoradoProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCMoradoProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdListarCNaranjaProWeb">
         <s:complexType />
       </s:element>
@@ -568,6 +584,40 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="mtdListarCNegroProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCRojoProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCRojoProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCRojoProWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarCRosadoProWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarCRosadoProWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarCRosadoProWebResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -608,6 +658,12 @@
   </wsdl:message>
   <wsdl:message name="mtdListarClientesSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedidosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedidosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPedidosResponse" />
   </wsdl:message>
   <wsdl:message name="mtdLoginEscritorioSoapIn">
     <wsdl:part name="parameters" element="tns:mtdLoginEscritorio" />
@@ -680,12 +736,6 @@
   </wsdl:message>
   <wsdl:message name="mtdListarCliSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarCliResponse" />
-  </wsdl:message>
-  <wsdl:message name="mtdListarPedSoapIn">
-    <wsdl:part name="parameters" element="tns:mtdListarPed" />
-  </wsdl:message>
-  <wsdl:message name="mtdListarPedSoapOut">
-    <wsdl:part name="parameters" element="tns:mtdListarPedResponse" />
   </wsdl:message>
   <wsdl:message name="mtdIndexSoapIn">
     <wsdl:part name="parameters" element="tns:mtdIndex" />
@@ -765,6 +815,12 @@
   <wsdl:message name="mtdListarCGrisProWebSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarCGrisProWebResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdListarCMoradoProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCMoradoProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCMoradoProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCMoradoProWebResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdListarCNaranjaProWebSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarCNaranjaProWeb" />
   </wsdl:message>
@@ -776,6 +832,18 @@
   </wsdl:message>
   <wsdl:message name="mtdListarCNegroProWebSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarCNegroProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCRojoProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCRojoProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCRojoProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCRojoProWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCRosadoProWebSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarCRosadoProWeb" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarCRosadoProWebSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarCRosadoProWebResponse" />
   </wsdl:message>
   <wsdl:message name="mtdListarCVerdeProWebSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarCVerdeProWeb" />
@@ -791,6 +859,10 @@
     <wsdl:operation name="mtdListarClientes">
       <wsdl:input message="tns:mtdListarClientesSoapIn" />
       <wsdl:output message="tns:mtdListarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedidos">
+      <wsdl:input message="tns:mtdListarPedidosSoapIn" />
+      <wsdl:output message="tns:mtdListarPedidosSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdLoginEscritorio">
       <wsdl:input message="tns:mtdLoginEscritorioSoapIn" />
@@ -839,10 +911,6 @@
     <wsdl:operation name="mtdListarCli">
       <wsdl:input message="tns:mtdListarCliSoapIn" />
       <wsdl:output message="tns:mtdListarCliSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarPed">
-      <wsdl:input message="tns:mtdListarPedSoapIn" />
-      <wsdl:output message="tns:mtdListarPedSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdIndex">
       <wsdl:input message="tns:mtdIndexSoapIn" />
@@ -896,6 +964,10 @@
       <wsdl:input message="tns:mtdListarCGrisProWebSoapIn" />
       <wsdl:output message="tns:mtdListarCGrisProWebSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="mtdListarCMoradoProWeb">
+      <wsdl:input message="tns:mtdListarCMoradoProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCMoradoProWebSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdListarCNaranjaProWeb">
       <wsdl:input message="tns:mtdListarCNaranjaProWebSoapIn" />
       <wsdl:output message="tns:mtdListarCNaranjaProWebSoapOut" />
@@ -903,6 +975,14 @@
     <wsdl:operation name="mtdListarCNegroProWeb">
       <wsdl:input message="tns:mtdListarCNegroProWebSoapIn" />
       <wsdl:output message="tns:mtdListarCNegroProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRojoProWeb">
+      <wsdl:input message="tns:mtdListarCRojoProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCRojoProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRosadoProWeb">
+      <wsdl:input message="tns:mtdListarCRosadoProWebSoapIn" />
+      <wsdl:output message="tns:mtdListarCRosadoProWebSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdListarCVerdeProWeb">
       <wsdl:input message="tns:mtdListarCVerdeProWebSoapIn" />
@@ -922,6 +1002,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarClientes">
       <soap:operation soapAction="http://tempuri.org/mtdListarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedidos">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1030,15 +1119,6 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarCli">
       <soap:operation soapAction="http://tempuri.org/mtdListarCli" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarPed">
-      <soap:operation soapAction="http://tempuri.org/mtdListarPed" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1163,6 +1243,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarCMoradoProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCMoradoProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdListarCNaranjaProWeb">
       <soap:operation soapAction="http://tempuri.org/mtdListarCNaranjaProWeb" style="document" />
       <wsdl:input>
@@ -1174,6 +1263,24 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarCNegroProWeb">
       <soap:operation soapAction="http://tempuri.org/mtdListarCNegroProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRojoProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCRojoProWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRosadoProWeb">
+      <soap:operation soapAction="http://tempuri.org/mtdListarCRosadoProWeb" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1204,6 +1311,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarClientes">
       <soap12:operation soapAction="http://tempuri.org/mtdListarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedidos">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1312,15 +1428,6 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarCli">
       <soap12:operation soapAction="http://tempuri.org/mtdListarCli" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mtdListarPed">
-      <soap12:operation soapAction="http://tempuri.org/mtdListarPed" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1445,6 +1552,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarCMoradoProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCMoradoProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdListarCNaranjaProWeb">
       <soap12:operation soapAction="http://tempuri.org/mtdListarCNaranjaProWeb" style="document" />
       <wsdl:input>
@@ -1456,6 +1572,24 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarCNegroProWeb">
       <soap12:operation soapAction="http://tempuri.org/mtdListarCNegroProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRojoProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCRojoProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarCRosadoProWeb">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarCRosadoProWeb" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

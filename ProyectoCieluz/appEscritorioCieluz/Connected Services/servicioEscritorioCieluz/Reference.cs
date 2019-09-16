@@ -30,6 +30,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPedidos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave);
@@ -46,10 +53,10 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedido", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        int mtdRegistrarPedido(appEscritorioCieluz.servicioEscritorioCieluz.clPedido objPed);
+        int mtdRegistrarPedido(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedido", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedido objPed);
+        System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -113,13 +120,6 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarPed();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -212,6 +212,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCGrisProWeb", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCGrisProWebAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCMoradoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCMoradoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCMoradoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCMoradoProWebAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNaranjaProWeb", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdListarCNaranjaProWeb();
@@ -226,6 +233,20 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCNegroProWeb", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNegroProWebAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRojoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCRojoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRojoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRojoProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRosadoProWeb", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarCRosadoProWeb();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCRosadoProWeb", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRosadoProWebAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCVerdeProWeb", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdListarCVerdeProWeb();
@@ -235,7 +256,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -407,7 +428,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -523,7 +544,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -667,22 +688,20 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class clPedido : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class clPedidos : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int idPedidoField;
+        private int idPedidosField;
         
-        private int cantidadField;
+        private string cantidadField;
         
-        private int tallaField;
+        private string tallaField;
         
-        private System.DateTime fechaField;
-        
-        private int precioTotalField;
+        private string precioTotalField;
         
         private string tipoPagoField;
         
@@ -692,19 +711,19 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int IdPedido {
+        public int IdPedidos {
             get {
-                return this.idPedidoField;
+                return this.idPedidosField;
             }
             set {
-                this.idPedidoField = value;
-                this.RaisePropertyChanged("IdPedido");
+                this.idPedidosField = value;
+                this.RaisePropertyChanged("IdPedidos");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public int Cantidad {
+        public string Cantidad {
             get {
                 return this.cantidadField;
             }
@@ -716,7 +735,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public int Talla {
+        public string Talla {
             get {
                 return this.tallaField;
             }
@@ -728,19 +747,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("Fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public int PrecioTotal {
+        public string PrecioTotal {
             get {
                 return this.precioTotalField;
             }
@@ -751,7 +758,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string TipoPago {
             get {
                 return this.tipoPagoField;
@@ -763,26 +770,26 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public int idProducto {
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public int IdProducto {
             get {
                 return this.idProductoField;
             }
             set {
                 this.idProductoField = value;
-                this.RaisePropertyChanged("idProducto");
+                this.RaisePropertyChanged("IdProducto");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public int idCliente {
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public int IdCliente {
             get {
                 return this.idClienteField;
             }
             set {
                 this.idClienteField = value;
-                this.RaisePropertyChanged("idCliente");
+                this.RaisePropertyChanged("IdCliente");
             }
         }
         
@@ -839,6 +846,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdListarClientesAsync(IdCliente);
         }
         
+        public System.Data.DataSet mtdListarPedidos() {
+            return base.Channel.mtdListarPedidos();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync() {
+            return base.Channel.mtdListarPedidosAsync();
+        }
+        
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {
             return base.Channel.mtdLoginEscritorio(Correo, Clave);
         }
@@ -855,11 +870,11 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdLoginWebAsync(Correo, Clave);
         }
         
-        public int mtdRegistrarPedido(appEscritorioCieluz.servicioEscritorioCieluz.clPedido objPed) {
+        public int mtdRegistrarPedido(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed) {
             return base.Channel.mtdRegistrarPedido(objPed);
         }
         
-        public System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedido objPed) {
+        public System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed) {
             return base.Channel.mtdRegistrarPedidoAsync(objPed);
         }
         
@@ -933,14 +948,6 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync() {
             return base.Channel.mtdListarCliAsync();
-        }
-        
-        public System.Data.DataSet mtdListarPed() {
-            return base.Channel.mtdListarPed();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync() {
-            return base.Channel.mtdListarPedAsync();
         }
         
         public System.Data.DataSet mtdIndex(int IdCliente) {
@@ -1047,6 +1054,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdListarCGrisProWebAsync();
         }
         
+        public System.Data.DataSet mtdListarCMoradoProWeb() {
+            return base.Channel.mtdListarCMoradoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCMoradoProWebAsync() {
+            return base.Channel.mtdListarCMoradoProWebAsync();
+        }
+        
         public System.Data.DataSet mtdListarCNaranjaProWeb() {
             return base.Channel.mtdListarCNaranjaProWeb();
         }
@@ -1061,6 +1076,22 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCNegroProWebAsync() {
             return base.Channel.mtdListarCNegroProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCRojoProWeb() {
+            return base.Channel.mtdListarCRojoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRojoProWebAsync() {
+            return base.Channel.mtdListarCRojoProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdListarCRosadoProWeb() {
+            return base.Channel.mtdListarCRosadoProWeb();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCRosadoProWebAsync() {
+            return base.Channel.mtdListarCRosadoProWebAsync();
         }
         
         public System.Data.DataSet mtdListarCVerdeProWeb() {

@@ -16,7 +16,7 @@ namespace appWebCieluz
         ServicioWebCieluz.ServidorProyectoSoapClient miservice = new ServicioWebCieluz.ServidorProyectoSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            lblIdCliente.Text = Session["IdCliente"].ToString();
             //var Foto = "FotoPro";
             //var Nombre = "NombrePro";
             //var Precio ="PrecioPro";
@@ -36,32 +36,26 @@ namespace appWebCieluz
         public void mtdRegistrarPedido()
         {
 
-            try
-            {
-                 ServicioWebCieluz.clPedido objPedido = new ServicioWebCieluz.clPedido();
-            objPedido.idProducto = int.Parse(txtRecive.Text);
-            objPedido.Cantidad = int.Parse(txtCantidad.Text);
-            objPedido.Talla = int.Parse(txtTalla.Text);
-            objPedido.PrecioTotal = int.Parse(lblTotal.Text);
-            //objPedido.TipoPago = txtTipoPago.Text;
-            objPedido.idCliente = 1;
+            ServicioWebCieluz.clPedidos objPedidos = new ServicioWebCieluz.clPedidos();
+            objPedidos.IdProducto = int.Parse(txtRecive.Text);
+            objPedidos.Cantidad = txtCantidad.Text;
+            objPedidos.Talla = txtTalla.Text;
+            objPedidos.PrecioTotal = lblTotal.Text;
+            objPedidos.TipoPago = cmbTipo.SelectedValue;
+            objPedidos.IdCliente = int.Parse(lblIdCliente.Text);
 
-            int resultado = miservice.mtdRegistrarPedido(objPedido);
+            int resultado = miservice.mtdRegistrarPedido(objPedidos);
 
             if (resultado > 0)
             {
-                Response.Redirect("Index.aspx");
+                Response.Redirect("confirmation.html");
             }
             else
             {
                 
             }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
+            
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -87,6 +81,7 @@ namespace appWebCieluz
 
         protected void btnCompra_Click(object sender, EventArgs e)
         {
+            mtdRegistrarPedido();
             txtFrom.Text = "Calzadocieluz@gmail.com";
             txtClave.Text = "Cieluz-2019";
             txtSubject.Text = "Tu Pedido - Calzado Cieluz";

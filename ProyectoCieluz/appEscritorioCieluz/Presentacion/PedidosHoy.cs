@@ -22,7 +22,7 @@ namespace appEscritorioCieluz
         private void PedidosHoy_Load(object sender, EventArgs e)
         {
             DataSet dsPedidos = new DataSet();
-            dsPedidos = miServicio.mtdListarPed();
+            dsPedidos = miServicio.mtdListarPedidos();
             DataTable tblPedido = dsPedidos.Tables["tblDatos"];
             dgvPedidosHoy.DataSource = tblPedido;
             this.dgvPedidosHoy.Columns["IdPedido"].Visible = false;

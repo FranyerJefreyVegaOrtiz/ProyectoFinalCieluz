@@ -74,7 +74,7 @@
                                     <td>
 
                                         <h5>
-                                            <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
+                                            <asp:DropDownList class="form-control" ID="cmbTipo" runat="server">
                                                 <asp:ListItem>Efectivo</asp:ListItem>
                                                 <asp:ListItem>Tarjeta de Credito</asp:ListItem>
                                             </asp:DropDownList></h5>
@@ -99,6 +99,7 @@
                                         </h5>
                                         <br />
                                         <asp:Button Class="main_btn" ID="btnOperacion" runat="server" Text="Calcular" OnClick="btnOperacion_Click" />
+                                        <asp:Label ID="lblIdCliente" runat="server" Visible="false" Text=""></asp:Label>
                                     </td>
                                 </tr>
                                 <asp:TextBox ID="txtRecive" runat="server" Visible="false"></asp:TextBox>

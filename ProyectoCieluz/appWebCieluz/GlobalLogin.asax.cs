@@ -18,7 +18,7 @@ namespace appWebCieluz
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["Correo"] = "";
-            Session["IdCliente"] = 0;
+            Session["IdCliente"] = "";
             Session["Clave"] = "";
            
         }

@@ -30,6 +30,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarClientesAsync(int IdCliente);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdListarPedidos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave);
@@ -46,10 +53,10 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedido", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        int mtdRegistrarPedido(appWebCieluz.ServicioWebCieluz.clPedido objPed);
+        int mtdRegistrarPedido(appWebCieluz.ServicioWebCieluz.clPedidos objPed);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedido", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appWebCieluz.ServicioWebCieluz.clPedido objPed);
+        System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appWebCieluz.ServicioWebCieluz.clPedidos objPed);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -113,13 +120,6 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCli", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet mtdListarPed();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPed", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdIndex", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -256,7 +256,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -428,7 +428,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -544,7 +544,7 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -688,22 +688,20 @@ namespace appWebCieluz.ServicioWebCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class clPedido : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class clPedidos : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int idPedidoField;
+        private int idPedidosField;
         
-        private int cantidadField;
+        private string cantidadField;
         
-        private int tallaField;
+        private string tallaField;
         
-        private System.DateTime fechaField;
-        
-        private int precioTotalField;
+        private string precioTotalField;
         
         private string tipoPagoField;
         
@@ -713,19 +711,19 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int IdPedido {
+        public int IdPedidos {
             get {
-                return this.idPedidoField;
+                return this.idPedidosField;
             }
             set {
-                this.idPedidoField = value;
-                this.RaisePropertyChanged("IdPedido");
+                this.idPedidosField = value;
+                this.RaisePropertyChanged("IdPedidos");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public int Cantidad {
+        public string Cantidad {
             get {
                 return this.cantidadField;
             }
@@ -737,7 +735,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public int Talla {
+        public string Talla {
             get {
                 return this.tallaField;
             }
@@ -749,19 +747,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.DateTime Fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("Fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public int PrecioTotal {
+        public string PrecioTotal {
             get {
                 return this.precioTotalField;
             }
@@ -772,7 +758,7 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string TipoPago {
             get {
                 return this.tipoPagoField;
@@ -784,26 +770,26 @@ namespace appWebCieluz.ServicioWebCieluz {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public int idProducto {
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public int IdProducto {
             get {
                 return this.idProductoField;
             }
             set {
                 this.idProductoField = value;
-                this.RaisePropertyChanged("idProducto");
+                this.RaisePropertyChanged("IdProducto");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public int idCliente {
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public int IdCliente {
             get {
                 return this.idClienteField;
             }
             set {
                 this.idClienteField = value;
-                this.RaisePropertyChanged("idCliente");
+                this.RaisePropertyChanged("IdCliente");
             }
         }
         
@@ -860,6 +846,14 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdListarClientesAsync(IdCliente);
         }
         
+        public System.Data.DataSet mtdListarPedidos() {
+            return base.Channel.mtdListarPedidos();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync() {
+            return base.Channel.mtdListarPedidosAsync();
+        }
+        
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {
             return base.Channel.mtdLoginEscritorio(Correo, Clave);
         }
@@ -876,11 +870,11 @@ namespace appWebCieluz.ServicioWebCieluz {
             return base.Channel.mtdLoginWebAsync(Correo, Clave);
         }
         
-        public int mtdRegistrarPedido(appWebCieluz.ServicioWebCieluz.clPedido objPed) {
+        public int mtdRegistrarPedido(appWebCieluz.ServicioWebCieluz.clPedidos objPed) {
             return base.Channel.mtdRegistrarPedido(objPed);
         }
         
-        public System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appWebCieluz.ServicioWebCieluz.clPedido objPed) {
+        public System.Threading.Tasks.Task<int> mtdRegistrarPedidoAsync(appWebCieluz.ServicioWebCieluz.clPedidos objPed) {
             return base.Channel.mtdRegistrarPedidoAsync(objPed);
         }
         
@@ -954,14 +948,6 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCliAsync() {
             return base.Channel.mtdListarCliAsync();
-        }
-        
-        public System.Data.DataSet mtdListarPed() {
-            return base.Channel.mtdListarPed();
-        }
-        
-        public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedAsync() {
-            return base.Channel.mtdListarPedAsync();
         }
         
         public System.Data.DataSet mtdIndex(int IdCliente) {

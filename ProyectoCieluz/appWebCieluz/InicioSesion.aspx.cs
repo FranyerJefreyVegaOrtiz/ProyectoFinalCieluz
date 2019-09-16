@@ -24,12 +24,13 @@ namespace appWebCieluz
             DataSet dsCliente = new DataSet();
             dsCliente = miservice.mtdListarClientes(IdCliente);
             DataTable tblLogin = dsCliente.Tables["tblDatos"];
-            string IdCliente1 = tblLogin.Rows[0][0].ToString();
             dsCliente = miservice.mtdLoginWeb(Correo, Clave);
-            Session["IdCliente"] = IdCliente1;
-            if (tblLogin.Rows.Count >= 1)
+            DataTable tblLogin2 = dsCliente.Tables["tblDatos"];
+
+            if (tblLogin2.Rows.Count >= 1)
             {
                 Session["Correo"] = Correo;
+                Session["IdCliente"] = tblLogin2.Rows[0][0].ToString();
                 Application["Validar"] = 1;
                 Response.Redirect("Index.aspx");
             }
@@ -37,7 +38,6 @@ namespace appWebCieluz
             {
                 lblMensaje.Text = "Error al ingresar...";
             }
-            Response.Redirect("Default.aspx?valor=" + IdCliente1);
         }
     }
 }
