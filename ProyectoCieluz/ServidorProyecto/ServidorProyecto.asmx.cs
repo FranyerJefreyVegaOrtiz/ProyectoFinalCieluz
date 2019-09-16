@@ -27,6 +27,21 @@ namespace ServidorProyecto
             int resul = objCli.mtdRegistrar(ObjCliente);
             return resul;
         }
+        [WebMethod]
+        public int mtdEditarCliente(clCliente objcli)
+        {
+            clCliente objCliente = new clCliente();
+            int resul = objCliente.mtdEditar(objcli);
+            return resul;
+        }
+        [WebMethod]
+        public DataSet mtdCargarCliente(int IdCliente)
+        {
+            DataSet dsCliente = new DataSet();
+            clCliente objCliente = new clCliente();
+            dsCliente = objCliente.mtdListarWeb(IdCliente);
+            return dsCliente;
+        }
 
         [WebMethod]
         public DataSet mtdListarClientes(int IdCliente)

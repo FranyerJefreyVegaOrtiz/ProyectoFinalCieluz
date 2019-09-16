@@ -4,76 +4,68 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-        <!--================Login Box Area =================-->
-    <section  class="feature_product_area section_gap">
-       <div class="container">
-            <div class="row">
-                <%--<div class="col-lg-6">
-                    <div class="login_box_img">
-                        <img class="img-fluid" src="img/login.jpg" alt="">
-                        <div class="hover">
-                            <h4>New to our website?</h4>
-                            <p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-                            <a class="main_btn" href="#">Create an Account</a>
-                        </div>
-                    </div>
-                </div>--%>
-                 <div class="main_box">
-                      <div class="main_title">
-                        <h2>Crear Nuevo Cliente</h2>
-                        <form class="row login_form" action="RegistrarCliente.aspx" method="post">
-                            <%--<div class="col-md-12 form-group">
-                                <select type="text" class="form-control" id="" runat="server" >
-                                    <option value="0"type="text" class="form-control" id="" runat="server">Cedula de ciudadania</option>
-                                    <option value="1"type="text" class="form-control" id="" runat="server">Tarjeta de identidad</option>
-                                    <option value="2"type="text" class="form-control" id="" runat="server">Cedula extranjera</option>
-                                </select>
-                            </div>--%>
-                            <div class="col-md-12 form-group">
-                                <input type="number" class="form-control" id="Documento" name="Documento" placeholder="Documento" runat="server" required>
-
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="number" class="form-control" id="Telefono" name="Telefono" placeholder="Telefono" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Correo" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Departamento" name="Departamento" placeholder="Departamento" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Municipio" name="Municipio" placeholder="Municipio" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Direccion" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="Clave" name="Clave" placeholder="Clave" runat="server" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="selector">
-                                    <label for="f-option2">Quieres iniciar sesion de una vez</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <button type="submit" value="submit" class="btn submit_btn" runat="server">Registrar</button>
-                            </div>
-                        </form>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-    </section>
-    <!--================End Login Box Area =================-->
+      <form class="row login_form" id="form" runat="server">
+          <div class="container">
+              <div class="form-row">
+                  <asp:Label ID="lblid" runat="server" Visible="false" Text="Label"></asp:Label>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label1" runat="server" Text="Tipo de Documento"></asp:Label>
+                      <br />
+                      <asp:DropDownList ID="cmbTipo" runat="server">
+                          <asp:ListItem>Cedula de Ciudadania</asp:ListItem>
+                          <asp:ListItem>Tarjeta de Identidad</asp:ListItem>
+                          <asp:ListItem>Cedula Extranjera</asp:ListItem>
+                      </asp:DropDownList>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label2" runat="server" Text="Documento"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtDocumento" TextMode="Number" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label3" runat="server" Text="Nombre"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtNombre" Text="" runat="server" ></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label4" runat="server" Text="Apellido"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtApellido" Text="" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label5" runat="server" Text="Telefono"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtTelefono" TextMode="Number" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label6" runat="server" Text="Correo"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtCorreo" TextMode="Email" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label7" runat="server" Text="Departamento"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtDepartamento" Text="" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label8" runat="server" Text="Municipio"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtMuni" Text=""  runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label9" runat="server" Text="Direccion"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtDireccion" Text="" runat="server"></asp:TextBox>
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <asp:Label ID="Label10" runat="server" Text="Clave"></asp:Label>
+                      <br />
+                      <asp:TextBox class="form-control" ID="txtClave" Text="" runat="server" ></asp:TextBox>
+                  </div>
+                   <div class="col-md-12 form-group">
+                       <asp:Button class="main_btn" ID="btnActualizar" runat="server" Text="Actualizar Perfil" OnClick="btnActualizar_Click" />
+                   </div>
+              </div>
+          </div>
+      </form>
 </asp:Content>
