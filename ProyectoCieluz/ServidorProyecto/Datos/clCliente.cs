@@ -39,11 +39,20 @@ namespace ServidorProyecto.Datos
         }
         public int mtdEditar(clCliente objCliente)
         {
-            string consulta = "Update Cliente set Documento='" + Documento + "',Nombre='" + Nombre + "',Apellido='" + Apellido + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Departamento='"+  Departamento +"',Municipio='"+ Municipio +"',Direccion='"+ Direccion +"',Clave='" + Clave + "'" +
+            string consulta = "Update Cliente set TipoDocumento='"+ TipoDocumento + "',Documento='" + Documento + "',Nombre='" + Nombre + "',Apellido='" + Apellido + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Departamento='"+  Departamento +"',Municipio='"+ Municipio +"',Direccion='"+ Direccion +"',Clave='" + Clave + "'" +
                               "where Documento='" + Documento + "'";
             clConexion objConexion = new clConexion();
             int res = objConexion.mtdConectado(consulta);
             return res;
+        }
+
+        public DataSet mtdListarWeb(int IdCliente)
+        {
+            string consulta = "Select TipoDocumento,Documento,Nombre,Apellido,Telefono,Correo,Departamento,Municipio,Direccion,Clave From Cliente Where IdCliente='"+ IdCliente +"'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
         }
         public int mtdEliminar(clCliente objCliente)
         {

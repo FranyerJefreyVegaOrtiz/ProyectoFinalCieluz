@@ -23,6 +23,20 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarClientes", ReplyAction="*")]
         System.Threading.Tasks.Task<int> mtdRegistrarClientesAsync(appWebCieluz.ServicioWebCieluz.clCliente ObjCliente);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarCliente", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarCliente(appWebCieluz.ServicioWebCieluz.clCliente objcli);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarClienteAsync(appWebCieluz.ServicioWebCieluz.clCliente objcli);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdCargarCliente", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdCargarCliente(int IdCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdCargarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdCargarClienteAsync(int IdCliente);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdListarClientes(int IdCliente);
@@ -836,6 +850,22 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<int> mtdRegistrarClientesAsync(appWebCieluz.ServicioWebCieluz.clCliente ObjCliente) {
             return base.Channel.mtdRegistrarClientesAsync(ObjCliente);
+        }
+        
+        public int mtdEditarCliente(appWebCieluz.ServicioWebCieluz.clCliente objcli) {
+            return base.Channel.mtdEditarCliente(objcli);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEditarClienteAsync(appWebCieluz.ServicioWebCieluz.clCliente objcli) {
+            return base.Channel.mtdEditarClienteAsync(objcli);
+        }
+        
+        public System.Data.DataSet mtdCargarCliente(int IdCliente) {
+            return base.Channel.mtdCargarCliente(IdCliente);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdCargarClienteAsync(int IdCliente) {
+            return base.Channel.mtdCargarClienteAsync(IdCliente);
         }
         
         public System.Data.DataSet mtdListarClientes(int IdCliente) {
