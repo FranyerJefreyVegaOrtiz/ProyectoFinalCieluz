@@ -138,6 +138,8 @@
     <Content Include="img\index\fabrica3.jpg" />
     <Content Include="img\index\fabrica4.jpg" />
     <Content Include="img\index\fabrica5.jpg" />
+    <Content Include="img\regist2.png" />
+    <Content Include="img\registrar.png" />
     <Content Include="Index.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="QuienesSomos .aspx" />
