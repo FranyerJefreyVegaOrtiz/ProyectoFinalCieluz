@@ -61,6 +61,15 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
+        public DataSet mtdPedidosEscritorio()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarEscritorio();
+            return dsPedidos;
+        }
+
+        [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
         {
             DataSet dsLogin = new DataSet();

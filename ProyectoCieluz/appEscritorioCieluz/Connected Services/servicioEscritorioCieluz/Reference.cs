@@ -23,6 +23,20 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarClientes", ReplyAction="*")]
         System.Threading.Tasks.Task<int> mtdRegistrarClientesAsync(appEscritorioCieluz.servicioEscritorioCieluz.clCliente ObjCliente);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarCliente", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdEditarCliente(appEscritorioCieluz.servicioEscritorioCieluz.clCliente objcli);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdEditarClienteAsync(appEscritorioCieluz.servicioEscritorioCieluz.clCliente objcli);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdCargarCliente", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdCargarCliente(int IdCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdCargarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdCargarClienteAsync(int IdCliente);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarClientes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdListarClientes(int IdCliente);
@@ -36,6 +50,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdPedidosEscritorio", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdPedidosEscritorio();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdPedidosEscritorio", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdPedidosEscritorioAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -256,7 +277,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -428,7 +449,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -544,7 +565,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -688,7 +709,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -838,6 +859,22 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
             return base.Channel.mtdRegistrarClientesAsync(ObjCliente);
         }
         
+        public int mtdEditarCliente(appEscritorioCieluz.servicioEscritorioCieluz.clCliente objcli) {
+            return base.Channel.mtdEditarCliente(objcli);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdEditarClienteAsync(appEscritorioCieluz.servicioEscritorioCieluz.clCliente objcli) {
+            return base.Channel.mtdEditarClienteAsync(objcli);
+        }
+        
+        public System.Data.DataSet mtdCargarCliente(int IdCliente) {
+            return base.Channel.mtdCargarCliente(IdCliente);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdCargarClienteAsync(int IdCliente) {
+            return base.Channel.mtdCargarClienteAsync(IdCliente);
+        }
+        
         public System.Data.DataSet mtdListarClientes(int IdCliente) {
             return base.Channel.mtdListarClientes(IdCliente);
         }
@@ -852,6 +889,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync() {
             return base.Channel.mtdListarPedidosAsync();
+        }
+        
+        public System.Data.DataSet mtdPedidosEscritorio() {
+            return base.Channel.mtdPedidosEscritorio();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdPedidosEscritorioAsync() {
+            return base.Channel.mtdPedidosEscritorioAsync();
         }
         
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {

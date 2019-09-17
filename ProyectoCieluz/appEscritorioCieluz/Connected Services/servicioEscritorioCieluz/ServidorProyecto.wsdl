@@ -31,6 +31,41 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdEditarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objcli" type="tns:clCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdEditarClienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCargarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCargarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdCargarClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdListarClientes">
         <s:complexType>
           <s:sequence>
@@ -59,6 +94,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedidosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdPedidosEscritorio">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdPedidosEscritorioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdPedidosEscritorioResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -653,6 +705,18 @@
   <wsdl:message name="mtdRegistrarClientesSoapOut">
     <wsdl:part name="parameters" element="tns:mtdRegistrarClientesResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdEditarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEditarCliente" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEditarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCargarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCargarCliente" />
+  </wsdl:message>
+  <wsdl:message name="mtdCargarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCargarClienteResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdListarClientesSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarClientes" />
   </wsdl:message>
@@ -664,6 +728,12 @@
   </wsdl:message>
   <wsdl:message name="mtdListarPedidosSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdPedidosEscritorioSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdPedidosEscritorio" />
+  </wsdl:message>
+  <wsdl:message name="mtdPedidosEscritorioSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdPedidosEscritorioResponse" />
   </wsdl:message>
   <wsdl:message name="mtdLoginEscritorioSoapIn">
     <wsdl:part name="parameters" element="tns:mtdLoginEscritorio" />
@@ -856,6 +926,14 @@
       <wsdl:input message="tns:mtdRegistrarClientesSoapIn" />
       <wsdl:output message="tns:mtdRegistrarClientesSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="mtdEditarCliente">
+      <wsdl:input message="tns:mtdEditarClienteSoapIn" />
+      <wsdl:output message="tns:mtdEditarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCargarCliente">
+      <wsdl:input message="tns:mtdCargarClienteSoapIn" />
+      <wsdl:output message="tns:mtdCargarClienteSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdListarClientes">
       <wsdl:input message="tns:mtdListarClientesSoapIn" />
       <wsdl:output message="tns:mtdListarClientesSoapOut" />
@@ -863,6 +941,10 @@
     <wsdl:operation name="mtdListarPedidos">
       <wsdl:input message="tns:mtdListarPedidosSoapIn" />
       <wsdl:output message="tns:mtdListarPedidosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <wsdl:input message="tns:mtdPedidosEscritorioSoapIn" />
+      <wsdl:output message="tns:mtdPedidosEscritorioSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdLoginEscritorio">
       <wsdl:input message="tns:mtdLoginEscritorioSoapIn" />
@@ -1000,6 +1082,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdEditarCliente">
+      <soap:operation soapAction="http://tempuri.org/mtdEditarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCargarCliente">
+      <soap:operation soapAction="http://tempuri.org/mtdCargarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdListarClientes">
       <soap:operation soapAction="http://tempuri.org/mtdListarClientes" style="document" />
       <wsdl:input>
@@ -1011,6 +1111,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPedidos">
       <soap:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <soap:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1309,6 +1418,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdEditarCliente">
+      <soap12:operation soapAction="http://tempuri.org/mtdEditarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCargarCliente">
+      <soap12:operation soapAction="http://tempuri.org/mtdCargarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdListarClientes">
       <soap12:operation soapAction="http://tempuri.org/mtdListarClientes" style="document" />
       <wsdl:input>
@@ -1320,6 +1447,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPedidos">
       <soap12:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <soap12:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

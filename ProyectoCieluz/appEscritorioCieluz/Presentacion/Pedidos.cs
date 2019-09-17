@@ -27,18 +27,18 @@ namespace appEscritorioCieluz
         public void mtdCargarDatos()
         {
             DataSet dsPedidos = new DataSet();
-            dsPedidos = miServicio.mtdListarPedidos();
+            dsPedidos = miServicio.mtdPedidosEscritorio();
             DataTable tblPedido = dsPedidos.Tables["tblDatos"];
             dgvPedidos.DataSource = tblPedido;
-            //this.dgvPedidos.Columns["IdPedidos"].Visible = false;
-            //this.dgvPedidos.Columns["IdProducto"].Visible = false;
-            //this.dgvPedidos.Columns["IdProducto1"].Visible = false;
-            //this.dgvPedidos.Columns["IdCliente"].Visible = false;
-            //this.dgvPedidos.Columns["Foto"].Visible = false;
-            //this.dgvPedidos.Columns["Descripcion"].Visible = false;
-            //this.dgvPedidos.Columns["idAdministrador"].Visible = false;
-            //this.dgvPedidos.Columns["IdCliente1"].Visible = false;
-            //this.dgvPedidos.Columns["Clave"].Visible = false;
+            this.dgvPedidos.Columns["IdPedidos"].Visible = false;
+            this.dgvPedidos.Columns["IdProducto"].Visible = false;
+            this.dgvPedidos.Columns["IdProducto1"].Visible = false;
+            this.dgvPedidos.Columns["IdCliente"].Visible = false;
+            this.dgvPedidos.Columns["Foto"].Visible = false;
+            this.dgvPedidos.Columns["Descripcion"].Visible = false;
+            this.dgvPedidos.Columns["idAdministrador"].Visible = false;
+            this.dgvPedidos.Columns["IdCliente1"].Visible = false;
+            this.dgvPedidos.Columns["Clave"].Visible = false;
         }
 
         private void Pedidos_Load(object sender, EventArgs e)
@@ -67,9 +67,9 @@ namespace appEscritorioCieluz
                     dgvPedidos.Columns["Documento"].ReadOnly = true;
                     txtDocumento.Text = Documento;
 
-                    Nombre = dgvPedidos.Rows[renglon].Cells["Nombre"].Value.ToString();
-                    dgvPedidos.Columns["Nombre"].ReadOnly = true;
-                    txtNombrePed.Text = Nombre;
+                    Nombre1 = dgvPedidos.Rows[renglon].Cells["Nombre1"].Value.ToString();
+                    dgvPedidos.Columns["Nombre1"].ReadOnly = true;
+                    txtNombre.Text = Nombre1;
 
                     Apellido = dgvPedidos.Rows[renglon].Cells["Apellido"].Value.ToString();
                     dgvPedidos.Columns["Apellido"].ReadOnly = true;
@@ -82,10 +82,10 @@ namespace appEscritorioCieluz
                     Municipio = dgvPedidos.Rows[renglon].Cells["Municipio"].Value.ToString();
                     dgvPedidos.Columns["Municipio"].ReadOnly = true;
                     txtMunicipio.Text = Municipio;
-                    
-                    Nombre1 = dgvPedidos.Rows[renglon].Cells["Nombre1"].Value.ToString();
-                    dgvPedidos.Columns["Nombre1"].ReadOnly = true;
-                    txtNombre.Text = Nombre1;
+
+                    Nombre = dgvPedidos.Rows[renglon].Cells["Nombre"].Value.ToString();
+                    dgvPedidos.Columns["Nombre"].ReadOnly = true;
+                    txtNombrePed.Text = Nombre;
 
                     Codigo = dgvPedidos.Rows[renglon].Cells["Codigo"].Value.ToString();
                     dgvPedidos.Columns["Codigo"].ReadOnly = true;
@@ -96,10 +96,8 @@ namespace appEscritorioCieluz
                     txtPrecio.Text = Precio;
                 }
             }
-            catch (Exception)
+            catch
             {
-
-                throw;
             }
         }
     }
