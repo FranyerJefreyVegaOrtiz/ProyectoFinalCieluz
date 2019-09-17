@@ -17,6 +17,9 @@ namespace appWebCieluz
         protected void Page_Load(object sender, EventArgs e)
         {
             lblIdCliente.Text = Session["IdCliente"].ToString();
+
+            
+            
             //var Foto = "FotoPro";
             //var Nombre = "NombrePro";
             //var Precio ="PrecioPro";

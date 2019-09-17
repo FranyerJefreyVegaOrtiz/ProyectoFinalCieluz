@@ -104,6 +104,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdPedidosEscritorio">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdPedidosEscritorioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdPedidosEscritorioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdLoginEscritorio">
         <s:complexType>
           <s:sequence>
@@ -712,6 +729,12 @@
   <wsdl:message name="mtdListarPedidosSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarPedidosResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdPedidosEscritorioSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdPedidosEscritorio" />
+  </wsdl:message>
+  <wsdl:message name="mtdPedidosEscritorioSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdPedidosEscritorioResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdLoginEscritorioSoapIn">
     <wsdl:part name="parameters" element="tns:mtdLoginEscritorio" />
   </wsdl:message>
@@ -919,6 +942,10 @@
       <wsdl:input message="tns:mtdListarPedidosSoapIn" />
       <wsdl:output message="tns:mtdListarPedidosSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <wsdl:input message="tns:mtdPedidosEscritorioSoapIn" />
+      <wsdl:output message="tns:mtdPedidosEscritorioSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdLoginEscritorio">
       <wsdl:input message="tns:mtdLoginEscritorioSoapIn" />
       <wsdl:output message="tns:mtdLoginEscritorioSoapOut" />
@@ -1084,6 +1111,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPedidos">
       <soap:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <soap:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1411,6 +1447,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarPedidos">
       <soap12:operation soapAction="http://tempuri.org/mtdListarPedidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdPedidosEscritorio">
+      <soap12:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

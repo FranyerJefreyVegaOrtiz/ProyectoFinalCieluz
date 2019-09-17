@@ -31,7 +31,15 @@ namespace appWebCieluz
 
         protected void btnCarro_Click(object sender, EventArgs e)
         {
+                
+            if (Session["Correo"] != null)
+            {
                 Response.Redirect("Carro.aspx?IdProducto=" + txtRecive.Text);
+            }
+            else
+            {
+                Response.Redirect("login.html");
+            }
         }
     }
 }

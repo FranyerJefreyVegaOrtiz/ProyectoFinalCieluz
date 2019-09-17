@@ -172,5 +172,14 @@ namespace appEscritorioCieluz.Presentacion
         //    File.WriteAllBytes(txtFotoPro.Text, archivoByte);
         //    MessageBox.Show("Archivo creado correctamente");
         //}
+
+        public void mtd()
+        {
+            for (int i = 100; i < Left; i++)
+            {
+                label1.Text = i.ToString();
+            }
+        }
     }
+
 }

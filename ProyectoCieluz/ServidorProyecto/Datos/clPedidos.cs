@@ -48,5 +48,14 @@ namespace ServidorProyecto.Datos
             int resul = objconexion.mtdConectado(consulta);
             return resul;
         }
+
+        public DataSet mtdListarEscritorio()
+        {
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente  where IdPedidos='"+ IdPedidos +"'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
     }
 }

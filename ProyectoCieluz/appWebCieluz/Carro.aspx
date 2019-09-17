@@ -39,7 +39,6 @@
                                 <a>$</a><%#Container.GetRouteUrl("PrecioPro")%><br /><br /></div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
