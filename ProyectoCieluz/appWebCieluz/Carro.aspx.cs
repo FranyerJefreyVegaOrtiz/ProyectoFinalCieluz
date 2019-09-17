@@ -51,7 +51,7 @@ namespace appWebCieluz
 
             if (resultado > 0)
             {
-
+                Response.Redirect("confirmation.html");
             }
             else
             {
@@ -84,6 +84,7 @@ namespace appWebCieluz
 
         protected void btnCompra_Click(object sender, EventArgs e)
         {
+            mtdRegistrarPedido();
             try
             {
                 txtFrom.Text = "Calzadocieluz@gmail.com";
@@ -103,7 +104,7 @@ namespace appWebCieluz
                     sc.Credentials = new NetworkCredential(txtFrom.Text, txtClave.Text);
                     sc.EnableSsl = true;
                     sc.Send(msg);
-                    mtdRegistrarPedido();
+                   
                     Response.Redirect("confirmation.html");
 
                 }

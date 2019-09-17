@@ -274,6 +274,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarCVerdeProWeb", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCVerdeProWebAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdNotificacionPedido", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdNotificacionPedido(string FechaXd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdNotificacionPedido", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdNotificacionPedidoAsync(string FechaXd);
     }
     
     /// <remarks/>
@@ -1145,6 +1152,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarCVerdeProWebAsync() {
             return base.Channel.mtdListarCVerdeProWebAsync();
+        }
+        
+        public System.Data.DataSet mtdNotificacionPedido(string FechaXd) {
+            return base.Channel.mtdNotificacionPedido(FechaXd);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdNotificacionPedidoAsync(string FechaXd) {
+            return base.Channel.mtdNotificacionPedidoAsync(FechaXd);
         }
     }
 }

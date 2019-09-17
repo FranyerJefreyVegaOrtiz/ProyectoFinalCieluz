@@ -22,18 +22,13 @@ namespace appEscritorioCieluz
         private void PedidosHoy_Load(object sender, EventArgs e)
         {
             DataSet dsPedidos = new DataSet();
-            dsPedidos = miServicio.mtdListarPedidos();
+            string Fecha = DateTime.Now.ToString("yyyy/MM/dd");
+            dsPedidos = miServicio.mtdNotificacionPedido(Fecha);
             DataTable tblPedido = dsPedidos.Tables["tblDatos"];
             dgvPedidosHoy.DataSource = tblPedido;
-            this.dgvPedidosHoy.Columns["IdPedido"].Visible = false;
+            this.dgvPedidosHoy.Columns["IdPedidos"].Visible = false;
             this.dgvPedidosHoy.Columns["idProducto"].Visible = false;
-            this.dgvPedidosHoy.Columns["IdProducto1"].Visible = false;
             this.dgvPedidosHoy.Columns["idCliente"].Visible = false;
-            this.dgvPedidosHoy.Columns["Foto"].Visible = false;
-            this.dgvPedidosHoy.Columns["Descripcion"].Visible = false;
-            this.dgvPedidosHoy.Columns["idAdministrador"].Visible = false;
-            this.dgvPedidosHoy.Columns["IdCliente1"].Visible = false;
-            this.dgvPedidosHoy.Columns["Clave"].Visible = false;
         }
 
         int renglon;

@@ -326,5 +326,15 @@ namespace ServidorProyecto
             dsProducto = objPro.mtdListarCVerde();
             return dsProducto;
         }
+
+        [WebMethod]
+        public DataSet mtdNotificacionPedido(string FechaXd)
+        {
+            DataSet dsPed = new DataSet();
+            clPedidos objPed = new clPedidos();
+            dsPed = objPed.mtdNotificacionPed(FechaXd);
+            return dsPed;
+        }
     }
+    
 }
