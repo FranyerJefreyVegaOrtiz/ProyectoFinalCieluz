@@ -51,7 +51,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListarEscritorio()
         {
-            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente  where IdPedidos='"+ IdPedidos +"'";
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente ";
             DataSet dsCliente = new DataSet();
             clConexion clConexion = new clConexion();
             dsCliente = clConexion.mtdDesconectado(consulta);
