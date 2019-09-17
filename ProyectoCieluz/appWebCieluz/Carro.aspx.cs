@@ -17,6 +17,9 @@ namespace appWebCieluz
         protected void Page_Load(object sender, EventArgs e)
         {
             lblIdCliente.Text = Session["IdCliente"].ToString();
+
+            
+            
             //var Foto = "FotoPro";
             //var Nombre = "NombrePro";
             //var Precio ="PrecioPro";
@@ -82,15 +85,15 @@ namespace appWebCieluz
         protected void btnCompra_Click(object sender, EventArgs e)
         {
             mtdRegistrarPedido();
-            txtFrom.Text = "Calzadocieluz@gmail.com";
-            txtClave.Text = "Cieluz-2019";
-            txtSubject.Text = "Tu Pedido - Calzado Cieluz";
-            txtBody.Text = "Tu pedido se esta creando...";
-            if (Session["Correo"] != null)
+            try
             {
-                //mtdRegistrarPedido();
-                try
+                txtFrom.Text = "Calzadocieluz@gmail.com";
+                txtClave.Text = "Cieluz-2019";
+                txtSubject.Text = "Tu Pedido - Calzado Cieluz";
+                txtBody.Text = "Tu pedido se esta creando...";
+                if (Session["Correo"] != null)
                 {
+                    
                     MailMessage msg = new MailMessage();
                     msg.From = new MailAddress(txtFrom.Text);
                     msg.To.Add(Session["Correo"].ToString());
@@ -101,17 +104,22 @@ namespace appWebCieluz
                     sc.Credentials = new NetworkCredential(txtFrom.Text, txtClave.Text);
                     sc.EnableSsl = true;
                     sc.Send(msg);
+                   
                     Response.Redirect("confirmation.html");
+
                 }
-                catch (Exception ex)
+                else
                 {
-                    Response.Write(ex.Message);
+                    Response.Redirect("login.html");
                 }
+
             }
-            else
+            catch (Exception ex)
             {
-                Response.Redirect("login.html");
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alertIns", "alert('Conexion; Hubo un error en la conexion');" , true);
             }
+           
         }
     }
 }

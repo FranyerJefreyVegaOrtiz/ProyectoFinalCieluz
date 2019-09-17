@@ -51,6 +51,13 @@ namespace appWebCieluz.ServicioWebCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdListarPedidos", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdPedidosEscritorio", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet mtdPedidosEscritorio();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdPedidosEscritorio", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> mtdPedidosEscritorioAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdLoginEscritorio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave);
@@ -882,6 +889,14 @@ namespace appWebCieluz.ServicioWebCieluz {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> mtdListarPedidosAsync() {
             return base.Channel.mtdListarPedidosAsync();
+        }
+        
+        public System.Data.DataSet mtdPedidosEscritorio() {
+            return base.Channel.mtdPedidosEscritorio();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> mtdPedidosEscritorioAsync() {
+            return base.Channel.mtdPedidosEscritorioAsync();
         }
         
         public System.Data.DataSet mtdLoginEscritorio(string Correo, string Clave) {

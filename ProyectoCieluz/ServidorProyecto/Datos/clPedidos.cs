@@ -25,10 +25,12 @@ namespace ServidorProyecto.Datos
             return dsCliente;
         }
 
+        string Fecha = DateTime.Now.ToString("yyyy/MM/dd");
+
         public int mtdRegistrar(clPedidos objPedidos)
         {
-            string consulta = "insert into Pedidos(Cantidad,Talla,PrecioTotal,TipoPago,IdProducto,IdCliente)" +
-                "Values('" + objPedidos.Cantidad + "','" + objPedidos.Talla + "','" + objPedidos.PrecioTotal + "','" + objPedidos.TipoPago + "','" + objPedidos.IdProducto + "','" + objPedidos.IdCliente+ "')";
+            string consulta = "insert into Pedidos(Cantidad,Talla,PrecioTotal,TipoPago,IdProducto,IdCliente,Fecha)" +
+                "Values('" + objPedidos.Cantidad + "','" + objPedidos.Talla + "','" + objPedidos.PrecioTotal + "','" + objPedidos.TipoPago + "','" + objPedidos.IdProducto + "','" + objPedidos.IdCliente+ "', '" + Fecha + "' )";
             clConexion clconexion = new clConexion();
             int result = clconexion.mtdConectado(consulta);
             return result;
@@ -47,6 +49,24 @@ namespace ServidorProyecto.Datos
             clConexion objconexion = new clConexion();
             int resul = objconexion.mtdConectado(consulta);
             return resul;
+        }
+
+        public DataSet mtdListarEscritorio()
+        {
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente ";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
+
+        public DataSet mtdNotificacionPed(string Fecha)
+        {
+            string consulta = "Select * From Pedidos Where Fecha = '"+ Fecha +"'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
         }
     }
 }
