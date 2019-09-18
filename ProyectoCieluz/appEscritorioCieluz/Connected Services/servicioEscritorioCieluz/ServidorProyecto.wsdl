@@ -217,6 +217,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdRegistrarPedidos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPed" type="tns:clPedidos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdRegistrarPedidosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdRegistrarPedidosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdEditarProducto">
         <s:complexType>
           <s:sequence>
@@ -759,6 +773,12 @@
   <wsdl:message name="mtdRegistrarProductoSoapOut">
     <wsdl:part name="parameters" element="tns:mtdRegistrarProductoResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdRegistrarPedidosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="mtdRegistrarPedidosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdRegistrarPedidosResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdEditarProductoSoapIn">
     <wsdl:part name="parameters" element="tns:mtdEditarProducto" />
   </wsdl:message>
@@ -962,6 +982,10 @@
       <wsdl:input message="tns:mtdRegistrarProductoSoapIn" />
       <wsdl:output message="tns:mtdRegistrarProductoSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPedidos">
+      <wsdl:input message="tns:mtdRegistrarPedidosSoapIn" />
+      <wsdl:output message="tns:mtdRegistrarPedidosSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdEditarProducto">
       <wsdl:input message="tns:mtdEditarProductoSoapIn" />
       <wsdl:output message="tns:mtdEditarProductoSoapOut" />
@@ -1156,6 +1180,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdRegistrarProducto">
       <soap:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPedidos">
+      <soap:operation soapAction="http://tempuri.org/mtdRegistrarPedidos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1492,6 +1525,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdRegistrarProducto">
       <soap12:operation soapAction="http://tempuri.org/mtdRegistrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdRegistrarPedidos">
+      <soap12:operation soapAction="http://tempuri.org/mtdRegistrarPedidos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

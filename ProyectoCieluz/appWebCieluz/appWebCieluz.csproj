@@ -129,6 +129,7 @@
     <Content Include="Formulario web1.aspx" />
     <Content Include="DetalleProductos.aspx" />
     <Content Include="Carro.aspx" />
+    <Content Include="Historial.aspx" />
     <Content Include="img\banner\bannher-bg.jpg" />
     <Content Include="img\banner\banner-bg.jpg" />
     <Content Include="img\cotizas-calzado-para-dama-alpargatas-moda-mujer-artesanal-D_NQ_NP_752774-MCO31560138034_072019-Q.jpg" />
@@ -463,6 +464,13 @@
     </Compile>
     <Compile Include="Carro.aspx.designer.cs">
       <DependentUpon>Carro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Historial.aspx.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historial.aspx.designer.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

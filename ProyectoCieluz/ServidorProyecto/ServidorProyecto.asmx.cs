@@ -93,13 +93,20 @@ namespace ServidorProyecto
             int resul = oblPedidos.mtdRegistrar(objPed);
             return resul;
         }
-
-
+        
         [WebMethod]
         public int mtdRegistrarProducto(clProducto objPro)
         {
             clProducto objProducto = new clProducto();
             int resul = objProducto.mtdRegistrar(objPro);
+            return resul;
+        }
+
+        [WebMethod]
+        public int mtdRegistrarPedidos(clPedidos objPed)
+        {
+            clPedidos objPedidos = new clPedidos();
+            int resul = objPedidos.mtdRegistrar(objPed);
             return resul;
         }
 

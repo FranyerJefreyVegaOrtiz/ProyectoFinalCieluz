@@ -106,6 +106,12 @@
     <Compile Include="Presentacion\PedidosHoy.Designer.cs">
       <DependentUpon>PedidosHoy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Produccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Produccion.Designer.cs">
+      <DependentUpon>Produccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PedidosHoy.resx">
       <DependentUpon>PedidosHoy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Produccion.resx">
+      <DependentUpon>Produccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>

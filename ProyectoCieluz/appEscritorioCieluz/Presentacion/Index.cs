@@ -82,6 +82,11 @@ namespace appEscritorioCieluz
             AbrirFormInPanel(new Entregados());
         }
 
+        private void btnProduccion_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new Produccion());
+        }
+
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Login objLogin = new Login();

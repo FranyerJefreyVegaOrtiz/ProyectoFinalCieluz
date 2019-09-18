@@ -86,6 +86,13 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarProducto", ReplyAction="*")]
         System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objPro);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedidos", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int mtdRegistrarPedidos(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdRegistrarPedidos", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> mtdRegistrarPedidosAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/mtdEditarProducto", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         int mtdEditarProducto(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objPro);
@@ -277,7 +284,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -449,7 +456,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -565,7 +572,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -709,7 +716,7 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -929,6 +936,14 @@ namespace appEscritorioCieluz.servicioEscritorioCieluz {
         
         public System.Threading.Tasks.Task<int> mtdRegistrarProductoAsync(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objPro) {
             return base.Channel.mtdRegistrarProductoAsync(objPro);
+        }
+        
+        public int mtdRegistrarPedidos(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed) {
+            return base.Channel.mtdRegistrarPedidos(objPed);
+        }
+        
+        public System.Threading.Tasks.Task<int> mtdRegistrarPedidosAsync(appEscritorioCieluz.servicioEscritorioCieluz.clPedidos objPed) {
+            return base.Channel.mtdRegistrarPedidosAsync(objPed);
         }
         
         public int mtdEditarProducto(appEscritorioCieluz.servicioEscritorioCieluz.clProducto objPro) {
