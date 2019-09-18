@@ -60,14 +60,14 @@ namespace ServidorProyecto
             return dsPedidos;
         }
 
-        [WebMethod]
-        public DataSet mtdPedidosEscritorio()
-        {
-            DataSet dsPedidos = new DataSet();
-            clPedidos objPedidos = new clPedidos();
-            dsPedidos = objPedidos.mtdListarEscritorio();
-            return dsPedidos;
-        }
+        //[WebMethod]
+        //public DataSet mtdPedidosEscritorio()
+        //{
+        //    DataSet dsPedidos = new DataSet();
+        //    clPedidos objPedidos = new clPedidos();
+        //    dsPedidos = objPedidos.mtdListarEscritorio();
+        //    return dsPedidos;
+        //}
 
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
@@ -333,5 +333,15 @@ namespace ServidorProyecto
             dsProducto = objPro.mtdListarCVerde();
             return dsProducto;
         }
+
+        [WebMethod]
+        public DataSet mtdNotificacionPedido(string FechaXd)
+        {
+            DataSet dsPed = new DataSet();
+            clPedidos objPed = new clPedidos();
+            dsPed = objPed.mtdNotificacionPed(FechaXd);
+            return dsPed;
+        }
     }
+    
 }

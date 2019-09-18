@@ -711,6 +711,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdNotificacionPedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FechaXd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdNotificacionPedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdNotificacionPedidoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="mtdRegistrarClientesSoapIn">
@@ -941,6 +962,12 @@
   <wsdl:message name="mtdListarCVerdeProWebSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarCVerdeProWebResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdNotificacionPedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdNotificacionPedido" />
+  </wsdl:message>
+  <wsdl:message name="mtdNotificacionPedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdNotificacionPedidoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServidorProyectoSoap">
     <wsdl:operation name="mtdRegistrarClientes">
       <wsdl:input message="tns:mtdRegistrarClientesSoapIn" />
@@ -1093,6 +1120,10 @@
     <wsdl:operation name="mtdListarCVerdeProWeb">
       <wsdl:input message="tns:mtdListarCVerdeProWebSoapIn" />
       <wsdl:output message="tns:mtdListarCVerdeProWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdNotificacionPedido">
+      <wsdl:input message="tns:mtdNotificacionPedidoSoapIn" />
+      <wsdl:output message="tns:mtdNotificacionPedidoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServidorProyectoSoap" type="tns:ServidorProyectoSoap">
@@ -1439,6 +1470,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdNotificacionPedido">
+      <soap:operation soapAction="http://tempuri.org/mtdNotificacionPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServidorProyectoSoap12" type="tns:ServidorProyectoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1777,6 +1817,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdListarCVerdeProWeb">
       <soap12:operation soapAction="http://tempuri.org/mtdListarCVerdeProWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdNotificacionPedido">
+      <soap12:operation soapAction="http://tempuri.org/mtdNotificacionPedido" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

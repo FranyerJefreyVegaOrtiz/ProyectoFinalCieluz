@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="login_box_img">
-                            <img class="img-fluid" src="img/login.jpg" alt="">
-                            <img class="img-fluid" src="img/login.jpg" alt="">
+                             <img class="img-fluid" src="img/regist2.png" alt="">
+                            <img class="img-fluid" src="img/registrar.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">

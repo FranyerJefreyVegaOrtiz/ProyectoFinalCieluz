@@ -51,7 +51,7 @@ namespace appWebCieluz
 
             if (resultado > 0)
             {
-
+                Response.Redirect("confirmation.html");
             }
             else
             {
@@ -87,13 +87,13 @@ namespace appWebCieluz
             mtdRegistrarPedido();
             try
             {
-
                 txtFrom.Text = "Calzadocieluz@gmail.com";
                 txtClave.Text = "Cieluz-2019";
                 txtSubject.Text = "Tu Pedido - Calzado Cieluz";
                 txtBody.Text = "Tu pedido se esta creando...";
                 if (Session["Correo"] != null)
                 {
+                    
                     MailMessage msg = new MailMessage();
                     msg.From = new MailAddress(txtFrom.Text);
                     msg.To.Add(Session["Correo"].ToString());
@@ -104,7 +104,7 @@ namespace appWebCieluz
                     sc.Credentials = new NetworkCredential(txtFrom.Text, txtClave.Text);
                     sc.EnableSsl = true;
                     sc.Send(msg);
-                    
+                   
                     Response.Redirect("confirmation.html");
 
                 }

@@ -3,11 +3,13 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using appEscritorioCieluz.Presentacion;
 using System.Drawing;
+using System.Data;
 
 namespace appEscritorioCieluz
 {
     public partial class Index : Form
     {
+        servicioEscritorioCieluz.ServidorProyectoSoapClient MiServicio = new servicioEscritorioCieluz.ServidorProyectoSoapClient();
         public Index()
         {
             InitializeComponent();
@@ -154,9 +156,36 @@ namespace appEscritorioCieluz
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
 
+        private void Index_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblHora_TextChanged(object sender, EventArgs e)
+        {
+            mtdNotificacion();
+        }
+
+        public void mtdNotificacion()
+        {
+
+            DataSet dsPedidos = new DataSet();
+            string Fecha = DateTime.Now.ToString("yyyy/MM/dd");
+            dsPedidos = MiServicio.mtdNotificacionPedido(Fecha);
+            DataTable tblNoti = dsPedidos.Tables["tblDatos"];
+            if (tblNoti.Rows.Count != 0)
+            {
+                btnPedidosHoy.BackColor = Color.Red;
+            }
+            else
+            {
+                btnPedidosHoy.BackColor = Color.Gray;
+            }
         }
     }
 }
