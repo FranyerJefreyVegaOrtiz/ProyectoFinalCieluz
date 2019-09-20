@@ -104,6 +104,57 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="mtdListarPedPro">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPedProResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedProResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarPedDes">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPedDesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedDesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdListarPedEnt">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdListarPedEntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdListarPedEntResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="mtdPedidosEscritorio">
         <s:complexType />
       </s:element>
@@ -111,6 +162,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="mtdPedidosEscritorioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdProduccionEscritorio">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdProduccionEscritorioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdProduccionEscritorioResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -175,12 +243,14 @@
       <s:complexType name="clPedidos">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdPedidos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nit" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Cantidad" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Talla" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="PrecioTotal" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TipoPago" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="IdProducto" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="mtdRegistrarPedidoResponse">
@@ -256,6 +326,20 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="mtdEliminarProductoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarPedido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="objPed" type="tns:clPedidos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdEditarPedidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdEditarPedidoResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -764,11 +848,35 @@
   <wsdl:message name="mtdListarPedidosSoapOut">
     <wsdl:part name="parameters" element="tns:mtdListarPedidosResponse" />
   </wsdl:message>
+  <wsdl:message name="mtdListarPedProSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPedPro" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedProSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPedProResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedDesSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPedDes" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedDesSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPedDesResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedEntSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdListarPedEnt" />
+  </wsdl:message>
+  <wsdl:message name="mtdListarPedEntSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdListarPedEntResponse" />
+  </wsdl:message>
   <wsdl:message name="mtdPedidosEscritorioSoapIn">
     <wsdl:part name="parameters" element="tns:mtdPedidosEscritorio" />
   </wsdl:message>
   <wsdl:message name="mtdPedidosEscritorioSoapOut">
     <wsdl:part name="parameters" element="tns:mtdPedidosEscritorioResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdProduccionEscritorioSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdProduccionEscritorio" />
+  </wsdl:message>
+  <wsdl:message name="mtdProduccionEscritorioSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdProduccionEscritorioResponse" />
   </wsdl:message>
   <wsdl:message name="mtdLoginEscritorioSoapIn">
     <wsdl:part name="parameters" element="tns:mtdLoginEscritorio" />
@@ -811,6 +919,12 @@
   </wsdl:message>
   <wsdl:message name="mtdEliminarProductoSoapOut">
     <wsdl:part name="parameters" element="tns:mtdEliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarPedidoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdEditarPedido" />
+  </wsdl:message>
+  <wsdl:message name="mtdEditarPedidoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdEditarPedidoResponse" />
   </wsdl:message>
   <wsdl:message name="mtdListarAdminSoapIn">
     <wsdl:part name="parameters" element="tns:mtdListarAdmin" />
@@ -989,9 +1103,25 @@
       <wsdl:input message="tns:mtdListarPedidosSoapIn" />
       <wsdl:output message="tns:mtdListarPedidosSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="mtdListarPedPro">
+      <wsdl:input message="tns:mtdListarPedProSoapIn" />
+      <wsdl:output message="tns:mtdListarPedProSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedDes">
+      <wsdl:input message="tns:mtdListarPedDesSoapIn" />
+      <wsdl:output message="tns:mtdListarPedDesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedEnt">
+      <wsdl:input message="tns:mtdListarPedEntSoapIn" />
+      <wsdl:output message="tns:mtdListarPedEntSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="mtdPedidosEscritorio">
       <wsdl:input message="tns:mtdPedidosEscritorioSoapIn" />
       <wsdl:output message="tns:mtdPedidosEscritorioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdProduccionEscritorio">
+      <wsdl:input message="tns:mtdProduccionEscritorioSoapIn" />
+      <wsdl:output message="tns:mtdProduccionEscritorioSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdLoginEscritorio">
       <wsdl:input message="tns:mtdLoginEscritorioSoapIn" />
@@ -1020,6 +1150,10 @@
     <wsdl:operation name="mtdEliminarProducto">
       <wsdl:input message="tns:mtdEliminarProductoSoapIn" />
       <wsdl:output message="tns:mtdEliminarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarPedido">
+      <wsdl:input message="tns:mtdEditarPedidoSoapIn" />
+      <wsdl:output message="tns:mtdEditarPedidoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="mtdListarAdmin">
       <wsdl:input message="tns:mtdListarAdminSoapIn" />
@@ -1173,8 +1307,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarPedPro">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPedPro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedDes">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPedDes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedEnt">
+      <soap:operation soapAction="http://tempuri.org/mtdListarPedEnt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdPedidosEscritorio">
       <soap:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdProduccionEscritorio">
+      <soap:operation soapAction="http://tempuri.org/mtdProduccionEscritorio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1238,6 +1408,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdEliminarProducto">
       <soap:operation soapAction="http://tempuri.org/mtdEliminarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarPedido">
+      <soap:operation soapAction="http://tempuri.org/mtdEditarPedido" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1527,8 +1706,44 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="mtdListarPedPro">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPedPro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedDes">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPedDes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdListarPedEnt">
+      <soap12:operation soapAction="http://tempuri.org/mtdListarPedEnt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="mtdPedidosEscritorio">
       <soap12:operation soapAction="http://tempuri.org/mtdPedidosEscritorio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdProduccionEscritorio">
+      <soap12:operation soapAction="http://tempuri.org/mtdProduccionEscritorio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1592,6 +1807,15 @@
     </wsdl:operation>
     <wsdl:operation name="mtdEliminarProducto">
       <soap12:operation soapAction="http://tempuri.org/mtdEliminarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdEditarPedido">
+      <soap12:operation soapAction="http://tempuri.org/mtdEditarPedido" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -9,12 +9,14 @@ namespace ServidorProyecto.Datos
     public class clPedidos
     {
         public int IdPedidos { get; set; }
+        public string Nit { get; set; }
         public string Cantidad { get; set; }
         public string Talla { get; set; }
         public string PrecioTotal { get; set; }
         public string TipoPago { get; set; }
         public int IdProducto { get; set; }
         public int IdCliente { get; set; }
+        public string Estado { get; set; }
 
         public DataSet mtdListar()
         {
@@ -35,14 +37,15 @@ namespace ServidorProyecto.Datos
             int result = clconexion.mtdConectado(consulta);
             return result;
         }
-        public int mtdEditar(clCliente objCliente)
+
+        public int mtdEditar(clPedidos objPed)
         {
-            string consulta = "Update Pedidos set Cantidad='" + Cantidad + "',Talla='" + Talla + "',PrecioTotal='" + PrecioTotal + "',TipoPago='" + TipoPago + "',IdProducto='" + IdProducto + "',IdCliente='" + IdCliente + "'" +
-                              "where IdPedidos='" + IdPedidos + "'";
+            string consulta = "Update Pedidos set Nit='"+ Nit +"', Cantidad='" + objPed.Cantidad + "',Talla='" + objPed.Talla + "',PrecioTotal='" + objPed.PrecioTotal + "',TipoPago='" + objPed.TipoPago + "',IdProducto='" + objPed.IdProducto + "',IdCliente='" + objPed.IdCliente + "', Estado = '"+ objPed.Estado + "' where Nit = '"+Nit+"'";
             clConexion objConexion = new clConexion();
             int res = objConexion.mtdConectado(consulta);
             return res;
         }
+
         public int mtdEliminar(clCliente objCliente)
         {
             string consulta = "Delete from Cliente where IdPedidos='" + IdPedidos + "'";
@@ -53,7 +56,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListarEscritorio()
         {
-            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente ";
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente";
             DataSet dsCliente = new DataSet();
             clConexion clConexion = new clConexion();
             dsCliente = clConexion.mtdDesconectado(consulta);
@@ -63,6 +66,33 @@ namespace ServidorProyecto.Datos
         public DataSet mtdNotificacionPed(string Fecha)
         {
             string consulta = "Select * From Pedidos Where Fecha = '"+ Fecha +"'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
+
+        public DataSet mtdListarProduccion()
+        {
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente where Estado = 'Produccion'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
+
+        public DataSet mtdListarDespachados()
+        {
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente where Estado = 'Despachados'";
+            DataSet dsCliente = new DataSet();
+            clConexion clConexion = new clConexion();
+            dsCliente = clConexion.mtdDesconectado(consulta);
+            return dsCliente;
+        }
+
+        public DataSet mtdListarEntregados()
+        {
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente where Estado = 'Entregados'";
             DataSet dsCliente = new DataSet();
             clConexion clConexion = new clConexion();
             dsCliente = clConexion.mtdDesconectado(consulta);

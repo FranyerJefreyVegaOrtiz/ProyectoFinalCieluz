@@ -51,6 +51,7 @@ namespace ServidorProyecto
             dsCliente = objCliente.mtdIndex(IdCliente);
             return dsCliente;
         }
+
         [WebMethod]
         public DataSet mtdListarPedidos()
         {
@@ -60,14 +61,50 @@ namespace ServidorProyecto
             return dsPedidos;
         }
 
-        //[WebMethod]
-        //public DataSet mtdPedidosEscritorio()
-        //{
-        //    DataSet dsPedidos = new DataSet();
-        //    clPedidos objPedidos = new clPedidos();
-        //    dsPedidos = objPedidos.mtdListarEscritorio();
-        //    return dsPedidos;
-        //}
+        [WebMethod]
+        public DataSet mtdListarPedPro()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarProduccion();
+            return dsPedidos;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarPedDes()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarDespachados();
+            return dsPedidos;
+        }
+
+        [WebMethod]
+        public DataSet mtdListarPedEnt()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarEntregados();
+            return dsPedidos;
+        }
+
+        [WebMethod]
+        public DataSet mtdPedidosEscritorio()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarEscritorio();
+            return dsPedidos;
+        }
+
+        [WebMethod]
+        public DataSet mtdProduccionEscritorio()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarProduccion();
+            return dsPedidos;
+        }
 
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
@@ -123,6 +160,14 @@ namespace ServidorProyecto
         {
             clProducto objProducto = new clProducto();
             int resul = objProducto.mtdEliminar(objPro);
+            return resul;
+        }
+
+        [WebMethod]
+        public int mtdEditarPedido(clPedidos objPed)
+        {
+            clPedidos objPedido = new clPedidos();
+            int resul = objPedido.mtdEditar(objPed);
             return resul;
         }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,46 +56,45 @@ namespace appEscritorioCieluz
                 if (dgvPedidos.SelectedCells.Count > 0)
                 {
                     renglon = e.RowIndex;
-                    string Documento;
-                    string Nombre;
-                    string Apellido;
-                    string Telefono;
-                    string Municipio;
-                    string Nombre1;
-                    string Codigo;
-                    string Precio;
+                    string Foto;
+                    string Cantidad;
+                    string Talla;
+                    string PrecioTotal;
+                    string TipoPago;
+                    string IdCliente;
+                    string IdProducto;
 
-                    Documento = dgvPedidos.Rows[renglon].Cells["Documento"].Value.ToString();
-                    dgvPedidos.Columns["Documento"].ReadOnly = true;
-                    txtDocumento.Text = Documento;
 
-                    Nombre1 = dgvPedidos.Rows[renglon].Cells["Nombre"].Value.ToString();
-                    dgvPedidos.Columns["Nombre"].ReadOnly = true;
-                    txtNombre.Text = Nombre1;
+                    //Foto = dgvPedidos.Rows[renglon].Cells["Foto"].Value.ToString();
+                    //dgvPedidos.Columns["Foto"].ReadOnly = true;
+                    //string archivoBase64 = "Foto";
+                    //byte[] archivoByte = Convert.FromBase64String(archivoBase64);
+                    //File.WriteAllBytes(pbxImagen.Image.ToString(), archivoByte);
 
-                    Apellido = dgvPedidos.Rows[renglon].Cells["Apellido"].Value.ToString();
-                    dgvPedidos.Columns["Apellido"].ReadOnly = true;
-                    txtApellido.Text = Apellido;
 
-                    Telefono = dgvPedidos.Rows[renglon].Cells["Telefono"].Value.ToString();
-                    dgvPedidos.Columns["Telefono"].ReadOnly = true;
-                    txtTelefono.Text = Telefono;
+                    Cantidad = dgvPedidos.Rows[renglon].Cells["Cantidad"].Value.ToString();
+                    dgvPedidos.Columns["Cantidad"].ReadOnly = true;
+                    txtCantidad.Text = Cantidad;
 
-                    Municipio = dgvPedidos.Rows[renglon].Cells["Municipio"].Value.ToString();
-                    dgvPedidos.Columns["Municipio"].ReadOnly = true;
-                    txtMunicipio.Text = Municipio;
+                    Talla = dgvPedidos.Rows[renglon].Cells["Talla"].Value.ToString();
+                    dgvPedidos.Columns["Talla"].ReadOnly = true;
+                    txtTalla.Text = Talla;
 
-                    Nombre = dgvPedidos.Rows[renglon].Cells["Nombre1"].Value.ToString();
-                    dgvPedidos.Columns["Nombre1"].ReadOnly = true;
-                    txtNombrePed.Text = Nombre;
+                    PrecioTotal = dgvPedidos.Rows[renglon].Cells["PrecioTotal"].Value.ToString();
+                    dgvPedidos.Columns["PrecioTotal"].ReadOnly = true;
+                    txtPrecioTotal.Text = PrecioTotal;
 
-                    Codigo = dgvPedidos.Rows[renglon].Cells["Codigo"].Value.ToString();
-                    dgvPedidos.Columns["Codigo"].ReadOnly = true;
-                    txtCodigo.Text = Codigo;
+                    TipoPago = dgvPedidos.Rows[renglon].Cells["TipoPago"].Value.ToString();
+                    dgvPedidos.Columns["TipoPago"].ReadOnly = true;
+                    txtTipoPago.Text = TipoPago;
 
-                    Precio = dgvPedidos.Rows[renglon].Cells["Precio"].Value.ToString();
-                    dgvPedidos.Columns["Precio"].ReadOnly = true;
-                    txtPrecio.Text = Precio;
+                    IdCliente = dgvPedidos.Rows[renglon].Cells["IdCliente"].Value.ToString();
+                    dgvPedidos.Columns["IdCliente"].ReadOnly = true;
+                    txtIdCliente.Text = IdCliente;
+
+                    IdProducto = dgvPedidos.Rows[renglon].Cells["IdProducto"].Value.ToString();
+                    dgvPedidos.Columns["IdProducto"].ReadOnly = true;
+                    txtIdProducto.Text = IdProducto;
                 }
             }
             catch
@@ -104,17 +104,85 @@ namespace appEscritorioCieluz
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvPedidos.SelectedRows)
+            servicioEscritorioCieluz.clPedidos objPedidos = new servicioEscritorioCieluz.clPedidos();
+
+            objPedidos.Nit = txtNit.Text;
+            objPedidos.Estado = txtEstado.Text;
+            objPedidos.Cantidad = txtCantidad.Text;
+            objPedidos.Talla = txtTalla.Text;
+            objPedidos.PrecioTotal = txtPrecioTotal.Text;
+            objPedidos.TipoPago = txtTipoPago.Text;
+            objPedidos.IdCliente = int.Parse(txtIdCliente.Text);
+            objPedidos.IdProducto = int.Parse(txtIdProducto.Text);
+
+            int resultado = miServicio.mtdEditarPedido(objPedidos);
+            if (resultado > 0)
             {
-                string Documento;
-                string Apellido;
+                MessageBox.Show("Editado");
+                string valor = txtNit.Text + 1;
+                txtNit.Text = valor;
+            }
+            else
+            {
+                MessageBox.Show("No Se Puede Editar");
+            }
+        }
 
-                Documento = this.dgvPedidos.CurrentRow.Cells[5].Value.ToString();
-                Apellido = this.dgvPedidos.CurrentRow.Cells[7].Value.ToString();
+        private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvPedidos.SelectedCells.Count > 0)
+                {
+                    renglon = e.RowIndex;
+                    string Foto;
+                    string Cantidad;
+                    string Talla;
+                    string PrecioTotal;
+                    string TipoPago;
+                    string Estado;
+                    string IdCliente;
+                    string IdProducto;
 
-                Produccion frmpro = new Produccion();
 
-                frmpro.dgvProduccion.Rows.Add(Documento, Apellido);
+                    //Foto = dgvPedidos.Rows[renglon].Cells["Foto"].Value.ToString();
+                    //dgvPedidos.Columns["Foto"].ReadOnly = true;
+                    //string archivoBase64 = "Foto";
+                    //byte[] archivoByte = Convert.FromBase64String(archivoBase64);
+                    //File.WriteAllBytes(pbxImagen.Image.ToString(), archivoByte);
+
+
+                    Cantidad = dgvPedidos.Rows[renglon].Cells["Cantidad"].Value.ToString();
+                    dgvPedidos.Columns["Cantidad"].ReadOnly = true;
+                    txtCantidad.Text = Cantidad;
+
+                    Talla = dgvPedidos.Rows[renglon].Cells["Talla"].Value.ToString();
+                    dgvPedidos.Columns["Talla"].ReadOnly = true;
+                    txtTalla.Text = Talla;
+
+                    PrecioTotal = dgvPedidos.Rows[renglon].Cells["PrecioTotal"].Value.ToString();
+                    dgvPedidos.Columns["PrecioTotal"].ReadOnly = true;
+                    txtPrecioTotal.Text = PrecioTotal;
+
+                    TipoPago = dgvPedidos.Rows[renglon].Cells["TipoPago"].Value.ToString();
+                    dgvPedidos.Columns["TipoPago"].ReadOnly = true;
+                    txtTipoPago.Text = TipoPago;
+
+                    Estado = dgvPedidos.Rows[renglon].Cells["Estado"].Value.ToString();
+                    dgvPedidos.Columns["Estado"].ReadOnly = true;
+                    txtEstado.Text = Estado;
+
+                    IdCliente = dgvPedidos.Rows[renglon].Cells["IdCliente"].Value.ToString();
+                    dgvPedidos.Columns["IdCliente"].ReadOnly = true;
+                    lblIdCliente.Text = IdCliente;
+
+                    IdProducto = dgvPedidos.Rows[renglon].Cells["IdProducto"].Value.ToString();
+                    dgvPedidos.Columns["IdProducto"].ReadOnly = true;
+                    lblIdProducto.Text = IdProducto;
+                }
+            }
+            catch
+            {
             }
         }
 
@@ -162,5 +230,5 @@ namespace appEscritorioCieluz
 
         //frmpro.dgvProduccion.Rows.Add(Cantidad, Talla, PrecioTotal, TipoPago, TipoDocumento, Documento, Nombre, Apellido, Telefono, Correo, Departamento, Municipio, Direccion, Nombre1, Codigo, Precio, Color, Diseño);
         //    }
-}
+    }
 }
