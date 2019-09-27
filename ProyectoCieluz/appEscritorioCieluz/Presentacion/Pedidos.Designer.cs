@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtTipoPago = new System.Windows.Forms.TextBox();
             this.txtPrecioTotal = new System.Windows.Forms.TextBox();
             this.txtTalla = new System.Windows.Forms.TextBox();
@@ -50,8 +50,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNit = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
@@ -76,11 +75,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.txtNit);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtEstado);
+            this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.txtIdProducto);
             this.panel2.Controls.Add(this.txtIdCliente);
-            this.panel2.Controls.Add(this.txtEstado);
             this.panel2.Controls.Add(this.txtTipoPago);
             this.panel2.Controls.Add(this.txtPrecioTotal);
             this.panel2.Controls.Add(this.txtTalla);
@@ -101,6 +99,13 @@
             this.panel2.Size = new System.Drawing.Size(434, 474);
             this.panel2.TabIndex = 0;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(21, 438);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(39, 20);
+            this.txtId.TabIndex = 58;
+            // 
             // txtIdProducto
             // 
             this.txtIdProducto.Location = new System.Drawing.Point(236, 389);
@@ -114,14 +119,6 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(100, 20);
             this.txtIdCliente.TabIndex = 55;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(236, 327);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
-            this.txtEstado.TabIndex = 54;
-            this.txtEstado.Text = "Produccion";
             // 
             // txtTipoPago
             // 
@@ -266,7 +263,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(135, 132);
+            this.label8.Location = new System.Drawing.Point(145, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(132, 22);
             this.label8.TabIndex = 31;
@@ -296,24 +293,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista Pedidos";
             // 
-            // txtNit
+            // txtEstado
             // 
-            this.txtNit.Location = new System.Drawing.Point(234, 169);
-            this.txtNit.Name = "txtNit";
-            this.txtNit.Size = new System.Drawing.Size(100, 20);
-            this.txtNit.TabIndex = 58;
-            this.txtNit.Text = "100";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(95, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 21);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Nit";
+            this.txtEstado.Location = new System.Drawing.Point(236, 327);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.TabIndex = 59;
+            this.txtEstado.Text = "Produccion";
             // 
             // Pedidos
             // 
@@ -354,12 +340,11 @@
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.TextBox txtIdCliente;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtTipoPago;
         private System.Windows.Forms.TextBox txtPrecioTotal;
         private System.Windows.Forms.TextBox txtTalla;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox txtNit;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }

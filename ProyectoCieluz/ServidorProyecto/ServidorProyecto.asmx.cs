@@ -105,6 +105,24 @@ namespace ServidorProyecto
             dsPedidos = objPedidos.mtdListarProduccion();
             return dsPedidos;
         }
+        
+        [WebMethod]
+        public DataSet mtdDespachadosEscritorio()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarDespachados();
+            return dsPedidos;
+        }
+
+        [WebMethod]
+        public DataSet mtdEntregadosEscritorio()
+        {
+            DataSet dsPedidos = new DataSet();
+            clPedidos objPedidos = new clPedidos();
+            dsPedidos = objPedidos.mtdListarEntregados();
+            return dsPedidos;
+        }
 
         [WebMethod]
         public DataSet mtdLoginEscritorio(string Correo, string Clave)
@@ -164,10 +182,10 @@ namespace ServidorProyecto
         }
 
         [WebMethod]
-        public int mtdEditarPedido(clPedidos objPed)
+        public int mtdEditarPedido(clPedidos objPed, int IdPedidos)
         {
             clPedidos objPedido = new clPedidos();
-            int resul = objPedido.mtdEditar(objPed);
+            int resul = objPedido.mtdEditar(objPed, IdPedidos);
             return resul;
         }
 

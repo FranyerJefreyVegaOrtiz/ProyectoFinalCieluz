@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvEntregados = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblTipoPago = new System.Windows.Forms.Label();
@@ -45,9 +43,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.dgvEntregados = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,31 +59,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dgvEntregados);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 541);
+            this.panel1.Size = new System.Drawing.Size(1082, 542);
             this.panel1.TabIndex = 0;
-            // 
-            // dgvEntregados
-            // 
-            this.dgvEntregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntregados.Location = new System.Drawing.Point(42, 58);
-            this.dgvEntregados.Name = "dgvEntregados";
-            this.dgvEntregados.ReadOnly = true;
-            this.dgvEntregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEntregados.Size = new System.Drawing.Size(735, 450);
-            this.dgvEntregados.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(60, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Listado Entregados";
             // 
             // panel3
             // 
@@ -251,6 +230,27 @@
             this.label8.TabIndex = 49;
             this.label8.Text = "Datos Pedido";
             // 
+            // dgvEntregados
+            // 
+            this.dgvEntregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntregados.Location = new System.Drawing.Point(42, 58);
+            this.dgvEntregados.Name = "dgvEntregados";
+            this.dgvEntregados.ReadOnly = true;
+            this.dgvEntregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEntregados.Size = new System.Drawing.Size(735, 450);
+            this.dgvEntregados.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(60, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Listado Entregados";
+            // 
             // Entregados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,11 +260,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Entregados";
             this.Text = "Entregados";
+            this.Load += new System.EventHandler(this.Entregados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntregados)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -32,7 +32,6 @@ namespace appEscritorioCieluz
             dsPedidos = miServicio.mtdPedidosEscritorio();
             DataTable tblPedido = dsPedidos.Tables["tblDatos"];
             dgvPedidos.DataSource = tblPedido;
-            this.dgvPedidos.Columns["IdPedidos"].Visible = false;
             this.dgvPedidos.Columns["IdProducto"].Visible = false;
             this.dgvPedidos.Columns["IdProducto1"].Visible = false;
             this.dgvPedidos.Columns["IdCliente"].Visible = false;
@@ -56,6 +55,7 @@ namespace appEscritorioCieluz
                 if (dgvPedidos.SelectedCells.Count > 0)
                 {
                     renglon = e.RowIndex;
+                    string IdPedidos;
                     string Foto;
                     string Cantidad;
                     string Talla;
@@ -70,7 +70,9 @@ namespace appEscritorioCieluz
                     //string archivoBase64 = "Foto";
                     //byte[] archivoByte = Convert.FromBase64String(archivoBase64);
                     //File.WriteAllBytes(pbxImagen.Image.ToString(), archivoByte);
-
+                    IdPedidos = dgvPedidos.Rows[renglon].Cells["IdPedidos"].Value.ToString();
+                    dgvPedidos.Columns["IdPedidos"].ReadOnly = true;
+                    txtId.Text = IdPedidos;
 
                     Cantidad = dgvPedidos.Rows[renglon].Cells["Cantidad"].Value.ToString();
                     dgvPedidos.Columns["Cantidad"].ReadOnly = true;
@@ -106,21 +108,21 @@ namespace appEscritorioCieluz
         {
             servicioEscritorioCieluz.clPedidos objPedidos = new servicioEscritorioCieluz.clPedidos();
 
-            objPedidos.Nit = txtNit.Text;
+            int IdPedidos = int.Parse(txtId.Text);
             objPedidos.Estado = txtEstado.Text;
             objPedidos.Cantidad = txtCantidad.Text;
             objPedidos.Talla = txtTalla.Text;
             objPedidos.PrecioTotal = txtPrecioTotal.Text;
             objPedidos.TipoPago = txtTipoPago.Text;
+            objPedidos.Estado = txtEstado.Text;
             objPedidos.IdCliente = int.Parse(txtIdCliente.Text);
             objPedidos.IdProducto = int.Parse(txtIdProducto.Text);
 
-            int resultado = miServicio.mtdEditarPedido(objPedidos);
+            int resultado = miServicio.mtdEditarPedido(objPedidos, IdPedidos);
             if (resultado > 0)
             {
                 MessageBox.Show("Editado");
-                string valor = txtNit.Text + 1;
-                txtNit.Text = valor;
+                mtdCargarDatos();
             }
             else
             {
@@ -135,7 +137,7 @@ namespace appEscritorioCieluz
                 if (dgvPedidos.SelectedCells.Count > 0)
                 {
                     renglon = e.RowIndex;
-                    string Foto;
+                    string IdPedidos;
                     string Cantidad;
                     string Talla;
                     string PrecioTotal;
@@ -150,7 +152,9 @@ namespace appEscritorioCieluz
                     //string archivoBase64 = "Foto";
                     //byte[] archivoByte = Convert.FromBase64String(archivoBase64);
                     //File.WriteAllBytes(pbxImagen.Image.ToString(), archivoByte);
-
+                    IdPedidos = dgvPedidos.Rows[renglon].Cells["IdPedidos"].Value.ToString();
+                    dgvPedidos.Columns["IdPedidos"].ReadOnly = true;
+                    txtId.Text = IdPedidos;
 
                     Cantidad = dgvPedidos.Rows[renglon].Cells["Cantidad"].Value.ToString();
                     dgvPedidos.Columns["Cantidad"].ReadOnly = true;

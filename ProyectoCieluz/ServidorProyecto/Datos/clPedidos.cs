@@ -9,7 +9,6 @@ namespace ServidorProyecto.Datos
     public class clPedidos
     {
         public int IdPedidos { get; set; }
-        public string Nit { get; set; }
         public string Cantidad { get; set; }
         public string Talla { get; set; }
         public string PrecioTotal { get; set; }
@@ -38,9 +37,9 @@ namespace ServidorProyecto.Datos
             return result;
         }
 
-        public int mtdEditar(clPedidos objPed)
+        public int mtdEditar(clPedidos objPed, int IdPedidos)
         {
-            string consulta = "Update Pedidos set Nit='"+ Nit +"', Cantidad='" + objPed.Cantidad + "',Talla='" + objPed.Talla + "',PrecioTotal='" + objPed.PrecioTotal + "',TipoPago='" + objPed.TipoPago + "',IdProducto='" + objPed.IdProducto + "',IdCliente='" + objPed.IdCliente + "', Estado = '"+ objPed.Estado + "' where Nit = '"+Nit+"'";
+            string consulta = "Update Pedidos set  Cantidad='" + objPed.Cantidad + "',Talla='" + objPed.Talla + "',PrecioTotal='" + objPed.PrecioTotal + "',TipoPago='" + objPed.TipoPago + "',IdProducto='" + objPed.IdProducto + "',IdCliente='" + objPed.IdCliente + "', Estado = '"+ objPed.Estado + "' where IdPedidos = '"+IdPedidos+"'";
             clConexion objConexion = new clConexion();
             int res = objConexion.mtdConectado(consulta);
             return res;
@@ -56,7 +55,7 @@ namespace ServidorProyecto.Datos
 
         public DataSet mtdListarEscritorio()
         {
-            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente";
+            string consulta = "Select Pedidos.*, Cliente.*, Producto.* From Producto inner join Pedidos on Producto.IdProducto = Pedidos.IdProducto inner join Cliente on Cliente.IdCliente = Pedidos.IdCliente  where Estado = ''";
             DataSet dsCliente = new DataSet();
             clConexion clConexion = new clConexion();
             dsCliente = clConexion.mtdDesconectado(consulta);
